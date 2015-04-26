@@ -7,7 +7,7 @@
   "main": "./lib/diameter-server",
   "repository": {
     "type": "git",
-    "url": "git://github.com/rkovacevic/node-diameter.git"
+    "url": "git://github.com/node-diameter/node-diameter.git"
   },
   "engines": { "node": ">=0.10.0" },
   "dependencies": { 
