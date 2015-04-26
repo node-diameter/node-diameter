@@ -1,8 +1,9 @@
 {
   "name" : "diameter",
-  "version" : "0.0.1",
+  "version" : "0.1.0",
   "description" : "Diameter base protocol implementation",
   "author": "Robert Kovacevic <robert.kovacevic1@gmail.com>",
+  "license": "GPL-3.0",
   "main": "./lib/diameter-server",
   "repository": {
     "type": "git",
@@ -18,7 +19,7 @@
     
   },
   "scripts": {
-    "test": "nodeunit test"
+    
   },
   "keywords": ["diameter"]
 }
