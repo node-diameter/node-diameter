@@ -13,7 +13,8 @@
   "dependencies": { 
     "lodash": ">=3.0.0",
     "sax": ">=1.0.0",
-    "q": ">=1.2.0"
+    "q": ">=1.2.0",
+    "long": "2.2.0"
   },
   "devDependencies": {
     
