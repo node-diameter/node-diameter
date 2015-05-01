@@ -1,7 +1,7 @@
 {
-  "name" : "diameter",
-  "version" : "0.1.0",
-  "description" : "Diameter base protocol implementation",
+  "name": "diameter",
+  "version": "0.1.0",
+  "description": "Diameter base protocol implementation",
   "author": "Robert Kovacevic <robert.kovacevic1@gmail.com>",
   "license": "GPL-3.0",
   "main": "./lib/diameter-server",
@@ -9,18 +9,20 @@
     "type": "git",
     "url": "git://github.com/node-diameter/node-diameter.git"
   },
-  "engines": { "node": ">=0.10.0" },
-  "dependencies": { 
-    "lodash": ">=3.0.0",
-    "sax": ">=1.0.0",
-    "q": ">=1.2.0",
-    "long": "2.2.0"
+  "engines": {
+    "node": ">=0.10.0"
   },
-  "devDependencies": {
-    
+  "dependencies": {
+    "chalk": "^1.0.0",
+    "ipaddr.js": "^1.0.1",
+    "lodash": "^3.0.0",
+    "long": "^2.2.0",
+    "q": "^1.2.0",
+    "sax": "^1.0.0"
   },
-  "scripts": {
-    
-  },
-  "keywords": ["diameter"]
+  "devDependencies": {},
+  "scripts": {},
+  "keywords": [
+    "diameter"
+  ]
 }
