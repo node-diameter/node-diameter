@@ -23,7 +23,9 @@
   "devDependencies": {
     "jest-cli": "^0.4.0"
   },
-  "scripts": {},
+  "scripts": {
+    "example": "node example/diameter-example.js"
+    },
   "keywords": [
     "diameter"
   ]
