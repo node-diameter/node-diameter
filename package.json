@@ -16,16 +16,18 @@
     "chalk": "^1.0.0",
     "ipaddr.js": "^1.0.1",
     "lodash": "^3.0.0",
+    "lokijs": "^1.2.5",
     "long": "^2.2.0",
     "q": "^1.2.0",
-    "sax": "^1.0.0"
+    "sax": "^1.0.0",
+    "spark-md5": "0.0.5"
   },
   "devDependencies": {
     "jest-cli": "^0.4.0"
   },
   "scripts": {
     "example": "node example/diameter-example.js"
-    },
+  },
   "keywords": [
     "diameter"
   ]
