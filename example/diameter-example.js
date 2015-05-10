@@ -10,8 +10,6 @@ var HOST = '127.0.0.1';
 var PORT = 3868;
 
 var server = diameter.createServer({
-    originHost: 'test.com',
-    originRealm: 'com',
     beforeAnyCommand: function(request, response) {
         console.log('RECEIVED: ');
         console.log(diameter.messageToColoredString(request));
