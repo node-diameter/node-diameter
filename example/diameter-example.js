@@ -1,4 +1,5 @@
 'use strict';
+
 var diameter = require('../lib/diameter-server');
 
 // ---------------------------------------------------------------------------
@@ -69,8 +70,9 @@ server.on('request', function(request, response, callback) {
     callback(response);
 });
 
-server.listen(PORT, HOST);
-console.log('Started DIAMETER server on ' + HOST + ':' + PORT);
+server.listen(PORT, HOST).then(function() {
+    console.log('Started DIAMETER server on ' + HOST + ':' + PORT); 
+}, console.log);
 
 // ---------------------------------------------------------------------------
 // Diameter Client example
