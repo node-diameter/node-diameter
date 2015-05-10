@@ -25,7 +25,11 @@
   "devDependencies": {
     "jest-cli": "^0.4.0"
   },
+  "jest": {
+    "testDirectoryName": "tests"
+  },
   "scripts": {
+    "test": "jest",
     "example": "node example/diameter-example.js"
   },
   "keywords": [
