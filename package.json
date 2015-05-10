@@ -4,7 +4,7 @@
   "description": "Diameter base protocol implementation",
   "author": "Robert Kovacevic <robert.kovacevic1@gmail.com>",
   "license": "GPL-3.0",
-  "main": "./lib/diameter-server",
+  "main": "./lib/diameter",
   "repository": {
     "type": "git",
     "url": "git://github.com/node-diameter/node-diameter.git"
@@ -29,6 +29,6 @@
     "example": "node example/diameter-example.js"
   },
   "keywords": [
-    "diameter"
+    "diameter", "protocol", "rfc6733", "server", "client"
   ]
 }
