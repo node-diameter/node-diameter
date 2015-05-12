@@ -7,6 +7,7 @@ var PORT = 3868;
 
 var server = diameter.createServer({
     beforeAnyCommand: function(request, response) {
+        console.log(request);
         console.log('RECEIVED: ');
         console.log(diameter.messageToColoredString(request));
     },
