@@ -30,7 +30,8 @@
   },
   "scripts": {
     "test": "jest",
-    "example": "node example/diameter-example.js"
+    "example-server": "node examples/diameter-server-example.js",
+    "example-client": "node examples/diameter-client-example.js"
   },
   "keywords": [
     "diameter", "protocol", "rfc6733", "server", "client"
