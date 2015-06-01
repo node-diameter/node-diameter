@@ -47,7 +47,7 @@ creditControlApp.onCommand('Credit-Control', function(request, response, callbac
                 ['CC-Time', 123],
                 ['CC-Money', [
                     ['Unit-Value', [
-                        ['Value-Digits', 123], 
+                        ['Value-Digits', 123],
                         ['Exponent', 1]
                     ]],
                     ['Currency-Code', 1]
@@ -57,10 +57,10 @@ creditControlApp.onCommand('Credit-Control', function(request, response, callbac
                 ['CC-Output-Octets', 123]
             ]],
             ['Requested-Service-Unit', [
-               ['CC-Time', 123],
+                ['CC-Time', 123],
                 ['CC-Money', [
                     ['Unit-Value', [
-                        ['Value-Digits', 123], 
+                        ['Value-Digits', 123],
                         ['Exponent', 1]
                     ]],
                     ['Currency-Code', 1]
@@ -74,6 +74,9 @@ creditControlApp.onCommand('Credit-Control', function(request, response, callbac
     callback(request, response);
 });
 
-server.listen({ port: PORT, host: HOST }).then(function() {
-    console.log('Started DIAMETER server on ' + HOST + ':' + PORT); 
+server.listen({
+    port: PORT,
+    host: HOST
+}).then(function() {
+    console.log('Started DIAMETER server on ' + HOST + ':' + PORT);
 }, console.log);
