@@ -6,7 +6,7 @@ var diameter = require('../lib/diameter');
 var HOST = '127.0.0.1';
 var PORT = 3868;
   
-diameter.createSession({host: HOST, port: PORT}).then(function(session) {
+diameter.connect({host: HOST, port: PORT}).then(function(session) {
 	var request = session.createRequest('Diameter Common Messages', 'Capabilities-Exchange');
 	request.body = request.body.concat([ 
 		[ 'Origin-Host', 'gx.pcef.com' ],
@@ -21,6 +21,8 @@ diameter.createSession({host: HOST, port: PORT}).then(function(session) {
 	session.sendRequest(request).then(function(response) {
 		console.log('RESPONSE:');
 		console.log(diameter.messageToColoredString(response));
+		
+		session.end();
 	}, function(error) {
 		console.log('Error sending request: ' + error);
 	});

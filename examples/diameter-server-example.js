@@ -2,10 +2,11 @@
 
 var diameter = require('../lib/diameter');
 
+
 var HOST = '127.0.0.1';
 var PORT = 3868;
 
-var server = diameter.createServer({
+var session = diameter.createSession({
     beforeAnyCommand: function(request, response) {
         console.log(request);
         console.log('RECEIVED: ');
@@ -17,7 +18,7 @@ var server = diameter.createServer({
     }
 });
 
-var commonMessagesApp = server.application('Diameter Common Messages');
+var commonMessagesApp = session.application('Diameter Common Messages');
 
 commonMessagesApp.onCommand('Capabilities-Exchange', function(request, response, callback) {
     response.body = response.body.concat([
@@ -32,7 +33,7 @@ commonMessagesApp.onCommand('Capabilities-Exchange', function(request, response,
     callback(request, response);
 });
 
-var creditControlApp = server.application('Diameter Credit Control Application');
+var creditControlApp = session.application('Diameter Credit Control Application');
 
 creditControlApp.onCommand('Credit-Control', function(request, response, callback) {
     response.body = response.body.concat([
@@ -73,6 +74,8 @@ creditControlApp.onCommand('Credit-Control', function(request, response, callbac
     ]);
     callback(request, response);
 });
+
+var server = diameter.createServer(session);
 
 server.listen({
     port: PORT,
