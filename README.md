@@ -9,6 +9,11 @@ node-diameter is node.js implementation of Base Diameter protocol. It is intende
 Check client and server in 'examples' directory. 
 
 To see it in action:
+
+````bash
+$ npm install
+````
+
 ### Start server:
 ````bash
 $ npm run-script example-server
