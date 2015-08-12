@@ -6,7 +6,20 @@ var diameter = require('../lib/diameter');
 var HOST = '127.0.0.1';
 var PORT = 3868;
   
-diameter.connect({host: HOST, port: PORT}).then(function(session) {
+var session = diameter.createSession({
+    beforeAnyCommand: function(request, response) {
+        console.log('SENDING: ');
+        console.log(diameter.messageToColoredString(request));
+    },
+    afterAnyCommand: function(request, response) {
+        console.log('RECEIVED: ');
+        console.log(diameter.messageToColoredString(response));
+    }
+});
+// You can add applications to client session here, for handling server
+// initiated requests. 
+
+diameter.connect({host: HOST, port: PORT}, session).then(function(session) {
 	var request = session.createRequest('Diameter Common Messages', 'Capabilities-Exchange');
 	request.body = request.body.concat([ 
 		[ 'Origin-Host', 'gx.pcef.com' ],
@@ -16,12 +29,7 @@ diameter.connect({host: HOST, port: PORT}).then(function(session) {
 		[ 'Supported-Vendor-Id', 10415 ],
 		[ 'Auth-Application-Id', 'Diameter Credit Control' ] 
 	]);
-	console.log('REQUEST:');
-	console.log(diameter.messageToColoredString(request));
 	session.sendRequest(request).then(function(response) {
-		console.log('RESPONSE:');
-		console.log(diameter.messageToColoredString(response));
-		
 		session.end();
 	}, function(error) {
 		console.log('Error sending request: ' + error);

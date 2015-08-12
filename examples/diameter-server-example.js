@@ -8,7 +8,6 @@ var PORT = 3868;
 
 var session = diameter.createSession({
     beforeAnyCommand: function(request, response) {
-        console.log(request);
         console.log('RECEIVED: ');
         console.log(diameter.messageToColoredString(request));
     },
