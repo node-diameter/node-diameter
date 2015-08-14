@@ -1646,7 +1646,7 @@
 			<enum name="ITU-T Rs" code="16777235"/>
 			<enum name="3GPP Rx" code="16777236"/>
 			<enum name="3GPP2 Ty" code="16777237"/>
-			<enum name="3GPP Gx 2" code="16777238"/>
+			<enum name="3GPP Gx" code="16777238"/>
 			<enum name="Juniper Cluster" code="16777239"/>
 			<enum name="Juniper Policy-Control-AAA" code="16777240"/>
 			<enum name="iptego USPI" code="16777241"/>
@@ -1778,7 +1778,7 @@
 			<enum name="ITU-T Rs" code="16777235"/>
 			<enum name="3GPP Rx" code="16777236"/>
 			<enum name="3GPP2 Ty" code="16777237"/>
-			<enum name="3GPP Gx 2" code="16777238"/>
+			<enum name="3GPP Gx" code="16777238"/>
 			<enum name="Juniper Cluster" code="16777239"/>
 			<enum name="Juniper Policy-Control-AAA" code="16777240"/>
 			<enum name="iptego USPI" code="16777241"/>
