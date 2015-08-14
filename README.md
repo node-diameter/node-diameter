@@ -2,4 +2,29 @@
 
 [![Code Climate](https://codeclimate.com/github/node-diameter/node-diameter/badges/gpa.svg)](https://codeclimate.com/github/node-diameter/node-diameter)
 
-Check example, documentation comming soon. Still under heavy development, not ready for any kind of use. 
+node-diameter is node.js implementation of Base Diameter protocol. It is intended for testing existing diameter apps. 
+
+## Usage
+
+Check client and server in 'examples' directory. 
+
+To see it in action:
+
+````bash
+$ npm install
+````
+
+### Start server:
+````bash
+$ npm run-script example-server
+````
+
+### Start client:
+````bash
+$ npm run-script example-client
+````
+
+## Dictionary
+
+node-diameter will use dictionaries you put in 'dictionaries' directory, in Wireshark xml format. On first launch, it will parse XML files, and store the dictionary in 'dictionary.json', in LokiJS database. 
+
