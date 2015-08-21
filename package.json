@@ -2,7 +2,10 @@
   "name": "diameter",
   "version": "0.4.0",
   "description": "Diameter base protocol implementation",
-  "author": "Robert Kovacevic <robert.kovacevic1@gmail.com>",
+  "author": {
+    "name": "Robert Kovacevic",
+    "email": "robert.kovacevic1@gmail.com"
+  },
   "license": "GPL-3.0",
   "main": "./lib/diameter",
   "repository": {
@@ -34,6 +37,21 @@
     "example-client": "node examples/diameter-client-example.js"
   },
   "keywords": [
-    "diameter", "protocol", "rfc6733", "server", "client"
-  ]
+    "diameter",
+    "protocol",
+    "rfc6733",
+    "server",
+    "client"
+  ],
+  "gitHead": "dc7c06899bd8b493e683c023b1be66f928ae1d43",
+  "readme": "# node-diameter\r\n\r\n[![Code Climate](https://codeclimate.com/github/node-diameter/node-diameter/badges/gpa.svg)](https://codeclimate.com/github/node-diameter/node-diameter)\r\n\r\nnode-diameter is node.js implementation of Base Diameter protocol. It is intended for testing existing diameter apps. \r\n\r\n## Usage\r\n\r\nCheck client and server in 'examples' directory. \r\n\r\nTo see it in action:\r\n\r\n````bash\r\n$ npm install\r\n````\r\n\r\n### Start server:\r\n````bash\r\n$ npm run-script example-server\r\n````\r\n\r\n### Start client:\r\n````bash\r\n$ npm run-script example-client\r\n````\r\n\r\n## Dictionary\r\n\r\nnode-diameter will use dictionaries you put in 'dictionaries' directory, in Wireshark xml format. On first launch, it will parse XML files, and store the dictionary in 'dictionary.json', in LokiJS database. \r\n\r\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/node-diameter/node-diameter/issues"
+  },
+  "homepage": "https://github.com/node-diameter/node-diameter#readme",
+  "_id": "diameter@0.4.0",
+  "_shasum": "035e63fbdd9b58b00e57a2c05f4d47c539a97a3e",
+  "_from": "git+https://github.com/freundschaft/node-diameter.git",
+  "_resolved": "git+https://github.com/freundschaft/node-diameter.git#dc7c06899bd8b493e683c023b1be66f928ae1d43"
 }
