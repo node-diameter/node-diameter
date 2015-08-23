@@ -2,7 +2,9 @@
 
 [![Code Climate](https://codeclimate.com/github/node-diameter/node-diameter/badges/gpa.svg)](https://codeclimate.com/github/node-diameter/node-diameter)
 
-node-diameter is node.js implementation of Base Diameter protocol. It is intended for testing existing diameter apps. 
+node-diameter is node.js implementation of Base Diameter protocol. 
+
+> *Warning* - still under development, expect frequent API changes. 
 
 ## Usage
 

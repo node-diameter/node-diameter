@@ -1,7 +1,9 @@
+jest.autoMockOff();
 jest.dontMock('../lib/diameter-util');
 
 describe('diameter-util', function() {
-    it('adds 1 + 2 to equal 3', function() {
-        expect(1 + 2).toBe(3);
+    it('generates random number', function() {
+        var util = require('../lib/diameter-util');
+        expect(util.random32BitNumber()).toBeGreaterThan(0);
     });
 });
