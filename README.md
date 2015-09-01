@@ -1,5 +1,7 @@
 # node-diameter
 
+[![Join the chat at https://gitter.im/node-diameter/node-diameter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/node-diameter/node-diameter?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![Code Climate](https://codeclimate.com/github/node-diameter/node-diameter/badges/gpa.svg)](https://codeclimate.com/github/node-diameter/node-diameter)
 
 node-diameter is node.js implementation of Base Diameter protocol. 
