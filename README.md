@@ -29,5 +29,6 @@ $ npm run-script example-client
 
 ## Dictionary
 
-node-diameter will use dictionaries you put in 'dictionaries' directory, in Wireshark xml format. On first launch, it will parse XML files, and store the dictionary in 'dictionary.json', in LokiJS database. 
+node-diameter uses the dictionary stored in 'dictionary.json', which is a LokiJS database. You can generate this database from Wireshark style dictionary XML files with:
 
+https://github.com/node-diameter/node-diameter-dictionary-parser
