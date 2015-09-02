@@ -86,6 +86,10 @@ diameter.getLokiDictionary().then(function(dictionary) {
         		});
             }, 2000);
         });
+        
+        socket.on('end', function() {
+            console.log('Client ' + socket.diameterSession.sessionId + ' disconnected.');
+        });
     });
     
     server.listen(PORT, HOST);
