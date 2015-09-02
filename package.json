@@ -26,7 +26,8 @@
     "jest-cli": "^0.4.0"
   },
   "jest": {
-    "testDirectoryName": "tests"
+    "testDirectoryName": "tests",
+    "collectCoverage": true
   },
   "scripts": {
     "test": "jest",
