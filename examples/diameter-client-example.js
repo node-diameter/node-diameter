@@ -31,25 +31,27 @@ diameter.getLokiDictionary().then(function(dictionary) {
         }, function(error) {
             console.log('Error sending request: ' + error);
         });
-        
-        // Handling server initiated messages:
-        socket.on('diameterMessage', function(event) {
-            if (event.message.command === 'Capabilities-Exchange') {
-                event.response.body = event.response.body.concat([
-                    ['Result-Code', 'DIAMETER_SUCCESS'],
-                    ['Origin-Host', 'test.com'],
-                    ['Origin-Realm', 'com'],
-                    ['Host-IP-Address', '2001:db8:3312::1'],
-                    ['Host-IP-Address', '1.2.3.4'],
-                    ['Vendor-Id', 123],
-                    ['Product-Name', 'node-diameter']
-                ]);
-                event.callback(event.response);
-                session.end();
-            }
-        });
     });
-
+    
+    // Handling server initiated messages:
+    socket.on('diameterMessage', function(event) {
+        if (event.message.command === 'Capabilities-Exchange') {
+            event.response.body = event.response.body.concat([
+                ['Result-Code', 'DIAMETER_SUCCESS'],
+                ['Origin-Host', 'test.com'],
+                ['Origin-Realm', 'com'],
+                ['Host-IP-Address', '2001:db8:3312::1'],
+                ['Host-IP-Address', '1.2.3.4'],
+                ['Vendor-Id', 123],
+                ['Product-Name', 'node-diameter']
+            ]);
+            event.callback(event.response);
+            socket.diameterSession.end();
+        }
+    });
+    socket.on('error', function(err) {
+        console.log(err);
+    });
 }, function(error) {
     console.log("Error loading dictionary: " + error);
 }).done();

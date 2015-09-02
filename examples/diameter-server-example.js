@@ -90,6 +90,9 @@ diameter.getLokiDictionary().then(function(dictionary) {
         socket.on('end', function() {
             console.log('Client ' + socket.diameterSession.sessionId + ' disconnected.');
         });
+        socket.on('error', function(err) {
+            console.log(err);
+        });
     });
     
     server.listen(PORT, HOST);
