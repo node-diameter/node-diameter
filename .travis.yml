@@ -9,3 +9,9 @@ addons:
     repo_token: $CODECLIMATE_REPO_TOKEN
 after_script:
   - codeclimate-test-reporter < coverage/lcov.info
+deploy:
+  provider: npm
+  email: "$EMAIL"
+  api_key: "$NPM_API_KEY"
+  on:
+    tags: true
