@@ -1,6 +1,3 @@
-jest.autoMockOff();
-jest.dontMock('../lib/diameter-util');
-
 var util = require('../lib/diameter-util');
 
 describe('diameter-util', function() {

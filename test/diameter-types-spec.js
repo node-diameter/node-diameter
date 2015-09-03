@@ -1,6 +1,3 @@
-jest.autoMockOff();
-jest.dontMock('../lib/diameter-types');
-
 var Buffer = require('buffer').Buffer;
 var types = require('../lib/diameter-types');
 var _ = require('lodash');

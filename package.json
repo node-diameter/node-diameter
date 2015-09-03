@@ -23,18 +23,20 @@
     "spark-md5": "0.0.5"
   },
   "devDependencies": {
-    "jest-cli": "^0.4.0"
-  },
-  "jest": {
-    "testDirectoryName": "tests",
-    "collectCoverage": true
+    "istanbul": "^0.3.19",
+    "jasmine-node": "^1.14.5"
   },
   "scripts": {
-    "test": "jest",
+    "test": "./node_modules/.bin/jasmine-node test",
+    "coverage": "./node_modules/.bin/istanbul cover --include-all-sources ./node_modules/.bin/jasmine-node test",
     "example-server": "node examples/diameter-server-example.js",
     "example-client": "node examples/diameter-client-example.js"
   },
   "keywords": [
-    "diameter", "protocol", "rfc6733", "server", "client"
+    "diameter",
+    "protocol",
+    "rfc6733",
+    "server",
+    "client"
   ]
 }
