@@ -27,6 +27,7 @@
   "scripts": {
     "unit": "./node_modules/.bin/jasmine-node test",
     "test": "./node_modules/.bin/istanbul cover -i \"lib/*.js\" ./node_modules/.bin/jasmine-node test",
+    "postversion": "git push origin master --tags",
     "example-server": "node examples/diameter-server-example.js",
     "example-client": "node examples/diameter-client-example.js"
   },
