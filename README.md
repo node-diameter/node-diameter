@@ -8,7 +8,6 @@
 
 node-diameter is node.js implementation of Base Diameter protocol. 
 
-> *Warning* - still under development, expect frequent API changes. 
 
 ## Usage
 
@@ -29,9 +28,3 @@ $ npm run-script example-server
 ````bash
 $ npm run-script example-client
 ````
-
-## Dictionary
-
-node-diameter uses the dictionary stored in 'dictionary.json', which is a LokiJS database. You can generate this database from Wireshark style dictionary XML files with:
-
-https://github.com/node-diameter/node-diameter-dictionary-parser
