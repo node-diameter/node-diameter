@@ -28,3 +28,9 @@ $ npm run-script example-server
 ````bash
 $ npm run-script example-client
 ````
+
+## Complementary library
+
+Makes it easier to work with diameter messages, by converting the arrays to objects:
+
+[https://github.com/atesgoral/diameter-avp-object](https://github.com/atesgoral/diameter-avp-object)
