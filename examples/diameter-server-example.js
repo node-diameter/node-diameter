@@ -67,8 +67,8 @@ var server = diameter.createServer(options, function(socket) {
         // Example server initiated message
         setTimeout(function() {
             console.log('Sending server initiated message');
-            var session = socket.diameterSession;
-            var request = session.createRequest('Diameter Common Messages', 'Capabilities-Exchange');
+            var connection = socket.diameterConnection;
+            var request = connection.createRequest('Diameter Common Messages', 'Capabilities-Exchange');
     		request.body = request.body.concat([
     			[ 'Origin-Host', 'gx.pcef.com' ],
     			[ 'Origin-Realm', 'pcef.com' ],
@@ -77,7 +77,7 @@ var server = diameter.createServer(options, function(socket) {
     			[ 'Supported-Vendor-Id', 10415 ],
     			[ 'Auth-Application-Id', 'Diameter Credit Control' ]
     		]);
-    		session.sendRequest(request).then(function(response) {
+    		connection.sendRequest(request).then(function(response) {
     			console.log('Got response for server initiated message');
     		}, function(error) {
     			console.log('Error sending request: ' + error);
@@ -86,7 +86,7 @@ var server = diameter.createServer(options, function(socket) {
     });
 
     socket.on('end', function() {
-        console.log('Client ' + socket.diameterSession.sessionId + ' disconnected.');
+        console.log('Client disconnected.');
     });
     socket.on('error', function(err) {
         console.log(err);

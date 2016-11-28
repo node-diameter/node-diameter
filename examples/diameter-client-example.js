@@ -14,8 +14,8 @@ var options = {
 };
 
 var socket = diameter.createConnection(options, function() {
-    var session = socket.diameterSession;
-    var request = session.createRequest('Diameter Common Messages', 'Capabilities-Exchange');
+    var connection = socket.diameterConnection;
+    var request = connection.createRequest('Diameter Common Messages', 'Capabilities-Exchange');
     request.body = request.body.concat([
         [ 'Origin-Host', 'gx.pcef.com' ],
         [ 'Origin-Realm', 'pcef.com' ],
@@ -24,7 +24,7 @@ var socket = diameter.createConnection(options, function() {
         [ 'Supported-Vendor-Id', 10415 ],
         [ 'Auth-Application-Id', 'Diameter Credit Control' ]
     ]);
-    session.sendRequest(request).then(function(response) {
+    connection.sendRequest(request).then(function(response) {
         // handle response
     }, function(error) {
         console.log('Error sending request: ' + error);
@@ -44,7 +44,7 @@ socket.on('diameterMessage', function(event) {
             ['Product-Name', 'node-diameter']
         ]);
         event.callback(event.response);
-        socket.diameterSession.end();
+        socket.diameterConnection.end();
     }
 });
 socket.on('error', function(err) {
