@@ -16,13 +16,13 @@ var options = {
 var socket = diameter.createConnection(options, function() {
     var session = socket.diameterSession;
     var request = session.createRequest('Diameter Common Messages', 'Capabilities-Exchange');
-    request.body = request.body.concat([ 
+    request.body = request.body.concat([
         [ 'Origin-Host', 'gx.pcef.com' ],
         [ 'Origin-Realm', 'pcef.com' ],
         [ 'Vendor-Id', 10415 ],
         [ 'Origin-State-Id', 219081 ],
         [ 'Supported-Vendor-Id', 10415 ],
-        [ 'Auth-Application-Id', 'Diameter Credit Control' ] 
+        [ 'Auth-Application-Id', 'Diameter Credit Control' ]
     ]);
     session.sendRequest(request).then(function(response) {
         // handle response
