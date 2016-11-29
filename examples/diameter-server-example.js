@@ -63,19 +63,19 @@ var server = diameter.createServer(options, function(socket) {
             ]);
             event.callback(event.response);
         }
-        
+
         // Example server initiated message
         setTimeout(function() {
             console.log('Sending server initiated message');
             var session = socket.diameterSession;
             var request = session.createRequest('Diameter Common Messages', 'Capabilities-Exchange');
-    		request.body = request.body.concat([ 
+    		request.body = request.body.concat([
     			[ 'Origin-Host', 'gx.pcef.com' ],
     			[ 'Origin-Realm', 'pcef.com' ],
     			[ 'Vendor-Id', 10415 ],
     			[ 'Origin-State-Id', 219081 ],
     			[ 'Supported-Vendor-Id', 10415 ],
-    			[ 'Auth-Application-Id', 'Diameter Credit Control' ] 
+    			[ 'Auth-Application-Id', 'Diameter Credit Control' ]
     		]);
     		session.sendRequest(request).then(function(response) {
     			console.log('Got response for server initiated message');
@@ -84,7 +84,7 @@ var server = diameter.createServer(options, function(socket) {
     		});
         }, 2000);
     });
-    
+
     socket.on('end', function() {
         console.log('Client ' + socket.diameterSession.sessionId + ' disconnected.');
     });
