@@ -17,8 +17,8 @@ var socket = diameter.createConnection(options, function() {
     var connection = socket.diameterConnection;
     var request = connection.createRequest('Diameter Common Messages', 'Capabilities-Exchange');
     request.body = request.body.concat([
-        [ 'Origin-Host', 'gx.pcef.com' ],
-        [ 'Origin-Realm', 'pcef.com' ],
+        [ 'Origin-Host', 'gx.pcef.example.com' ],
+        [ 'Origin-Realm', 'pcef.example.com' ],
         [ 'Vendor-Id', 10415 ],
         [ 'Origin-State-Id', 219081 ],
         [ 'Supported-Vendor-Id', 10415 ],
@@ -36,8 +36,8 @@ socket.on('diameterMessage', function(event) {
     if (event.message.command === 'Capabilities-Exchange') {
         event.response.body = event.response.body.concat([
             ['Result-Code', 'DIAMETER_SUCCESS'],
-            ['Origin-Host', 'test.com'],
-            ['Origin-Realm', 'com'],
+            ['Origin-Host', 'gx.pcrf.example.com'],
+            ['Origin-Realm', 'pcrf.example.com'],
             ['Host-IP-Address', '2001:db8:3312::1'],
             ['Host-IP-Address', '1.2.3.4'],
             ['Vendor-Id', 123],
