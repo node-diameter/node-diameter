@@ -5,13 +5,20 @@ var diameter = require('../lib/diameter');
 
 var HOST = '127.0.0.1';
 var PORT = 3868;
-
-var options = {
-    beforeAnyMessage: diameter.logMessage,
-    afterAnyMessage: diameter.logMessage,
-    port: PORT,
-    host: HOST
-};
+var verbose = true;
+if (verbose) {
+    var options = {
+        beforeAnyMessage: diameter.logMessage,
+        afterAnyMessage: diameter.logMessage,
+        port: PORT,     
+        host: HOST
+    }
+} else {
+    var options = {     
+        port: PORT,
+        host: HOST  
+    }                   
+};                          
 
 var socket = diameter.createConnection(options, function() {
     var connection = socket.diameterConnection;
@@ -24,11 +31,18 @@ var socket = diameter.createConnection(options, function() {
         [ 'Supported-Vendor-Id', 10415 ],
         [ 'Auth-Application-Id', 'Diameter Credit Control' ]
     ]);
-    connection.sendRequest(request).then(function(response) {
+    connection.sendRequest(request).then(
+        response=>{
         // handle response
-    }, function(error) {
+    }, 
+        error=>{
+        // handle error
         console.log('Error sending request: ' + error);
-    });
+    }).finally(
+        ()=>{
+        // tasks upon completion
+        }
+    );
 });
 
 // Handling server initiated messages:
