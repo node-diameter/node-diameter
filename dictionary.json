@@ -19416,7 +19416,7 @@
             "code": 455,
             "name": "Multiple-Services-Indicator",
             "vendorId": 0,
-            "type": "Integer32",
+            "type": "Unsigned32",
             "flags": {
                 "mandatory": true,
                 "protected": false,
