@@ -33,6 +33,10 @@
             "name": "Diameter Mobile IPv6 IKE   (MIP6I)"
         },
         {
+            "code": 8,
+            "name": "Diameter Mobile IPv6 Auth  (MIP6A)"
+        },
+        {
             "code": 111,
             "name": "ALU Sy"
         },
@@ -41,8 +45,20 @@
             "name": "Sun Ping Application"
         },
         {
+            "code": 16777216,
+            "name": "3GPP Cx"
+        },
+        {
+            "code": 16777217,
+            "name": "3GPP Sh"
+        },
+        {
             "code": 16777219,
             "name": "3GPP Wx"
+        },
+        {
+            "code": 16777222,
+            "name": "3GPP Gq"
         },
         {
             "code": 16777223,
@@ -75,6 +91,10 @@
         {
             "code": 16777234,
             "name": "Vodafone Gx+"
+        },
+        {
+            "code": 16777236,
+            "name": "3GPP Rx"
         },
         {
             "code": 16777237,
@@ -117,6 +137,10 @@
             "name": "3GPP Gxx"
         },
         {
+            "code": 16777267,
+            "name": "3GPP S9"
+        },
+        {
             "code": 16777269,
             "name": "Ericsson HSI"
         },
@@ -127,6 +151,14 @@
         {
             "code": 16777291,
             "name": "3GPP SLh"
+        },
+        {
+            "code": 16777292,
+            "name": "3GPP SGmb"
+        },
+        {
+            "code": 16777302,
+            "name": "3GPP Sy"
         },
         {
             "code": 16777304,
@@ -269,6 +301,56 @@
             "vendorId": 0
         },
         {
+            "code": 300,
+            "name": "User-Authorization",
+            "vendorId": 10415
+        },
+        {
+            "code": 301,
+            "name": "Server-Assignment",
+            "vendorId": 10415
+        },
+        {
+            "code": 302,
+            "name": "Location-Info",
+            "vendorId": 10415
+        },
+        {
+            "code": 303,
+            "name": "Multimedia-Auth",
+            "vendorId": 10415
+        },
+        {
+            "code": 304,
+            "name": "Registration-Termination",
+            "vendorId": 10415
+        },
+        {
+            "code": 305,
+            "name": "Push-Profile",
+            "vendorId": 10415
+        },
+        {
+            "code": 306,
+            "name": "User-Data",
+            "vendorId": 10415
+        },
+        {
+            "code": 307,
+            "name": "Profile-Update",
+            "vendorId": 10415
+        },
+        {
+            "code": 308,
+            "name": "Subscribe-Notifications",
+            "vendorId": 10415
+        },
+        {
+            "code": 309,
+            "name": "Push-Notification",
+            "vendorId": 10415
+        },
+        {
             "code": 310,
             "name": "Boostrapping-Info",
             "vendorId": 0
@@ -336,6 +418,11 @@
         {
             "code": 324,
             "name": "3GPP-ME-Identity-Check",
+            "vendorId": 0
+        },
+        {
+            "code": 325,
+            "name": "MIP6-Request/Answer",
             "vendorId": 0
         },
         {
@@ -18775,10 +18862,10 @@
             "code": 436,
             "name": "Requested-Action",
             "vendorId": 0,
-            "type": "Unsigned32",
+            "type": "Integer32",
             "flags": {
                 "mandatory": true,
-                "protected": true,
+                "protected": false,
                 "mayEncrypt": true,
                 "vendorBit": false
             },
@@ -18805,10 +18892,10 @@
             "code": 436,
             "name": "Requested-Action",
             "vendorId": 0,
-            "type": "Integer32",
+            "type": "Unsigned32",
             "flags": {
                 "mandatory": true,
-                "protected": false,
+                "protected": true,
                 "mayEncrypt": true,
                 "vendorBit": false
             },
@@ -19404,7 +19491,7 @@
             "code": 455,
             "name": "Multiple-Services-Indicator",
             "vendorId": 0,
-            "type": "Unsigned32",
+            "type": "Integer32",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -20275,6 +20362,24 @@
         },
         {
             "code": 486,
+            "name": "MIP6-Agent-Info",
+            "vendorId": 0,
+            "type": "Grouped",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": false
+            },
+            "groupedAvps": [
+                "MIP-Home-Agent-Address",
+                "MIP-Home-Agent-Host",
+                "MIP6-Home-Link-Prefix",
+                "AVP"
+            ]
+        },
+        {
+            "code": 486,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -20283,6 +20388,18 @@
                 "protected": false,
                 "mayEncrypt": true,
                 "vendorBit": true
+            }
+        },
+        {
+            "code": 487,
+            "name": "MIP-Careof-Address",
+            "vendorId": 0,
+            "type": "IPAddress",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": false
             }
         },
         {
@@ -20299,6 +20416,18 @@
         },
         {
             "code": 488,
+            "name": "MIP-Authenticator",
+            "vendorId": 0,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": false
+            }
+        },
+        {
+            "code": 488,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -20307,6 +20436,18 @@
                 "protected": false,
                 "mayEncrypt": true,
                 "vendorBit": true
+            }
+        },
+        {
+            "code": 489,
+            "name": "MIP-MAC-Mobility-Data",
+            "vendorId": 0,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": false
             }
         },
         {
@@ -20323,6 +20464,18 @@
         },
         {
             "code": 490,
+            "name": "MIP-Timestamp",
+            "vendorId": 0,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": false
+            }
+        },
+        {
+            "code": 490,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -20331,6 +20484,18 @@
                 "protected": false,
                 "mayEncrypt": true,
                 "vendorBit": true
+            }
+        },
+        {
+            "code": 491,
+            "name": "MIP-MN-HA-SPI",
+            "vendorId": 0,
+            "type": "Unsigned32",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": false
             }
         },
         {
@@ -20347,6 +20512,26 @@
         },
         {
             "code": 492,
+            "name": "MIP-MN-HA-MSA",
+            "vendorId": 0,
+            "type": "Grouped",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": false
+            },
+            "groupedAvps": [
+                "MIP-Session-Key",
+                "MIP-MSA-Lifetime",
+                "MIP-MN-HA-SPI",
+                "MIP-Algorithm-Type",
+                "MIP-Replay-Mode",
+                "AVP"
+            ]
+        },
+        {
+            "code": 492,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -20355,6 +20540,18 @@
                 "protected": false,
                 "mayEncrypt": true,
                 "vendorBit": true
+            }
+        },
+        {
+            "code": 493,
+            "name": "Service-Selection",
+            "vendorId": 0,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": false
             }
         },
         {
@@ -20368,6 +20565,28 @@
                 "mayEncrypt": true,
                 "vendorBit": true
             }
+        },
+        {
+            "code": 494,
+            "name": "MIP6-Auth-Mode",
+            "vendorId": 0,
+            "type": "Integer32",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": false
+            },
+            "enums": [
+                {
+                    "code": 0,
+                    "name": "Reserved"
+                },
+                {
+                    "code": 1,
+                    "name": "IP6_AUTH_MN_AAA"
+                }
+            ]
         },
         {
             "code": 494,
@@ -20522,6 +20741,32 @@
         },
         {
             "code": 500,
+            "name": "Abort-Cause",
+            "vendorId": 10415,
+            "type": "Integer32",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            },
+            "enums": [
+                {
+                    "code": 0,
+                    "name": "BEARER_RELEASED"
+                },
+                {
+                    "code": 1,
+                    "name": "INSUFFICIENT_SERVER_RESOURCES"
+                },
+                {
+                    "code": 2,
+                    "name": "INSUFFICIENT_BEARER_RESOURCES"
+                }
+            ]
+        },
+        {
+            "code": 500,
             "name": "Line-Identifier",
             "vendorId": 13019,
             "type": "OctetString",
@@ -20560,6 +20805,18 @@
                 "mandatory": true,
                 "protected": true,
                 "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 501,
+            "name": "Access-Network-Charging-Address",
+            "vendorId": 10415,
+            "type": "IPAddress",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
                 "vendorBit": true
             }
         },
@@ -20609,6 +20866,22 @@
                 "mayEncrypt": true,
                 "vendorBit": true
             }
+        },
+        {
+            "code": 502,
+            "name": "Access-Network-Charging-Identifier",
+            "vendorId": 10415,
+            "type": "Grouped",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            },
+            "groupedAvps": [
+                "Access-Network-Charging-Identifier-Value",
+                "Flows"
+            ]
         },
         {
             "code": 502,
@@ -20663,6 +20936,18 @@
         },
         {
             "code": 503,
+            "name": "Access-Network-Charging-Identifier-Value",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 503,
             "name": "ETSI-SIP-Authentication-Info",
             "vendorId": 13019,
             "type": "Grouped",
@@ -20679,6 +20964,18 @@
                 "ETSI-Digest-CNonce",
                 "ETSI-Digest-Nonce-Count"
             ]
+        },
+        {
+            "code": 504,
+            "name": "PMIP6-DHCP-Server-Address",
+            "vendorId": 0,
+            "type": "IPAddress",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": false
+            }
         },
         {
             "code": 504,
@@ -20703,6 +21000,18 @@
         },
         {
             "code": 504,
+            "name": "AF-Application-Identifier",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 504,
             "name": "ETSI-Digest-Realm",
             "vendorId": 13019,
             "type": "OctetString",
@@ -20715,12 +21024,36 @@
         },
         {
             "code": 505,
+            "name": "PMIP6-IPv4-Home-Address",
+            "vendorId": 0,
+            "type": "IPAddress",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": false
+            }
+        },
+        {
+            "code": 505,
             "name": "SN-Absolute-Validity-Time",
             "vendorId": 8164,
             "type": "Time",
             "flags": {
                 "mandatory": true,
                 "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 505,
+            "name": "AF-Charging-Identifier",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
                 "mayEncrypt": true,
                 "vendorBit": true
             }
@@ -20739,6 +21072,30 @@
         },
         {
             "code": 506,
+            "name": "Mobile-Node-Identifier",
+            "vendorId": 0,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": false
+            }
+        },
+        {
+            "code": 506,
+            "name": "Authorization-Token",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 506,
             "name": "ETSI-Digest-Domain",
             "vendorId": 13019,
             "type": "OctetString",
@@ -20751,6 +21108,23 @@
         },
         {
             "code": 507,
+            "name": "Service-Configuration",
+            "vendorId": 0,
+            "type": "Grouped",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": false
+            },
+            "groupedAvps": [
+                "MIP6-Agent-Info",
+                "Service-Selection",
+                "AVP"
+            ]
+        },
+        {
+            "code": 507,
             "name": "Flow-Description",
             "vendorId": 5771,
             "type": "OctetString",
@@ -20758,6 +21132,18 @@
                 "mandatory": true,
                 "protected": true,
                 "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 507,
+            "name": "Flow-Description",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": false,
                 "vendorBit": true
             }
         },
@@ -20775,6 +21161,21 @@
         },
         {
             "code": 508,
+            "name": "Flow-Grouping",
+            "vendorId": 10415,
+            "type": "Grouped",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            },
+            "groupedAvps": [
+                "Flows"
+            ]
+        },
+        {
+            "code": 508,
             "name": "ETSI-Digest-Stale",
             "vendorId": 13019,
             "type": "OctetString",
@@ -20782,6 +21183,18 @@
                 "mandatory": false,
                 "protected": false,
                 "mayEncrypt": false,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 509,
+            "name": "Flow-Number",
+            "vendorId": 10415,
+            "type": "Unsigned32",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
                 "vendorBit": true
             }
         },
@@ -20799,6 +21212,23 @@
         },
         {
             "code": 510,
+            "name": "Flows",
+            "vendorId": 10415,
+            "type": "Grouped",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            },
+            "groupedAvps": [
+                "Media-Component-Number",
+                "Flow-Number",
+                "Final-Unit-Action"
+            ]
+        },
+        {
+            "code": 510,
             "name": "ETSI-Digest-QoP",
             "vendorId": 13019,
             "type": "OctetString",
@@ -20808,6 +21238,40 @@
                 "mayEncrypt": false,
                 "vendorBit": true
             }
+        },
+        {
+            "code": 511,
+            "name": "Flow-Status",
+            "vendorId": 10415,
+            "type": "Integer32",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            },
+            "enums": [
+                {
+                    "code": 0,
+                    "name": "ENABLED-UPLINK"
+                },
+                {
+                    "code": 1,
+                    "name": "ENABLED-DOWNLINK"
+                },
+                {
+                    "code": 2,
+                    "name": "ENABLED"
+                },
+                {
+                    "code": 3,
+                    "name": "DISABLED"
+                },
+                {
+                    "code": 4,
+                    "name": "REMOVED"
+                }
+            ]
         },
         {
             "code": 511,
@@ -20845,6 +21309,32 @@
         },
         {
             "code": 512,
+            "name": "Flow-Usage",
+            "vendorId": 10415,
+            "type": "Integer32",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            },
+            "enums": [
+                {
+                    "code": 0,
+                    "name": "NO_INFORMATION"
+                },
+                {
+                    "code": 1,
+                    "name": "RTCP"
+                },
+                {
+                    "code": 2,
+                    "name": "AF_SIGNALLING"
+                }
+            ]
+        },
+        {
+            "code": 512,
             "name": "ETSI-Digest-Auth-Param",
             "vendorId": 13019,
             "type": "OctetString",
@@ -20866,6 +21356,72 @@
                 "mayEncrypt": true,
                 "vendorBit": true
             }
+        },
+        {
+            "code": 513,
+            "name": "Specific-Action",
+            "vendorId": 10415,
+            "type": "Integer32",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": false,
+                "vendorBit": true
+            },
+            "enums": [
+                {
+                    "code": 0,
+                    "name": "SERVICE_INFORMATION_REQUEST (now void)"
+                },
+                {
+                    "code": 1,
+                    "name": "CHARGING_CORRELATION_EXCHANGE"
+                },
+                {
+                    "code": 2,
+                    "name": "INDICATION_OF_LOSS_OF_BEARER"
+                },
+                {
+                    "code": 3,
+                    "name": "INDICATION_OF_RECOVERY_OF_BEARER"
+                },
+                {
+                    "code": 4,
+                    "name": "INDICATION_OF_RELEASE_OF_BEARER"
+                },
+                {
+                    "code": 5,
+                    "name": "INDICATION_OF_ESTABLISHMENT_OF_BEARER (now void)"
+                },
+                {
+                    "code": 6,
+                    "name": "IP-CAN_CHANGE"
+                },
+                {
+                    "code": 7,
+                    "name": "INDICATION_OF_OUT_OF_CREDIT"
+                },
+                {
+                    "code": 8,
+                    "name": "INDICATION_OF_SUCCESSFUL_RESOURCES_ALLOCATION"
+                },
+                {
+                    "code": 9,
+                    "name": "INDICATION_OF_FAILED_RESOURCES_ALLOCATION"
+                },
+                {
+                    "code": 10,
+                    "name": "INDICATION_OF_LIMITED_PCC_DEPLOYMENT"
+                },
+                {
+                    "code": 11,
+                    "name": "USAGE_REPORT"
+                },
+                {
+                    "code": 12,
+                    "name": "ACCESS_NETWORK_INFO_REPORT"
+                }
+            ]
         },
         {
             "code": 513,
@@ -20917,6 +21473,18 @@
         },
         {
             "code": 515,
+            "name": "Max-Requested-Bandwidth-DL",
+            "vendorId": 10415,
+            "type": "Unsigned32",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 515,
             "name": "ETSI-Digest-Response",
             "vendorId": 13019,
             "type": "OctetString",
@@ -20924,6 +21492,18 @@
                 "mandatory": false,
                 "protected": false,
                 "mayEncrypt": false,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 516,
+            "name": "Max-Requested-Bandwidth-UL",
+            "vendorId": 10415,
+            "type": "Unsigned32",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
                 "vendorBit": true
             }
         },
@@ -20958,6 +21538,34 @@
         },
         {
             "code": 517,
+            "name": "Media-Component-Description",
+            "vendorId": 10415,
+            "type": "Grouped",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            },
+            "groupedAvps": [
+                "Media-Component-Number",
+                "Media-Sub-Component",
+                "AF-Application-Identifier",
+                "Media-Type",
+                "Max-Requested-Bandwidth-UL",
+                "Max-Requested-Bandwidth-DL",
+                "Flow-Status",
+                "RS-Bandwidth",
+                "RR-Bandwidth",
+                "Codec-Data",
+                "Reservation-Priority",
+                "Reservation-Class",
+                "Transport-Class",
+                "Media-Authorization-Context-Id"
+            ]
+        },
+        {
+            "code": 517,
             "name": "ETSI-Digest-Nonce-Count",
             "vendorId": 13019,
             "type": "OctetString",
@@ -20976,6 +21584,18 @@
             "flags": {
                 "mandatory": true,
                 "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 518,
+            "name": "Media-Component-Number",
+            "vendorId": 10415,
+            "type": "Unsigned32",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
                 "mayEncrypt": true,
                 "vendorBit": true
             }
@@ -21006,6 +21626,26 @@
         },
         {
             "code": 519,
+            "name": "Media-Sub-Component",
+            "vendorId": 10415,
+            "type": "Grouped",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            },
+            "groupedAvps": [
+                "Flow-Number",
+                "Flow-Description",
+                "Flow-Status",
+                "Flow-Usage",
+                "Max-Requested-Bandwidth-UL",
+                "Max-Requested-Bandwidth-DL"
+            ]
+        },
+        {
+            "code": 519,
             "name": "ETSI-Digest-Entity-Body-Hash",
             "vendorId": 13019,
             "type": "OctetString",
@@ -21031,6 +21671,52 @@
                 {
                     "code": 0,
                     "name": "ENABLE_DETECTION"
+                }
+            ]
+        },
+        {
+            "code": 520,
+            "name": "Media-Type",
+            "vendorId": 10415,
+            "type": "Integer32",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            },
+            "enums": [
+                {
+                    "code": 0,
+                    "name": "AUDIO"
+                },
+                {
+                    "code": 1,
+                    "name": "VIDEO"
+                },
+                {
+                    "code": 2,
+                    "name": "DATA"
+                },
+                {
+                    "code": 3,
+                    "name": "APPLICATION"
+                },
+                {
+                    "code": 4,
+                    "name": "CONTROL"
+                },
+                {
+                    "code": 5,
+                    "name": "TEXT"
+                },
+                {
+                    "code": 6,
+                    "name": "MESSAGE"
+                },
+                {
+                    "code": 4294967295,
+                    "name": "OTHER"
                 }
             ]
         },
@@ -21070,6 +21756,18 @@
         },
         {
             "code": 521,
+            "name": "RR-Bandwidth",
+            "vendorId": 10415,
+            "type": "Unsigned32",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 521,
             "name": "ETSI-Digest-Response-Auth",
             "vendorId": 13019,
             "type": "OctetString",
@@ -21093,6 +21791,18 @@
             }
         },
         {
+            "code": 522,
+            "name": "RS-Bandwidth",
+            "vendorId": 10415,
+            "type": "Unsigned32",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
             "code": 523,
             "name": "SN-Phase0-PSAPName",
             "vendorId": 8164,
@@ -21105,6 +21815,40 @@
             }
         },
         {
+            "code": 523,
+            "name": "SIP-Forking-Indication",
+            "vendorId": 10415,
+            "type": "Integer32",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            },
+            "enums": [
+                {
+                    "code": 0,
+                    "name": "SINGLE_DIALOGUE"
+                },
+                {
+                    "code": 1,
+                    "name": "SEVERAL_DIALOGUES"
+                }
+            ]
+        },
+        {
+            "code": 524,
+            "name": "Codec-Data AVP",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
             "code": 525,
             "name": "SN-Charging-Id",
             "vendorId": 8164,
@@ -21112,6 +21856,18 @@
             "flags": {
                 "mandatory": true,
                 "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 525,
+            "name": "Service-URN",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
                 "mayEncrypt": true,
                 "vendorBit": true
             }
@@ -21138,6 +21894,23 @@
             ]
         },
         {
+            "code": 526,
+            "name": "Acceptable-Service-Info",
+            "vendorId": 10415,
+            "type": "Grouped",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            },
+            "groupedAvps": [
+                "Media-Component-Description",
+                "Max-Requested-Bandwidth-UL",
+                "Max-Requested-Bandwidth-DL"
+            ]
+        },
+        {
             "code": 527,
             "name": "SN-Service-Start-Timestamp",
             "vendorId": 8164,
@@ -21150,6 +21923,28 @@
             }
         },
         {
+            "code": 527,
+            "name": "Service-Info-Status",
+            "vendorId": 10415,
+            "type": "Integer32",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            },
+            "enums": [
+                {
+                    "code": 0,
+                    "name": "FINAL_SERVICE_INFORMATION"
+                },
+                {
+                    "code": 1,
+                    "name": "PRELIMINARY_SERVICE_INFORMATION"
+                }
+            ]
+        },
+        {
             "code": 528,
             "name": "SN-Rulebase-Id",
             "vendorId": 8164,
@@ -21157,6 +21952,18 @@
             "flags": {
                 "mandatory": true,
                 "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 528,
+            "name": "MPS-Identifier",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
                 "mayEncrypt": true,
                 "vendorBit": true
             }
@@ -21172,6 +21979,28 @@
                 "mayEncrypt": true,
                 "vendorBit": true
             }
+        },
+        {
+            "code": 529,
+            "name": "AF-Signalling-Protocol",
+            "vendorId": 10415,
+            "type": "Integer32",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            },
+            "enums": [
+                {
+                    "code": 0,
+                    "name": "NO_INFORMATION"
+                },
+                {
+                    "code": 1,
+                    "name": "SIP"
+                }
+            ]
         },
         {
             "code": 530,
@@ -21214,6 +22043,18 @@
             ]
         },
         {
+            "code": 531,
+            "name": "Sponsor-Identity",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
             "code": 532,
             "name": "Port-Start",
             "vendorId": 0,
@@ -21226,6 +22067,18 @@
             }
         },
         {
+            "code": 532,
+            "name": "Application-Service-Provider-Identity",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
             "code": 533,
             "name": "Port-End",
             "vendorId": 0,
@@ -21235,6 +22088,86 @@
                 "protected": false,
                 "mayEncrypt": false,
                 "vendorBit": false
+            }
+        },
+        {
+            "code": 533,
+            "name": "Rx-Request-Type",
+            "vendorId": 10415,
+            "type": "Integer32",
+            "flags": {
+                "mandatory": false,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            },
+            "enums": [
+                {
+                    "code": 0,
+                    "name": "INITIAL_REQUEST"
+                },
+                {
+                    "code": 1,
+                    "name": "UPDATE_REQUEST"
+                }
+            ]
+        },
+        {
+            "code": 534,
+            "name": "Min-Requested-Bandwidth-DL",
+            "vendorId": 10415,
+            "type": "Unsigned32",
+            "flags": {
+                "mandatory": false,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 535,
+            "name": "Min-Requested-Bandwidth-UL",
+            "vendorId": 10415,
+            "type": "Unsigned32",
+            "flags": {
+                "mandatory": false,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 536,
+            "name": "Required-Access-Info",
+            "vendorId": 10415,
+            "type": "Integer32",
+            "flags": {
+                "mandatory": false,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            },
+            "enums": [
+                {
+                    "code": 0,
+                    "name": "USER_LOCATION"
+                },
+                {
+                    "code": 1,
+                    "name": "MS_TIME_ZONE"
+                }
+            ]
+        },
+        {
+            "code": 537,
+            "name": "IP-Domain-Id",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": false,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
             }
         },
         {
@@ -21350,6 +22283,18 @@
             ]
         },
         {
+            "code": 600,
+            "name": "Visited-Network-Identifier",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            }
+        },
+        {
             "code": 601,
             "name": "Final-Unit-Indication",
             "vendorId": 193,
@@ -21357,6 +22302,18 @@
             "flags": {
                 "mandatory": true,
                 "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 601,
+            "name": "Public-Identity",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
                 "mayEncrypt": true,
                 "vendorBit": true
             }
@@ -21379,6 +22336,18 @@
             ]
         },
         {
+            "code": 602,
+            "name": "Server-Name",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
             "code": 603,
             "name": "Cost",
             "vendorId": 193,
@@ -21389,6 +22358,23 @@
                 "mayEncrypt": true,
                 "vendorBit": true
             }
+        },
+        {
+            "code": 603,
+            "name": "Server-Capabilities",
+            "vendorId": 10415,
+            "type": "Grouped",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            },
+            "groupedAvps": [
+                "Mandatory-Capability",
+                "Optional-Capability",
+                "Server-Name"
+            ]
         },
         {
             "code": 604,
@@ -21407,6 +22393,18 @@
             ]
         },
         {
+            "code": 604,
+            "name": "Mandatory-Capability",
+            "vendorId": 10415,
+            "type": "Unsigned32",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
             "code": 605,
             "name": "Accounting-Correlation-Id",
             "vendorId": 193,
@@ -21414,6 +22412,18 @@
             "flags": {
                 "mandatory": true,
                 "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 605,
+            "name": "Optional-Capability",
+            "vendorId": 10415,
+            "type": "Unsigned32",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
                 "mayEncrypt": true,
                 "vendorBit": true
             }
@@ -21436,6 +22446,18 @@
             ]
         },
         {
+            "code": 606,
+            "name": "User-Data",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
             "code": 607,
             "name": "Service-Parameter-Info",
             "vendorId": 193,
@@ -21450,6 +22472,18 @@
                 "Service-Parameter-Type",
                 "Service-Parameter-Value"
             ]
+        },
+        {
+            "code": 607,
+            "name": "SIP-Number-Auth-Items",
+            "vendorId": 10415,
+            "type": "Unsigned32",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
         },
         {
             "code": 608,
@@ -21546,6 +22580,18 @@
             ]
         },
         {
+            "code": 608,
+            "name": "SIP-Authentication-Scheme",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
             "code": 609,
             "name": "Service-Parameter-Value",
             "vendorId": 193,
@@ -21558,6 +22604,18 @@
             }
         },
         {
+            "code": 609,
+            "name": "SIP-Authenticate",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
             "code": 610,
             "name": "Event-Timestamp",
             "vendorId": 193,
@@ -21565,6 +22623,18 @@
             "flags": {
                 "mandatory": true,
                 "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 610,
+            "name": "SIP-Authorization",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
                 "mayEncrypt": true,
                 "vendorBit": true
             }
@@ -21600,6 +22670,18 @@
             ]
         },
         {
+            "code": 611,
+            "name": "SIP-Authentication-Context",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
             "code": 612,
             "name": "Unit-Value",
             "vendorId": 193,
@@ -21613,6 +22695,35 @@
             "groupedAvps": [
                 "Value-Digits",
                 "Exponent"
+            ]
+        },
+        {
+            "code": 612,
+            "name": "SIP-Auth-Data-Item",
+            "vendorId": 10415,
+            "type": "Grouped",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            },
+            "groupedAvps": [
+                "SIP-Item-Number",
+                "SIP-Authentication-Scheme",
+                "SIP-Authenticate",
+                "SIP-Authorization",
+                "SIP-Authentication-Context",
+                "Confidentiality-Key",
+                "Integrity-Key",
+                "SIP-Digest-Authenticate",
+                "Framed-IP-Address",
+                "Framed-IPv6-Prefix",
+                "Framed-Interface-Id",
+                "Line-Identifier",
+                "Authentication-Method",
+                "Authentication-Information-SIM",
+                "Authorization -Information-SIM"
             ]
         },
         {
@@ -21633,6 +22744,18 @@
             ]
         },
         {
+            "code": 613,
+            "name": "SIP-Item-Number",
+            "vendorId": 10415,
+            "type": "Unsigned32",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
             "code": 614,
             "name": "Check-Balance-Result",
             "vendorId": 193,
@@ -21651,6 +22774,76 @@
                 {
                     "code": 1,
                     "name": "No Credit"
+                }
+            ]
+        },
+        {
+            "code": 614,
+            "name": "Server-Assignment-Type",
+            "vendorId": 10415,
+            "type": "Integer32",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            },
+            "enums": [
+                {
+                    "code": 0,
+                    "name": "NO_ASSIGNMENT"
+                },
+                {
+                    "code": 1,
+                    "name": "REGISTRATION"
+                },
+                {
+                    "code": 2,
+                    "name": "RE_REGISTRATION"
+                },
+                {
+                    "code": 3,
+                    "name": "UNREGISTERED_USER"
+                },
+                {
+                    "code": 4,
+                    "name": "TIMEOUT_DEREGISTRATION"
+                },
+                {
+                    "code": 5,
+                    "name": "USER_DEREGISTRATION"
+                },
+                {
+                    "code": 6,
+                    "name": "TIMEOUT_DEREGISTRATION_STORE_SERVER_NAME"
+                },
+                {
+                    "code": 7,
+                    "name": "USER_DEREGISTRATION_STORE_SERVER_NAME"
+                },
+                {
+                    "code": 8,
+                    "name": "ADMINISTRATIVE_DEREGISTRATION"
+                },
+                {
+                    "code": 9,
+                    "name": "AUTHENTICATION_FAILURE"
+                },
+                {
+                    "code": 10,
+                    "name": "AUTHENTICATION_TIMEOUT"
+                },
+                {
+                    "code": 11,
+                    "name": "DEREGISTRATION_TOO_MUCH_DATA"
+                },
+                {
+                    "code": 12,
+                    "name": "AAA_USER_DATA_REQUEST"
+                },
+                {
+                    "code": 13,
+                    "name": "PGW_UPDATE"
                 }
             ]
         },
@@ -21685,6 +22878,22 @@
             ]
         },
         {
+            "code": 615,
+            "name": "Deregistration-Reason",
+            "vendorId": 10415,
+            "type": "Grouped",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            },
+            "groupedAvps": [
+                "Reason-Code",
+                "Reason-Info"
+            ]
+        },
+        {
             "code": 616,
             "name": "Exponent",
             "vendorId": 193,
@@ -21697,6 +22906,36 @@
             }
         },
         {
+            "code": 616,
+            "name": "Reason-Code",
+            "vendorId": 10415,
+            "type": "Integer32",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            },
+            "enums": [
+                {
+                    "code": 0,
+                    "name": "PERMANENT_TERMINATION"
+                },
+                {
+                    "code": 1,
+                    "name": "NEW_SERVER_ASSIGNED"
+                },
+                {
+                    "code": 2,
+                    "name": "SERVER_CHANGE"
+                },
+                {
+                    "code": 3,
+                    "name": "REMOVE_S-CSCF"
+                }
+            ]
+        },
+        {
             "code": 617,
             "name": "Value-Digits",
             "vendorId": 193,
@@ -21707,6 +22946,1053 @@
                 "mayEncrypt": true,
                 "vendorBit": true
             }
+        },
+        {
+            "code": 617,
+            "name": "Reason-Info",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 618,
+            "name": "Charging-Information",
+            "vendorId": 10415,
+            "type": "Grouped",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            },
+            "groupedAvps": [
+                "Primary-Event-Charging-Function-Name",
+                "Secondary-Event-Charging-Function-Name",
+                "Primary-Charging-Collection-Function-Name",
+                "Secondary-Charging-Collection-Function-Name"
+            ]
+        },
+        {
+            "code": 619,
+            "name": "Primary-Event-Charging-Function-Name",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 620,
+            "name": "Secondary-Event-Charging-Function-Name",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 621,
+            "name": "Primary-Charging-Collection-Function-Name",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 622,
+            "name": "Secondary-Charging-Collection-Function-Name",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 623,
+            "name": "User-Authorization-Type",
+            "vendorId": 10415,
+            "type": "Integer32",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            },
+            "enums": [
+                {
+                    "code": 0,
+                    "name": "REGISTRATION"
+                },
+                {
+                    "code": 1,
+                    "name": "DE_REGISTRATION"
+                },
+                {
+                    "code": 2,
+                    "name": "REGISTRATION_AND_CAPABILITIES"
+                }
+            ]
+        },
+        {
+            "code": 624,
+            "name": "User-Data-Already-Available",
+            "vendorId": 10415,
+            "type": "Integer32",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            },
+            "enums": [
+                {
+                    "code": 0,
+                    "name": "USER_DATA_NOT_AVAILABLE"
+                },
+                {
+                    "code": 1,
+                    "name": "USER_DATA_ALREADY_AVAILABLE"
+                }
+            ]
+        },
+        {
+            "code": 625,
+            "name": "Confidentiality-Key",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 626,
+            "name": "Integrity-Key",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 627,
+            "name": "User-Data-Request-Type(Obsolete)",
+            "vendorId": 10415,
+            "type": "Unsigned32",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            },
+            "enums": [
+                {
+                    "code": 0,
+                    "name": "Complete-Profile"
+                },
+                {
+                    "code": 1,
+                    "name": "Registered-Profile"
+                },
+                {
+                    "code": 2,
+                    "name": "Unregistered-Profile"
+                }
+            ]
+        },
+        {
+            "code": 628,
+            "name": "Supported-Features",
+            "vendorId": 10415,
+            "type": "Grouped",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            },
+            "groupedAvps": [
+                "Vendor-ID",
+                "Feature-List-ID",
+                "Feature-List"
+            ]
+        },
+        {
+            "code": 629,
+            "name": "Feature-List-ID",
+            "vendorId": 10415,
+            "type": "Unsigned32",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 630,
+            "name": "Feature-List",
+            "vendorId": 10415,
+            "type": "Unsigned32",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 631,
+            "name": "Supported-Applications",
+            "vendorId": 10415,
+            "type": "Grouped",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            },
+            "groupedAvps": [
+                "Auth-Application-Id",
+                "Acct-Application-Id",
+                "Vendor-Specific-Application-Id"
+            ]
+        },
+        {
+            "code": 632,
+            "name": "Associated-Identities",
+            "vendorId": 10415,
+            "type": "Grouped",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            },
+            "groupedAvps": [
+                "User-Name"
+            ]
+        },
+        {
+            "code": 633,
+            "name": "Originating-Request",
+            "vendorId": 10415,
+            "type": "Integer32",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            },
+            "enums": [
+                {
+                    "code": 0,
+                    "name": "ORIGINATING"
+                }
+            ]
+        },
+        {
+            "code": 634,
+            "name": "Wildcarded-PSI",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 635,
+            "name": "SIP-Digest-Authenticate AVP",
+            "vendorId": 10415,
+            "type": "Grouped",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            },
+            "groupedAvps": [
+                "Digest-Realm",
+                "Digest-Algorithm",
+                "Digest-QoP",
+                "Digest-HA1"
+            ]
+        },
+        {
+            "code": 636,
+            "name": "Wildcarded-IMPU",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 637,
+            "name": "UAR-Flags",
+            "vendorId": 10415,
+            "type": "Unsigned32",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 638,
+            "name": "Loose-Route-Indication",
+            "vendorId": 10415,
+            "type": "Integer32",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            },
+            "enums": [
+                {
+                    "code": 0,
+                    "name": "LOOSE_ROUTE_NOT_REQUIRED"
+                },
+                {
+                    "code": 1,
+                    "name": "LOOSE_ROUTE_REQUIRED"
+                }
+            ]
+        },
+        {
+            "code": 639,
+            "name": "SCSCF-Restoration-Info",
+            "vendorId": 10415,
+            "type": "Grouped",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            },
+            "groupedAvps": [
+                "User-Name",
+                "Restoration-Info"
+            ]
+        },
+        {
+            "code": 640,
+            "name": "Path",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 641,
+            "name": "Contact",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 642,
+            "name": "Subscription-Info",
+            "vendorId": 10415,
+            "type": "Grouped",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            },
+            "groupedAvps": [
+                "Call-ID-SIP-Header",
+                "From-SIP-Header",
+                "To-SIP-Header",
+                "Record-Route",
+                "Contact"
+            ]
+        },
+        {
+            "code": 643,
+            "name": "Call-ID-SIP-Header",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 644,
+            "name": "From-SIP-Header",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 645,
+            "name": "To-SIP-Header",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 646,
+            "name": "Record-Route",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 647,
+            "name": "Associated-Registered-Identities",
+            "vendorId": 10415,
+            "type": "Grouped",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            },
+            "groupedAvps": [
+                "User-Name"
+            ]
+        },
+        {
+            "code": 648,
+            "name": "Multiple-Registration-Indication",
+            "vendorId": 10415,
+            "type": "Integer32",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            },
+            "enums": [
+                {
+                    "code": 0,
+                    "name": "NOT_MULTIPLE_REGISTRATION"
+                },
+                {
+                    "code": 1,
+                    "name": "MULTIPLE_REGISTRATION"
+                }
+            ]
+        },
+        {
+            "code": 649,
+            "name": "Restoration-Info",
+            "vendorId": 10415,
+            "type": "Grouped",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            },
+            "groupedAvps": [
+                "Path",
+                "Contact",
+                "Subscription-Info"
+            ]
+        },
+        {
+            "code": 650,
+            "name": "Session-Priority",
+            "vendorId": 10415,
+            "type": "Integer32",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            },
+            "enums": [
+                {
+                    "code": 0,
+                    "name": "PRIORITY-0"
+                },
+                {
+                    "code": 1,
+                    "name": "PRIORITY-1"
+                },
+                {
+                    "code": 2,
+                    "name": "PRIORITY-2"
+                },
+                {
+                    "code": 3,
+                    "name": "PRIORITY-3"
+                },
+                {
+                    "code": 4,
+                    "name": "PRIORITY-4"
+                }
+            ]
+        },
+        {
+            "code": 651,
+            "name": "Identity-with-Emergency-Registration",
+            "vendorId": 10415,
+            "type": "Grouped",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            },
+            "groupedAvps": [
+                "User-Name",
+                "Public-Identity",
+                "Restoration-Info"
+            ]
+        },
+        {
+            "code": 700,
+            "name": "User-Identity",
+            "vendorId": 10415,
+            "type": "Grouped",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            },
+            "groupedAvps": [
+                "Public-Identity",
+                "MSISDN"
+            ]
+        },
+        {
+            "code": 701,
+            "name": "MSISDN",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 702,
+            "name": "User-Data",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 703,
+            "name": "Data-Reference",
+            "vendorId": 10415,
+            "type": "Integer32",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            },
+            "enums": [
+                {
+                    "code": 0,
+                    "name": "RepositoryData"
+                },
+                {
+                    "code": 1,
+                    "name": "Undefined"
+                },
+                {
+                    "code": 2,
+                    "name": "Undefined"
+                },
+                {
+                    "code": 3,
+                    "name": "Undefined"
+                },
+                {
+                    "code": 4,
+                    "name": "Undefined"
+                },
+                {
+                    "code": 5,
+                    "name": "Undefined"
+                },
+                {
+                    "code": 6,
+                    "name": "Undefined"
+                },
+                {
+                    "code": 7,
+                    "name": "Undefined"
+                },
+                {
+                    "code": 8,
+                    "name": "Undefined"
+                },
+                {
+                    "code": 9,
+                    "name": "Undefined"
+                },
+                {
+                    "code": 10,
+                    "name": "IMSPublicIdentity"
+                },
+                {
+                    "code": 11,
+                    "name": "IMSUserState"
+                },
+                {
+                    "code": 12,
+                    "name": "S-CSCFName"
+                },
+                {
+                    "code": 13,
+                    "name": "InitialFilterCriteria"
+                },
+                {
+                    "code": 14,
+                    "name": "LocationInformation"
+                },
+                {
+                    "code": 15,
+                    "name": "UserState"
+                },
+                {
+                    "code": 16,
+                    "name": "ChargingInformation"
+                },
+                {
+                    "code": 17,
+                    "name": "MSISDN"
+                },
+                {
+                    "code": 18,
+                    "name": "PSIActivation"
+                },
+                {
+                    "code": 19,
+                    "name": "DSAI"
+                },
+                {
+                    "code": 20,
+                    "name": "Reserved"
+                },
+                {
+                    "code": 21,
+                    "name": "ServiceLevelTraceInfo"
+                },
+                {
+                    "code": 22,
+                    "name": "IPAddressSecureBindingInformation"
+                },
+                {
+                    "code": 23,
+                    "name": "ServicePriorityLevel"
+                },
+                {
+                    "code": 24,
+                    "name": "SMSRegistrationInfo"
+                },
+                {
+                    "code": 25,
+                    "name": "UEReachabilityForIP"
+                },
+                {
+                    "code": 26,
+                    "name": "TADSinformation"
+                },
+                {
+                    "code": 27,
+                    "name": "STN-SR"
+                },
+                {
+                    "code": 28,
+                    "name": "UE-SRVCC-Capability"
+                },
+                {
+                    "code": 29,
+                    "name": "ExtendedPriority"
+                },
+                {
+                    "code": 30,
+                    "name": "CSRN"
+                },
+                {
+                    "code": 31,
+                    "name": "ReferenceLocationInformation"
+                }
+            ]
+        },
+        {
+            "code": 704,
+            "name": "Service-Indication",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": false
+            }
+        },
+        {
+            "code": 705,
+            "name": "Subs-Req-Type",
+            "vendorId": 10415,
+            "type": "Integer32",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            },
+            "enums": [
+                {
+                    "code": 0,
+                    "name": "Subscribe"
+                },
+                {
+                    "code": 1,
+                    "name": "Unsubscribe"
+                }
+            ]
+        },
+        {
+            "code": 706,
+            "name": "Requested-Domain",
+            "vendorId": 10415,
+            "type": "Integer32",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            },
+            "enums": [
+                {
+                    "code": 0,
+                    "name": "CS-Domain"
+                },
+                {
+                    "code": 1,
+                    "name": "PS-Domain"
+                }
+            ]
+        },
+        {
+            "code": 707,
+            "name": "Current-Location",
+            "vendorId": 10415,
+            "type": "Integer32",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            },
+            "enums": [
+                {
+                    "code": 0,
+                    "name": "DoNotNeedInitiateActiveLocationRetrieval"
+                },
+                {
+                    "code": 1,
+                    "name": "InitiateActiveLocationRetrieval"
+                }
+            ]
+        },
+        {
+            "code": 708,
+            "name": "Identity-Set",
+            "vendorId": 10415,
+            "type": "Integer32",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            },
+            "enums": [
+                {
+                    "code": 0,
+                    "name": "ALL_IDENTITIES"
+                },
+                {
+                    "code": 1,
+                    "name": "REGISTERED_IDENTITIES"
+                },
+                {
+                    "code": 2,
+                    "name": "IMPLICIT_IDENTITIES"
+                },
+                {
+                    "code": 3,
+                    "name": "ALIAS_IDENTITIES"
+                }
+            ]
+        },
+        {
+            "code": 709,
+            "name": "Expiry-Time",
+            "vendorId": 10415,
+            "type": "Time",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 710,
+            "name": "Send-Data-Indication",
+            "vendorId": 10415,
+            "type": "Integer32",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            },
+            "enums": [
+                {
+                    "code": 0,
+                    "name": "USER_DATA_NOT_REQUESTED"
+                },
+                {
+                    "code": 1,
+                    "name": "USER_DATA_REQUESTED"
+                }
+            ]
+        },
+        {
+            "code": 711,
+            "name": "DSAI-Tag",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 712,
+            "name": "One-Time-Notification",
+            "vendorId": 10415,
+            "type": "Integer32",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": false,
+                "vendorBit": true
+            },
+            "enums": [
+                {
+                    "code": 0,
+                    "name": "ONE_TIME_NOTIFICATION_REQUESTED"
+                }
+            ]
+        },
+        {
+            "code": 713,
+            "name": "Requested-Nodes",
+            "vendorId": 10415,
+            "type": "Unsigned32",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            },
+            "enums": [
+                {
+                    "code": 1,
+                    "name": "MME"
+                },
+                {
+                    "code": 2,
+                    "name": "SGSN"
+                },
+                {
+                    "code": 3,
+                    "name": "MME,SGSN"
+                }
+            ]
+        },
+        {
+            "code": 714,
+            "name": "Serving-Node-Indication",
+            "vendorId": 10415,
+            "type": "Integer32",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            },
+            "enums": [
+                {
+                    "code": 0,
+                    "name": "ONLY_SERVING_NODES_REQUIRED"
+                }
+            ]
+        },
+        {
+            "code": 715,
+            "name": "Repository-Data-ID",
+            "vendorId": 10415,
+            "type": "Grouped",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            },
+            "groupedAvps": [
+                "Service-Indication",
+                "Sequence-Number"
+            ]
+        },
+        {
+            "code": 716,
+            "name": "Sequence-Number",
+            "vendorId": 10415,
+            "type": "Unsigned32",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 717,
+            "name": "Pre-paging-Supported",
+            "vendorId": 10415,
+            "type": "Integer32",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            },
+            "enums": [
+                {
+                    "code": 0,
+                    "name": "PREPAGING_NOT_SUPPORTED"
+                },
+                {
+                    "code": 1,
+                    "name": "PREPAGING_SUPPORTED"
+                }
+            ]
+        },
+        {
+            "code": 718,
+            "name": "Local-Time-Zone-Indication",
+            "vendorId": 10415,
+            "type": "Integer32",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            },
+            "enums": [
+                {
+                    "code": 0,
+                    "name": "ONLY_LOCAL_TIME_ZONE_REQUESTED"
+                },
+                {
+                    "code": 1,
+                    "name": "LOCAL_TIME_ZONE_WITH_LOCATION_INFO_REQUESTED"
+                }
+            ]
+        },
+        {
+            "code": 719,
+            "name": "UDR-Flags",
+            "vendorId": 10415,
+            "type": "Unsigned32",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            },
+            "enums": [
+                {
+                    "code": 1,
+                    "name": "Location-Information-EPS-Supported"
+                },
+                {
+                    "code": 2,
+                    "name": "RAT-Type-Requested"
+                }
+            ]
         },
         {
             "code": 800,
@@ -23956,6 +26242,476 @@
                 "Access-Network-Physical-Access-ID-Value",
                 "Access-Network-Physical-Access-ID-Realm"
             ]
+        },
+        {
+            "code": 900,
+            "name": "TMGI",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 901,
+            "name": "Required-MBMS-Bearer-Capabilities",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 902,
+            "name": "MBMS-StartStop-Indication",
+            "vendorId": 10415,
+            "type": "Integer32",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            },
+            "enums": [
+                {
+                    "code": 0,
+                    "name": "START"
+                },
+                {
+                    "code": 1,
+                    "name": "STOP"
+                },
+                {
+                    "code": 2,
+                    "name": "UPDATE"
+                }
+            ]
+        },
+        {
+            "code": 903,
+            "name": "MBMS-Service-Area",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 904,
+            "name": "MBMS-Session-Duration",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 905,
+            "name": "Alternative-APN",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 906,
+            "name": "MBMS-Service-Type",
+            "vendorId": 10415,
+            "type": "Integer32",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            },
+            "enums": [
+                {
+                    "code": 0,
+                    "name": "MULTICAST"
+                },
+                {
+                    "code": 1,
+                    "name": "BROADCAST"
+                }
+            ]
+        },
+        {
+            "code": 907,
+            "name": "MBMS-2G-3G-Indicator",
+            "vendorId": 10415,
+            "type": "Integer32",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            },
+            "enums": [
+                {
+                    "code": 0,
+                    "name": "2G"
+                },
+                {
+                    "code": 1,
+                    "name": "3G"
+                },
+                {
+                    "code": 2,
+                    "name": "2G-AND-3G"
+                }
+            ]
+        },
+        {
+            "code": 908,
+            "name": "MBMS-Session-Identity",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 909,
+            "name": "RAI",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 910,
+            "name": "Additional-MBMS-Trace-Info",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 911,
+            "name": "MBMS-Time-To-Data-Transfer",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 912,
+            "name": "MBMS-Session-Repetition-Number",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 913,
+            "name": "MBMS-Required-QoS",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": false,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 914,
+            "name": "MBMS-Counting-Information",
+            "vendorId": 10415,
+            "type": "Integer32",
+            "flags": {
+                "mandatory": false,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            },
+            "enums": [
+                {
+                    "code": 0,
+                    "name": "COUNTING-NOT-APPLICABLE"
+                },
+                {
+                    "code": 1,
+                    "name": "COUNTING-APPLICABLE"
+                }
+            ]
+        },
+        {
+            "code": 915,
+            "name": "MBMS-User-Data-Mode-Indication",
+            "vendorId": 10415,
+            "type": "Integer32",
+            "flags": {
+                "mandatory": false,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            },
+            "enums": [
+                {
+                    "code": 0,
+                    "name": "Unicast"
+                },
+                {
+                    "code": 1,
+                    "name": "Multicast and Unicast"
+                }
+            ]
+        },
+        {
+            "code": 916,
+            "name": "MBMS-GGSN-Address",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 917,
+            "name": "MBMS-GGSN-IPv6-Address",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 918,
+            "name": "MBMS-BMSC-SSM-IP-Address",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 919,
+            "name": "MBMS-BMSC-SSM-IPv6-Address",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 920,
+            "name": "MBMS-Flow-Identifier",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": false,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 921,
+            "name": "CN-IP-Multicast-Distribution",
+            "vendorId": 10415,
+            "type": "Integer32",
+            "flags": {
+                "mandatory": false,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            },
+            "enums": [
+                {
+                    "code": 0,
+                    "name": "NO-IP-MULTICAST"
+                },
+                {
+                    "code": 1,
+                    "name": "IP-MULTICAST"
+                }
+            ]
+        },
+        {
+            "code": 922,
+            "name": "MBMS-HC-Indicator",
+            "vendorId": 10415,
+            "type": "Integer32",
+            "flags": {
+                "mandatory": false,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            },
+            "enums": [
+                {
+                    "code": 0,
+                    "name": "uncompressed-header"
+                },
+                {
+                    "code": 1,
+                    "name": "compressed-header"
+                }
+            ]
+        },
+        {
+            "code": 923,
+            "name": "MBMS-Access-Indicator",
+            "vendorId": 10415,
+            "type": "Integer32",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            },
+            "enums": [
+                {
+                    "code": 0,
+                    "name": "UTRAN"
+                },
+                {
+                    "code": 1,
+                    "name": "E-UTRAN"
+                },
+                {
+                    "code": 2,
+                    "name": "UTRAN-AND-E-UTRAN"
+                }
+            ]
+        },
+        {
+            "code": 924,
+            "name": "MBMS-GW-SSM-IP-Address",
+            "vendorId": 10415,
+            "type": "IPAddress",
+            "flags": {
+                "mandatory": false,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 925,
+            "name": "MBMS-GW-SSM-IPv6-Address",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": false,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 926,
+            "name": "MBMS-BMSC-SSM-UDP-Port",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": false,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 927,
+            "name": "MBMS-GW-UDP-Port",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": false,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 928,
+            "name": "MBMS-GW-UDP-Port-Indicator",
+            "vendorId": 10415,
+            "type": "Integer32",
+            "flags": {
+                "mandatory": false,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            },
+            "enums": [
+                {
+                    "code": 1,
+                    "name": "UDP-PORT-REQUIRED"
+                }
+            ]
+        },
+        {
+            "code": 929,
+            "name": "MBMS-Data-Transfer-Start",
+            "vendorId": 10415,
+            "type": "Unsigned64",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 930,
+            "name": "MBMS-Data-Transfer-Stop",
+            "vendorId": 10415,
+            "type": "Unsigned64",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            }
         },
         {
             "code": 1000,
@@ -32842,6 +35598,139 @@
             ]
         },
         {
+            "code": 2200,
+            "name": "Subsession-Decision-Info",
+            "vendorId": 10415,
+            "type": "Grouped",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            },
+            "groupedAvps": [
+                "Subsession-Id",
+                "AN-GW-Address",
+                "Result-Code",
+                "Experimental-Result-Code",
+                "Charging-Rule-Remove",
+                "Charging-Rule-Install",
+                "QoS-Rule-Install",
+                "QoS-Rule-Remove",
+                "Default-EPS-Bearer-QoS",
+                "Usage-Monitoring-Information",
+                "Session-Release-Cause",
+                "Bearer-Control-Mode",
+                "Event-Trigger",
+                "Online",
+                "Offline",
+                "QoS-Information"
+            ]
+        },
+        {
+            "code": 2201,
+            "name": "Subsession-Enforcement-Info",
+            "vendorId": 10415,
+            "type": "Grouped",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            },
+            "groupedAvps": [
+                "Subsession-Id",
+                "Subsession-Operation",
+                "AN-GW-Address",
+                "Bearer-Identifier",
+                "Bearer-Operation",
+                "Packet-Filter-Information",
+                "Packet-Filter-Operation",
+                "QoS-Information",
+                "Framed-IP-Address",
+                "Framed-IPv6-Address",
+                "CoA-Information",
+                "Called-Station-ID",
+                "PDN-Connection-ID",
+                "Bearer-Usage",
+                "TFT-Packet-Filter-Information",
+                "Online",
+                "Offline",
+                "Result-Code",
+                "Experimental-Result-Code",
+                "Charging-Rule-Report",
+                "QoS-Rule-Report",
+                "Default-EPS-Bearer-QoS",
+                "Network-Request-Support",
+                "Usage-Monitoring-Information",
+                "Multiple-BBERF-Action",
+                "Event-Trigger",
+                "Access-Network-Charging-Address",
+                "Access-Network-Charging-Identifier-Gx",
+                "Session-Linking-Indicator"
+            ]
+        },
+        {
+            "code": 2202,
+            "name": "Subsession-Id",
+            "vendorId": 10415,
+            "type": "Unsigned32",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 2203,
+            "name": "Subsession-Operation",
+            "vendorId": 10415,
+            "type": "Integer32",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            },
+            "enums": [
+                {
+                    "code": 0,
+                    "name": "TERMINATION"
+                },
+                {
+                    "code": 1,
+                    "name": "ESTABLISHMENT"
+                },
+                {
+                    "code": 2,
+                    "name": "MODIFICATION"
+                }
+            ]
+        },
+        {
+            "code": 2204,
+            "name": "Multiple-BBERF-Action",
+            "vendorId": 10415,
+            "type": "Integer32",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            },
+            "enums": [
+                {
+                    "code": 0,
+                    "name": "ESTABLISHMENT"
+                },
+                {
+                    "code": 1,
+                    "name": "TERMINATION"
+                }
+            ]
+        },
+        {
             "code": 2300,
             "name": "Reserved",
             "vendorId": 10415,
@@ -34741,6 +37630,141 @@
             "type": "OctetString",
             "flags": {
                 "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 60528,
+            "name": "Account-State",
+            "vendorId": 28458,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": false,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 60530,
+            "name": "Subscriber-Specific-Info",
+            "vendorId": 28458,
+            "type": "Grouped",
+            "flags": {
+                "mandatory": false,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            },
+            "groupedAvps": [
+                "Account-State",
+                "Active-Product-Offer",
+                "Billing-Account"
+            ]
+        },
+        {
+            "code": 60551,
+            "name": "Offer-Name",
+            "vendorId": 28458,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": false,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 60552,
+            "name": "Version",
+            "vendorId": 28458,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": false,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 60553,
+            "name": "Active-Product-Offer",
+            "vendorId": 28458,
+            "type": "Grouped",
+            "flags": {
+                "mandatory": false,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            },
+            "groupedAvps": [
+                "Offer-Name",
+                "Version",
+                "Expiry-Date"
+            ]
+        },
+        {
+            "code": 60554,
+            "name": "Expiry-Date",
+            "vendorId": 28458,
+            "type": "Time",
+            "flags": {
+                "mandatory": false,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 60557,
+            "name": "Billing-Account",
+            "vendorId": 28458,
+            "type": "Grouped",
+            "flags": {
+                "mandatory": false,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            },
+            "groupedAvps": [
+                "Billing-Account-Number",
+                "Account-Type",
+                "Account-Subtype"
+            ]
+        },
+        {
+            "code": 60558,
+            "name": "Billing-Account-Number",
+            "vendorId": 28458,
+            "type": "Integer32",
+            "flags": {
+                "mandatory": false,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 60559,
+            "name": "Account-Type",
+            "vendorId": 28458,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": false,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 60560,
+            "name": "Account-Subtype",
+            "vendorId": 28458,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": false,
                 "protected": true,
                 "mayEncrypt": true,
                 "vendorBit": true
