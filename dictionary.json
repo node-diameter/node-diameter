@@ -458,10 +458,10 @@
         {
             "code": 0,
             "name": "Dummy",
-            "vendorId": 12951,
-            "type": "OctetString",
+            "vendorId": 5806,
+            "type": "Unsigned32",
             "flags": {
-                "mandatory": true,
+                "mandatory": false,
                 "protected": true,
                 "mayEncrypt": true,
                 "vendorBit": true
@@ -470,10 +470,10 @@
         {
             "code": 0,
             "name": "Dummy",
-            "vendorId": 5806,
-            "type": "Unsigned32",
+            "vendorId": 12951,
+            "type": "OctetString",
             "flags": {
-                "mandatory": false,
+                "mandatory": true,
                 "protected": true,
                 "mayEncrypt": true,
                 "vendorBit": true
@@ -493,18 +493,6 @@
         },
         {
             "code": 1,
-            "name": "Ping-Timestamp-Secs",
-            "vendorId": 42,
-            "type": "Unsigned32",
-            "flags": {
-                "mandatory": false,
-                "protected": false,
-                "mayEncrypt": false,
-                "vendorBit": true
-            }
-        },
-        {
-            "code": 1,
             "name": "User-Name",
             "vendorId": 0,
             "type": "OctetString",
@@ -517,13 +505,13 @@
         },
         {
             "code": 1,
-            "name": "3GPP-IMSI",
-            "vendorId": 10415,
-            "type": "OctetString",
+            "name": "Ping-Timestamp-Secs",
+            "vendorId": 42,
+            "type": "Unsigned32",
             "flags": {
-                "mandatory": true,
-                "protected": true,
-                "mayEncrypt": true,
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
                 "vendorBit": true
             }
         },
@@ -540,14 +528,14 @@
             }
         },
         {
-            "code": 2,
-            "name": "Ping-Timestamp-Usecs",
-            "vendorId": 42,
-            "type": "Unsigned32",
+            "code": 1,
+            "name": "3GPP-IMSI",
+            "vendorId": 10415,
+            "type": "OctetString",
             "flags": {
-                "mandatory": false,
-                "protected": false,
-                "mayEncrypt": false,
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
                 "vendorBit": true
             }
         },
@@ -565,13 +553,13 @@
         },
         {
             "code": 2,
-            "name": "3GPP-Charging-Id",
-            "vendorId": 10415,
-            "type": "OctetString",
+            "name": "Ping-Timestamp-Usecs",
+            "vendorId": 42,
+            "type": "Unsigned32",
             "flags": {
-                "mandatory": true,
-                "protected": true,
-                "mayEncrypt": true,
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
                 "vendorBit": true
             }
         },
@@ -588,20 +576,16 @@
             }
         },
         {
-            "code": 3,
-            "name": "Ping-Timestamp",
-            "vendorId": 42,
-            "type": "Grouped",
+            "code": 2,
+            "name": "3GPP-Charging-Id",
+            "vendorId": 10415,
+            "type": "OctetString",
             "flags": {
-                "mandatory": false,
-                "protected": false,
-                "mayEncrypt": false,
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
                 "vendorBit": true
-            },
-            "groupedAvps": [
-                "Ping-Timestamp-Secs",
-                "Ping-Timestamp-Usecs"
-            ]
+            }
         },
         {
             "code": 3,
@@ -617,32 +601,18 @@
         },
         {
             "code": 3,
-            "name": "3GPP-PDP-Type",
-            "vendorId": 10415,
-            "type": "Integer32",
+            "name": "Ping-Timestamp",
+            "vendorId": 42,
+            "type": "Grouped",
             "flags": {
-                "mandatory": true,
-                "protected": true,
-                "mayEncrypt": true,
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
                 "vendorBit": true
             },
-            "enums": [
-                {
-                    "code": 0,
-                    "name": "IPv4"
-                },
-                {
-                    "code": 1,
-                    "name": "PPP"
-                },
-                {
-                    "code": 2,
-                    "name": "IPv6"
-                },
-                {
-                    "code": 3,
-                    "name": "IPv4v6"
-                }
+            "groupedAvps": [
+                "Ping-Timestamp-Secs",
+                "Ping-Timestamp-Usecs"
             ]
         },
         {
@@ -2764,6 +2734,36 @@
             ]
         },
         {
+            "code": 3,
+            "name": "3GPP-PDP-Type",
+            "vendorId": 10415,
+            "type": "Integer32",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            },
+            "enums": [
+                {
+                    "code": 0,
+                    "name": "IPv4"
+                },
+                {
+                    "code": 1,
+                    "name": "PPP"
+                },
+                {
+                    "code": 2,
+                    "name": "IPv6"
+                },
+                {
+                    "code": 3,
+                    "name": "IPv4v6"
+                }
+            ]
+        },
+        {
             "code": 4,
             "name": "NAS-IP-Address",
             "vendorId": 0,
@@ -2773,18 +2773,6 @@
                 "protected": true,
                 "mayEncrypt": true,
                 "vendorBit": false
-            }
-        },
-        {
-            "code": 4,
-            "name": "3GPP-CG-Address",
-            "vendorId": 10415,
-            "type": "IPAddress",
-            "flags": {
-                "mandatory": true,
-                "protected": true,
-                "mayEncrypt": true,
-                "vendorBit": true
             }
         },
         {
@@ -2990,6 +2978,18 @@
             ]
         },
         {
+            "code": 4,
+            "name": "3GPP-CG-Address",
+            "vendorId": 10415,
+            "type": "IPAddress",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
             "code": 5,
             "name": "NAS-Port",
             "vendorId": 0,
@@ -3003,9 +3003,9 @@
         },
         {
             "code": 5,
-            "name": "3GPP-GPRS-Negotiated-QoS-profile",
-            "vendorId": 10415,
-            "type": "OctetString",
+            "name": "SN-Primary-DNS-Server",
+            "vendorId": 8164,
+            "type": "IPAddress",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -3015,9 +3015,9 @@
         },
         {
             "code": 5,
-            "name": "SN-Primary-DNS-Server",
-            "vendorId": 8164,
-            "type": "IPAddress",
+            "name": "3GPP-GPRS-Negotiated-QoS-profile",
+            "vendorId": 10415,
+            "type": "OctetString",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -3117,8 +3117,8 @@
         },
         {
             "code": 6,
-            "name": "3GPP-SGSN-Address",
-            "vendorId": 10415,
+            "name": "SN-Secondary-DNS-Server",
+            "vendorId": 8164,
             "type": "IPAddress",
             "flags": {
                 "mandatory": true,
@@ -3129,8 +3129,8 @@
         },
         {
             "code": 6,
-            "name": "SN-Secondary-DNS-Server",
-            "vendorId": 8164,
+            "name": "3GPP-SGSN-Address",
+            "vendorId": 10415,
             "type": "IPAddress",
             "flags": {
                 "mandatory": true,
@@ -3211,9 +3211,9 @@
         },
         {
             "code": 7,
-            "name": "3GPP-GGSN-Address",
-            "vendorId": 10415,
-            "type": "IPAddress",
+            "name": "SN-Re-CHAP-Interval",
+            "vendorId": 8164,
+            "type": "Unsigned32",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -3223,9 +3223,9 @@
         },
         {
             "code": 7,
-            "name": "SN-Re-CHAP-Interval",
-            "vendorId": 8164,
-            "type": "Unsigned32",
+            "name": "3GPP-GGSN-Address",
+            "vendorId": 10415,
+            "type": "IPAddress",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -3247,8 +3247,8 @@
         },
         {
             "code": 8,
-            "name": "3GPP-IMSI-MCC-MNC",
-            "vendorId": 10415,
+            "name": "SN-IP-Pool-Name",
+            "vendorId": 8164,
             "type": "OctetString",
             "flags": {
                 "mandatory": true,
@@ -3259,8 +3259,8 @@
         },
         {
             "code": 8,
-            "name": "SN-IP-Pool-Name",
-            "vendorId": 8164,
+            "name": "3GPP-IMSI-MCC-MNC",
+            "vendorId": 10415,
             "type": "OctetString",
             "flags": {
                 "mandatory": true,
@@ -3279,18 +3279,6 @@
                 "protected": true,
                 "mayEncrypt": true,
                 "vendorBit": false
-            }
-        },
-        {
-            "code": 9,
-            "name": "3GPP-GGSN-MCC-MNC",
-            "vendorId": 10415,
-            "type": "OctetString",
-            "flags": {
-                "mandatory": true,
-                "protected": true,
-                "mayEncrypt": true,
-                "vendorBit": true
             }
         },
         {
@@ -3324,6 +3312,18 @@
             ]
         },
         {
+            "code": 9,
+            "name": "3GPP-GGSN-MCC-MNC",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
             "code": 10,
             "name": "Framed-Routing",
             "vendorId": 0,
@@ -3355,8 +3355,8 @@
         },
         {
             "code": 10,
-            "name": "3GPP-NSAPI",
-            "vendorId": 10415,
+            "name": "SN-IP-Filter-In",
+            "vendorId": 8164,
             "type": "OctetString",
             "flags": {
                 "mandatory": true,
@@ -3367,8 +3367,8 @@
         },
         {
             "code": 10,
-            "name": "SN-IP-Filter-In",
-            "vendorId": 8164,
+            "name": "3GPP-NSAPI",
+            "vendorId": 10415,
             "type": "OctetString",
             "flags": {
                 "mandatory": true,
@@ -3391,8 +3391,8 @@
         },
         {
             "code": 11,
-            "name": "3GPP-Session-Stop-Indicator",
-            "vendorId": 10415,
+            "name": "SN-IP-Filter-Out",
+            "vendorId": 8164,
             "type": "OctetString",
             "flags": {
                 "mandatory": true,
@@ -3403,8 +3403,8 @@
         },
         {
             "code": 11,
-            "name": "SN-IP-Filter-Out",
-            "vendorId": 8164,
+            "name": "3GPP-Session-Stop-Indicator",
+            "vendorId": 10415,
             "type": "OctetString",
             "flags": {
                 "mandatory": true,
@@ -3469,9 +3469,9 @@
         },
         {
             "code": 13,
-            "name": "3GPP-Charging-Characteristics",
-            "vendorId": 10415,
-            "type": "OctetString",
+            "name": "SN-Local-IP-Address",
+            "vendorId": 8164,
+            "type": "IPAddress",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -3481,9 +3481,9 @@
         },
         {
             "code": 13,
-            "name": "SN-Local-IP-Address",
-            "vendorId": 8164,
-            "type": "IPAddress",
+            "name": "3GPP-Charging-Characteristics",
+            "vendorId": 10415,
+            "type": "OctetString",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -3501,18 +3501,6 @@
                 "protected": true,
                 "mayEncrypt": true,
                 "vendorBit": false
-            }
-        },
-        {
-            "code": 14,
-            "name": "3GPP-CG-IPv6-Address",
-            "vendorId": 10415,
-            "type": "OctetString",
-            "flags": {
-                "mandatory": true,
-                "protected": true,
-                "mayEncrypt": true,
-                "vendorBit": true
             }
         },
         {
@@ -3536,6 +3524,18 @@
                     "name": "Yes"
                 }
             ]
+        },
+        {
+            "code": 14,
+            "name": "3GPP-CG-IPv6-Address",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
         },
         {
             "code": 15,
@@ -3589,30 +3589,6 @@
         },
         {
             "code": 15,
-            "name": "3GPP-SGSN-IPv6-Address",
-            "vendorId": 10415,
-            "type": "OctetString",
-            "flags": {
-                "mandatory": true,
-                "protected": true,
-                "mayEncrypt": true,
-                "vendorBit": true
-            }
-        },
-        {
-            "code": 15,
-            "name": "SN-PPP-Outbound-Password",
-            "vendorId": 8164,
-            "type": "OctetString",
-            "flags": {
-                "mandatory": true,
-                "protected": true,
-                "mayEncrypt": true,
-                "vendorBit": true
-            }
-        },
-        {
-            "code": 15,
             "name": "Detailed-Result",
             "vendorId": 637,
             "type": "Grouped",
@@ -3628,6 +3604,30 @@
             ]
         },
         {
+            "code": 15,
+            "name": "SN-PPP-Outbound-Password",
+            "vendorId": 8164,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 15,
+            "name": "3GPP-SGSN-IPv6-Address",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
             "code": 16,
             "name": "Login-TCP-Port",
             "vendorId": 0,
@@ -3641,11 +3641,11 @@
         },
         {
             "code": 16,
-            "name": "3GPP-GGSN-IPv6-Address",
-            "vendorId": 10415,
+            "name": "Detailed-Result-Cause",
+            "vendorId": 637,
             "type": "OctetString",
             "flags": {
-                "mandatory": true,
+                "mandatory": false,
                 "protected": true,
                 "mayEncrypt": true,
                 "vendorBit": true
@@ -3665,11 +3665,11 @@
         },
         {
             "code": 16,
-            "name": "Detailed-Result-Cause",
-            "vendorId": 637,
+            "name": "3GPP-GGSN-IPv6-Address",
+            "vendorId": 10415,
             "type": "OctetString",
             "flags": {
-                "mandatory": false,
+                "mandatory": true,
                 "protected": true,
                 "mayEncrypt": true,
                 "vendorBit": true
@@ -3689,9 +3689,9 @@
         },
         {
             "code": 17,
-            "name": "3GPP-IPv6-DNS-Server",
-            "vendorId": 10415,
-            "type": "OctetString",
+            "name": "Detailed-Result-Code",
+            "vendorId": 637,
+            "type": "Unsigned32",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -3713,9 +3713,9 @@
         },
         {
             "code": 17,
-            "name": "Detailed-Result-Code",
-            "vendorId": 637,
-            "type": "Unsigned32",
+            "name": "3GPP-IPv6-DNS-Server",
+            "vendorId": 10415,
+            "type": "OctetString",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -3737,8 +3737,8 @@
         },
         {
             "code": 18,
-            "name": "3GPP-SGSN-MCC-MNC",
-            "vendorId": 10415,
+            "name": "SN-IP-Out-ACL",
+            "vendorId": 8164,
             "type": "OctetString",
             "flags": {
                 "mandatory": true,
@@ -3749,8 +3749,8 @@
         },
         {
             "code": 18,
-            "name": "SN-IP-Out-ACL",
-            "vendorId": 8164,
+            "name": "3GPP-SGSN-MCC-MNC",
+            "vendorId": 10415,
             "type": "OctetString",
             "flags": {
                 "mandatory": true,
@@ -3769,18 +3769,6 @@
                 "protected": true,
                 "mayEncrypt": true,
                 "vendorBit": false
-            }
-        },
-        {
-            "code": 19,
-            "name": "3GPP-Teardown-Indicator",
-            "vendorId": 10415,
-            "type": "OctetString",
-            "flags": {
-                "mandatory": true,
-                "protected": true,
-                "mayEncrypt": true,
-                "vendorBit": true
             }
         },
         {
@@ -3806,6 +3794,18 @@
             ]
         },
         {
+            "code": 19,
+            "name": "3GPP-Teardown-Indicator",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
             "code": 20,
             "name": "Callback-Id",
             "vendorId": 0,
@@ -3815,18 +3815,6 @@
                 "protected": true,
                 "mayEncrypt": true,
                 "vendorBit": false
-            }
-        },
-        {
-            "code": 20,
-            "name": "3GPP-IMEISV",
-            "vendorId": 10415,
-            "type": "OctetString",
-            "flags": {
-                "mandatory": true,
-                "protected": true,
-                "mayEncrypt": true,
-                "vendorBit": true
             }
         },
         {
@@ -3948,6 +3936,18 @@
             ]
         },
         {
+            "code": 20,
+            "name": "3GPP-IMEISV",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
             "code": 21,
             "name": "Unassigned",
             "vendorId": 0,
@@ -3957,18 +3957,6 @@
                 "protected": false,
                 "mayEncrypt": false,
                 "vendorBit": false
-            }
-        },
-        {
-            "code": 21,
-            "name": "3GPP-RAT-Type",
-            "vendorId": 10415,
-            "type": "OctetString",
-            "flags": {
-                "mandatory": true,
-                "protected": true,
-                "mayEncrypt": true,
-                "vendorBit": true
             }
         },
         {
@@ -4034,6 +4022,18 @@
             ]
         },
         {
+            "code": 21,
+            "name": "3GPP-RAT-Type",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
             "code": 22,
             "name": "Framed-Route",
             "vendorId": 0,
@@ -4043,18 +4043,6 @@
                 "protected": true,
                 "mayEncrypt": true,
                 "vendorBit": false
-            }
-        },
-        {
-            "code": 22,
-            "name": "3GPP-User-Location-Info",
-            "vendorId": 10415,
-            "type": "OctetString",
-            "flags": {
-                "mandatory": true,
-                "protected": true,
-                "mayEncrypt": true,
-                "vendorBit": true
             }
         },
         {
@@ -4080,6 +4068,18 @@
             ]
         },
         {
+            "code": 22,
+            "name": "3GPP-User-Location-Info",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
             "code": 23,
             "name": "Framed-IPX-Network",
             "vendorId": 0,
@@ -4093,9 +4093,9 @@
         },
         {
             "code": 23,
-            "name": "3GPP-MS-TimeZone",
-            "vendorId": 10415,
-            "type": "OctetString",
+            "name": "SN-Min-Compress-Size",
+            "vendorId": 8164,
+            "type": "Unsigned32",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -4105,9 +4105,9 @@
         },
         {
             "code": 23,
-            "name": "SN-Min-Compress-Size",
-            "vendorId": 8164,
-            "type": "Unsigned32",
+            "name": "3GPP-MS-TimeZone",
+            "vendorId": 10415,
+            "type": "OctetString",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -4125,18 +4125,6 @@
                 "protected": true,
                 "mayEncrypt": true,
                 "vendorBit": false
-            }
-        },
-        {
-            "code": 24,
-            "name": "3GPP-CAMEL-Charging-Info",
-            "vendorId": 10415,
-            "type": "OctetString",
-            "flags": {
-                "mandatory": true,
-                "protected": true,
-                "mayEncrypt": true,
-                "vendorBit": true
             }
         },
         {
@@ -4238,6 +4226,18 @@
             ]
         },
         {
+            "code": 24,
+            "name": "3GPP-CAMEL-Charging-Info",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
             "code": 25,
             "name": "Class",
             "vendorId": 0,
@@ -4247,18 +4247,6 @@
                 "protected": true,
                 "mayEncrypt": true,
                 "vendorBit": false
-            }
-        },
-        {
-            "code": 25,
-            "name": "3GPP-Packet-Filter",
-            "vendorId": 10415,
-            "type": "OctetString",
-            "flags": {
-                "mandatory": true,
-                "protected": true,
-                "mayEncrypt": true,
-                "vendorBit": true
             }
         },
         {
@@ -4284,6 +4272,18 @@
             ]
         },
         {
+            "code": 25,
+            "name": "3GPP-Packet-Filter",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
             "code": 26,
             "name": "Vendor-Specific",
             "vendorId": 0,
@@ -4297,8 +4297,8 @@
         },
         {
             "code": 26,
-            "name": "3GPP-Negotiated-DSCP",
-            "vendorId": 10415,
+            "name": "SN-Tunnel-Password",
+            "vendorId": 8164,
             "type": "OctetString",
             "flags": {
                 "mandatory": true,
@@ -4309,8 +4309,8 @@
         },
         {
             "code": 26,
-            "name": "SN-Tunnel-Password",
-            "vendorId": 8164,
+            "name": "3GPP-Negotiated-DSCP",
+            "vendorId": 10415,
             "type": "OctetString",
             "flags": {
                 "mandatory": true,
@@ -4329,18 +4329,6 @@
                 "protected": true,
                 "mayEncrypt": true,
                 "vendorBit": false
-            }
-        },
-        {
-            "code": 27,
-            "name": "3GPP-Allocate-IP-Type",
-            "vendorId": 10415,
-            "type": "OctetString",
-            "flags": {
-                "mandatory": true,
-                "protected": true,
-                "mayEncrypt": true,
-                "vendorBit": true
             }
         },
         {
@@ -4368,6 +4356,18 @@
                     "name": "prioritized"
                 }
             ]
+        },
+        {
+            "code": 27,
+            "name": "3GPP-Allocate-IP-Type",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
         },
         {
             "code": 28,
@@ -10248,18 +10248,6 @@
         },
         {
             "code": 204,
-            "name": "SN-Admin-Expiry",
-            "vendorId": 8164,
-            "type": "Integer32",
-            "flags": {
-                "mandatory": true,
-                "protected": true,
-                "mayEncrypt": true,
-                "vendorBit": true
-            }
-        },
-        {
-            "code": 204,
             "name": "More-Peers",
             "vendorId": 11,
             "type": "Grouped",
@@ -10275,6 +10263,18 @@
                 "Peer-State",
                 "Peer-State-Change"
             ]
+        },
+        {
+            "code": 204,
+            "name": "SN-Admin-Expiry",
+            "vendorId": 8164,
+            "type": "Integer32",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
         },
         {
             "code": 205,
@@ -11392,28 +11392,6 @@
         },
         {
             "code": 256,
-            "name": "Context-Type",
-            "vendorId": 12645,
-            "type": "Unsigned32",
-            "flags": {
-                "mandatory": false,
-                "protected": false,
-                "mayEncrypt": false,
-                "vendorBit": true
-            },
-            "enums": [
-                {
-                    "code": 0,
-                    "name": "PRIMARY"
-                },
-                {
-                    "code": 1,
-                    "name": "SECONDARY"
-                }
-            ]
-        },
-        {
-            "code": 256,
             "name": "SN-Role-Of-Node",
             "vendorId": 8164,
             "type": "Unsigned32",
@@ -11435,6 +11413,28 @@
             ]
         },
         {
+            "code": 256,
+            "name": "Context-Type",
+            "vendorId": 12645,
+            "type": "Unsigned32",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            },
+            "enums": [
+                {
+                    "code": 0,
+                    "name": "PRIMARY"
+                },
+                {
+                    "code": 1,
+                    "name": "SECONDARY"
+                }
+            ]
+        },
+        {
             "code": 257,
             "name": "Host-IP-Address",
             "vendorId": 0,
@@ -11448,18 +11448,6 @@
         },
         {
             "code": 257,
-            "name": "Quota-Consumption-Time",
-            "vendorId": 12645,
-            "type": "Unsigned32",
-            "flags": {
-                "mandatory": false,
-                "protected": false,
-                "mayEncrypt": false,
-                "vendorBit": true
-            }
-        },
-        {
-            "code": 257,
             "name": "SN-Session-Id",
             "vendorId": 8164,
             "type": "OctetString",
@@ -11467,6 +11455,18 @@
                 "mandatory": true,
                 "protected": true,
                 "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 257,
+            "name": "Quota-Consumption-Time",
+            "vendorId": 12645,
+            "type": "Unsigned32",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
                 "vendorBit": true
             }
         },
@@ -11826,18 +11826,6 @@
         },
         {
             "code": 258,
-            "name": "Quota-Holding-Time",
-            "vendorId": 12645,
-            "type": "Unsigned32",
-            "flags": {
-                "mandatory": false,
-                "protected": false,
-                "mayEncrypt": false,
-                "vendorBit": true
-            }
-        },
-        {
-            "code": 258,
             "name": "SN-SIP-Request-Time-Stamp",
             "vendorId": 8164,
             "type": "OctetString",
@@ -11845,6 +11833,18 @@
                 "mandatory": true,
                 "protected": true,
                 "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 258,
+            "name": "Quota-Holding-Time",
+            "vendorId": 12645,
+            "type": "Unsigned32",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
                 "vendorBit": true
             }
         },
@@ -12148,18 +12148,6 @@
         },
         {
             "code": 259,
-            "name": "Time-Quota-Threshold",
-            "vendorId": 12645,
-            "type": "Unsigned32",
-            "flags": {
-                "mandatory": false,
-                "protected": false,
-                "mayEncrypt": false,
-                "vendorBit": true
-            }
-        },
-        {
-            "code": 259,
             "name": "SN-SIP-Response-Time-Stamp",
             "vendorId": 8164,
             "type": "OctetString",
@@ -12167,6 +12155,18 @@
                 "mandatory": true,
                 "protected": true,
                 "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 259,
+            "name": "Time-Quota-Threshold",
+            "vendorId": 12645,
+            "type": "Unsigned32",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
                 "vendorBit": true
             }
         },
@@ -12186,6 +12186,18 @@
                 "Auth-Application-Id",
                 "Acct-Application-Id"
             ]
+        },
+        {
+            "code": 260,
+            "name": "SN-IMS-Charging-Identifier",
+            "vendorId": 8164,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
         },
         {
             "code": 260,
@@ -12212,18 +12224,6 @@
                     "name": "WLAN"
                 }
             ]
-        },
-        {
-            "code": 260,
-            "name": "SN-IMS-Charging-Identifier",
-            "vendorId": 8164,
-            "type": "OctetString",
-            "flags": {
-                "mandatory": true,
-                "protected": true,
-                "mayEncrypt": true,
-                "vendorBit": true
-            }
         },
         {
             "code": 261,
@@ -12266,6 +12266,40 @@
                     "name": "ALL_USER"
                 }
             ]
+        },
+        {
+            "code": 261,
+            "name": "Acc-Service-Type",
+            "vendorId": 193,
+            "type": "Integer32",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            },
+            "enums": [
+                {
+                    "code": 0,
+                    "name": "Audio Conference"
+                },
+                {
+                    "code": 1,
+                    "name": "Video Conference"
+                }
+            ]
+        },
+        {
+            "code": 261,
+            "name": "SN-Originating-IOI",
+            "vendorId": 8164,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
         },
         {
             "code": 261,
@@ -12314,40 +12348,6 @@
             ]
         },
         {
-            "code": 261,
-            "name": "SN-Originating-IOI",
-            "vendorId": 8164,
-            "type": "OctetString",
-            "flags": {
-                "mandatory": true,
-                "protected": true,
-                "mayEncrypt": true,
-                "vendorBit": true
-            }
-        },
-        {
-            "code": 261,
-            "name": "Acc-Service-Type",
-            "vendorId": 193,
-            "type": "Integer32",
-            "flags": {
-                "mandatory": true,
-                "protected": false,
-                "mayEncrypt": false,
-                "vendorBit": true
-            },
-            "enums": [
-                {
-                    "code": 0,
-                    "name": "Audio Conference"
-                },
-                {
-                    "code": 1,
-                    "name": "Video Conference"
-                }
-            ]
-        },
-        {
             "code": 262,
             "name": "Redirect-Max-Cache-Time",
             "vendorId": 0,
@@ -12385,18 +12385,6 @@
         },
         {
             "code": 263,
-            "name": "Time-Of-First-Usage",
-            "vendorId": 12645,
-            "type": "Time",
-            "flags": {
-                "mandatory": false,
-                "protected": false,
-                "mayEncrypt": false,
-                "vendorBit": true
-            }
-        },
-        {
-            "code": 263,
             "name": "SN-SDP-Session-Description",
             "vendorId": 8164,
             "type": "OctetString",
@@ -12404,6 +12392,18 @@
                 "mandatory": true,
                 "protected": true,
                 "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 263,
+            "name": "Time-Of-First-Usage",
+            "vendorId": 12645,
+            "type": "Time",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
                 "vendorBit": true
             }
         },
@@ -12421,18 +12421,6 @@
         },
         {
             "code": 264,
-            "name": "Time-Of-Last-Usage",
-            "vendorId": 12645,
-            "type": "Time",
-            "flags": {
-                "mandatory": false,
-                "protected": false,
-                "mayEncrypt": false,
-                "vendorBit": true
-            }
-        },
-        {
-            "code": 264,
             "name": "SN-GGSN-Address",
             "vendorId": 8164,
             "type": "IPAddress",
@@ -12440,6 +12428,18 @@
                 "mandatory": true,
                 "protected": true,
                 "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 264,
+            "name": "Time-Of-Last-Usage",
+            "vendorId": 12645,
+            "type": "Time",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
                 "vendorBit": true
             }
         },
@@ -12453,6 +12453,18 @@
                 "protected": true,
                 "mayEncrypt": false,
                 "vendorBit": false
+            }
+        },
+        {
+            "code": 265,
+            "name": "SN-Sec-IP-Pool-Name",
+            "vendorId": 8164,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
             }
         },
         {
@@ -12471,18 +12483,6 @@
             ]
         },
         {
-            "code": 265,
-            "name": "SN-Sec-IP-Pool-Name",
-            "vendorId": 8164,
-            "type": "OctetString",
-            "flags": {
-                "mandatory": true,
-                "protected": true,
-                "mayEncrypt": true,
-                "vendorBit": true
-            }
-        },
-        {
             "code": 266,
             "name": "Vendor-Id",
             "vendorId": 0,
@@ -12492,6 +12492,18 @@
                 "protected": true,
                 "mayEncrypt": false,
                 "vendorBit": false
+            }
+        },
+        {
+            "code": 266,
+            "name": "SN-Authorised-Qos",
+            "vendorId": 8164,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
             }
         },
         {
@@ -12569,18 +12581,6 @@
             ]
         },
         {
-            "code": 266,
-            "name": "SN-Authorised-Qos",
-            "vendorId": 8164,
-            "type": "OctetString",
-            "flags": {
-                "mandatory": true,
-                "protected": true,
-                "mayEncrypt": true,
-                "vendorBit": true
-            }
-        },
-        {
             "code": 267,
             "name": "Firmware-Revision",
             "vendorId": 0,
@@ -12590,18 +12590,6 @@
                 "protected": false,
                 "mayEncrypt": false,
                 "vendorBit": false
-            }
-        },
-        {
-            "code": 267,
-            "name": "User-Location-Information",
-            "vendorId": 12645,
-            "type": "OctetString",
-            "flags": {
-                "mandatory": false,
-                "protected": false,
-                "mayEncrypt": false,
-                "vendorBit": true
             }
         },
         {
@@ -12657,6 +12645,18 @@
                     "name": "Internal_Error"
                 }
             ]
+        },
+        {
+            "code": 267,
+            "name": "User-Location-Information",
+            "vendorId": 12645,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            }
         },
         {
             "code": 268,
@@ -12934,18 +12934,6 @@
         },
         {
             "code": 268,
-            "name": "Volume-Quota-Threshold",
-            "vendorId": 12645,
-            "type": "Unsigned32",
-            "flags": {
-                "mandatory": false,
-                "protected": false,
-                "mayEncrypt": false,
-                "vendorBit": true
-            }
-        },
-        {
-            "code": 268,
             "name": "SN-Node-Functionality",
             "vendorId": 8164,
             "type": "Unsigned32",
@@ -12969,6 +12957,18 @@
                     "name": "I-CSCF"
                 }
             ]
+        },
+        {
+            "code": 268,
+            "name": "Volume-Quota-Threshold",
+            "vendorId": 12645,
+            "type": "Unsigned32",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            }
         },
         {
             "code": 269,
@@ -13601,18 +13601,6 @@
         },
         {
             "code": 290,
-            "name": "SN-Max-Sec-Contexts-Per-Subs",
-            "vendorId": 8164,
-            "type": "Unsigned32",
-            "flags": {
-                "mandatory": true,
-                "protected": true,
-                "mayEncrypt": true,
-                "vendorBit": true
-            }
-        },
-        {
-            "code": 290,
             "name": "Rule-Space-Suggestion",
             "vendorId": 193,
             "type": "OctetString",
@@ -13620,6 +13608,18 @@
                 "mandatory": true,
                 "protected": false,
                 "mayEncrypt": false,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 290,
+            "name": "SN-Max-Sec-Contexts-Per-Subs",
+            "vendorId": 8164,
+            "type": "Unsigned32",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
                 "vendorBit": true
             }
         },
@@ -13633,6 +13633,18 @@
                 "protected": false,
                 "mayEncrypt": false,
                 "vendorBit": false
+            }
+        },
+        {
+            "code": 291,
+            "name": "Rule-Space-Decision",
+            "vendorId": 193,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
             }
         },
         {
@@ -13658,18 +13670,6 @@
             ]
         },
         {
-            "code": 291,
-            "name": "Rule-Space-Decision",
-            "vendorId": 193,
-            "type": "OctetString",
-            "flags": {
-                "mandatory": true,
-                "protected": false,
-                "mayEncrypt": false,
-                "vendorBit": true
-            }
-        },
-        {
             "code": 292,
             "name": "Redirect-Host",
             "vendorId": 0,
@@ -13679,6 +13679,18 @@
                 "protected": true,
                 "mayEncrypt": false,
                 "vendorBit": false
+            }
+        },
+        {
+            "code": 292,
+            "name": "Bearer-Control-Options",
+            "vendorId": 193,
+            "type": "Unsigned32",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
             }
         },
         {
@@ -13702,18 +13714,6 @@
                     "name": "Enable"
                 }
             ]
-        },
-        {
-            "code": 292,
-            "name": "Bearer-Control-Options",
-            "vendorId": 193,
-            "type": "Unsigned32",
-            "flags": {
-                "mandatory": true,
-                "protected": false,
-                "mayEncrypt": false,
-                "vendorBit": true
-            }
         },
         {
             "code": 293,
@@ -13892,48 +13892,6 @@
                 "mayEncrypt": true,
                 "vendorBit": true
             }
-        },
-        {
-            "code": 298,
-            "name": "ETSI-Experimental-Result-Code",
-            "vendorId": 13019,
-            "type": "Unsigned32",
-            "flags": {
-                "mandatory": true,
-                "protected": false,
-                "mayEncrypt": false,
-                "vendorBit": true
-            },
-            "enums": [
-                {
-                    "code": 4041,
-                    "name": "INSUFFICIENT_RESOURCES"
-                },
-                {
-                    "code": 4043,
-                    "name": "COMMIT_FAILURE"
-                },
-                {
-                    "code": 4044,
-                    "name": "REFRESH_FAILURE"
-                },
-                {
-                    "code": 4045,
-                    "name": "QOS_PROFILE_FAILURE"
-                },
-                {
-                    "code": 4046,
-                    "name": "ACCESS_PROFILE_FAILURE"
-                },
-                {
-                    "code": 4047,
-                    "name": "PRIORITY_NOT_GRANTED"
-                },
-                {
-                    "code": 5041,
-                    "name": "MODIFICATION_FAILURE"
-                }
-            ]
         },
         {
             "code": 298,
@@ -14284,16 +14242,46 @@
             ]
         },
         {
-            "code": 299,
-            "name": "Not defined in .xml",
+            "code": 298,
+            "name": "ETSI-Experimental-Result-Code",
             "vendorId": 13019,
-            "type": "OctetString",
+            "type": "Unsigned32",
             "flags": {
                 "mandatory": true,
                 "protected": false,
-                "mayEncrypt": true,
+                "mayEncrypt": false,
                 "vendorBit": true
-            }
+            },
+            "enums": [
+                {
+                    "code": 4041,
+                    "name": "INSUFFICIENT_RESOURCES"
+                },
+                {
+                    "code": 4043,
+                    "name": "COMMIT_FAILURE"
+                },
+                {
+                    "code": 4044,
+                    "name": "REFRESH_FAILURE"
+                },
+                {
+                    "code": 4045,
+                    "name": "QOS_PROFILE_FAILURE"
+                },
+                {
+                    "code": 4046,
+                    "name": "ACCESS_PROFILE_FAILURE"
+                },
+                {
+                    "code": 4047,
+                    "name": "PRIORITY_NOT_GRANTED"
+                },
+                {
+                    "code": 5041,
+                    "name": "MODIFICATION_FAILURE"
+                }
+            ]
         },
         {
             "code": 299,
@@ -14340,21 +14328,16 @@
             ]
         },
         {
-            "code": 300,
-            "name": "Globally-Unique-Address",
+            "code": 299,
+            "name": "Not defined in .xml",
             "vendorId": 13019,
-            "type": "Grouped",
+            "type": "OctetString",
             "flags": {
                 "mandatory": true,
                 "protected": false,
                 "mayEncrypt": true,
                 "vendorBit": true
-            },
-            "groupedAvps": [
-                "Framed-IP-Address",
-                "Framed-IPv6-Prefix",
-                "Address-Realm"
-            ]
+            }
         },
         {
             "code": 300,
@@ -14394,16 +14377,21 @@
             }
         },
         {
-            "code": 301,
-            "name": "Address-Realm",
+            "code": 300,
+            "name": "Globally-Unique-Address",
             "vendorId": 13019,
-            "type": "OctetString",
+            "type": "Grouped",
             "flags": {
                 "mandatory": true,
                 "protected": false,
                 "mayEncrypt": true,
                 "vendorBit": true
-            }
+            },
+            "groupedAvps": [
+                "Framed-IP-Address",
+                "Framed-IPv6-Prefix",
+                "Address-Realm"
+            ]
         },
         {
             "code": 301,
@@ -14430,12 +14418,12 @@
             }
         },
         {
-            "code": 302,
-            "name": "Logical-Access-Id",
+            "code": 301,
+            "name": "Address-Realm",
             "vendorId": 13019,
             "type": "OctetString",
             "flags": {
-                "mandatory": false,
+                "mandatory": true,
                 "protected": false,
                 "mayEncrypt": true,
                 "vendorBit": true
@@ -14466,6 +14454,42 @@
             }
         },
         {
+            "code": 302,
+            "name": "Logical-Access-Id",
+            "vendorId": 13019,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 303,
+            "name": "Unallocated",
+            "vendorId": 0,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": false
+            }
+        },
+        {
+            "code": 303,
+            "name": "SN-QOS-HLR-Profile",
+            "vendorId": 8164,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
             "code": 303,
             "name": "Initial-Gate-Setting",
             "vendorId": 13019,
@@ -14483,7 +14507,7 @@
             ]
         },
         {
-            "code": 303,
+            "code": 304,
             "name": "Unallocated",
             "vendorId": 0,
             "type": "OctetString",
@@ -14495,8 +14519,8 @@
             }
         },
         {
-            "code": 303,
-            "name": "SN-QOS-HLR-Profile",
+            "code": 304,
+            "name": "SN-Fast-Reauth-Username",
             "vendorId": 8164,
             "type": "OctetString",
             "flags": {
@@ -14527,7 +14551,7 @@
             ]
         },
         {
-            "code": 304,
+            "code": 305,
             "name": "Unallocated",
             "vendorId": 0,
             "type": "OctetString",
@@ -14539,8 +14563,8 @@
             }
         },
         {
-            "code": 304,
-            "name": "SN-Fast-Reauth-Username",
+            "code": 305,
+            "name": "SN-Pseudonym-Username",
             "vendorId": 8164,
             "type": "OctetString",
             "flags": {
@@ -14570,46 +14594,6 @@
                     "code": 1,
                     "name": "IP-CONNECTIVITY-LOST"
                 }
-            ]
-        },
-        {
-            "code": 305,
-            "name": "Unallocated",
-            "vendorId": 0,
-            "type": "OctetString",
-            "flags": {
-                "mandatory": false,
-                "protected": false,
-                "mayEncrypt": false,
-                "vendorBit": false
-            }
-        },
-        {
-            "code": 305,
-            "name": "SN-Pseudonym-Username",
-            "vendorId": 8164,
-            "type": "OctetString",
-            "flags": {
-                "mandatory": true,
-                "protected": true,
-                "mayEncrypt": true,
-                "vendorBit": true
-            }
-        },
-        {
-            "code": 306,
-            "name": "Access-Network-Type",
-            "vendorId": 13019,
-            "type": "Grouped",
-            "flags": {
-                "mandatory": false,
-                "protected": false,
-                "mayEncrypt": true,
-                "vendorBit": true
-            },
-            "groupedAvps": [
-                "NAS-Port-Type",
-                "Aggregation-Network-Type"
             ]
         },
         {
@@ -14647,29 +14631,19 @@
             ]
         },
         {
-            "code": 307,
-            "name": "Aggregation-Network-Type",
+            "code": 306,
+            "name": "Access-Network-Type",
             "vendorId": 13019,
-            "type": "Integer32",
+            "type": "Grouped",
             "flags": {
                 "mandatory": false,
                 "protected": false,
                 "mayEncrypt": true,
                 "vendorBit": true
             },
-            "enums": [
-                {
-                    "code": 0,
-                    "name": "UNKNOWN"
-                },
-                {
-                    "code": 1,
-                    "name": "ATM"
-                },
-                {
-                    "code": 2,
-                    "name": "ETHERNET"
-                }
+            "groupedAvps": [
+                "NAS-Port-Type",
+                "Aggregation-Network-Type"
             ]
         },
         {
@@ -14697,16 +14671,30 @@
             }
         },
         {
-            "code": 308,
-            "name": "Maximum-Allowed-Bandwidth-UL",
+            "code": 307,
+            "name": "Aggregation-Network-Type",
             "vendorId": 13019,
-            "type": "Unsigned32",
+            "type": "Integer32",
             "flags": {
                 "mandatory": false,
                 "protected": false,
                 "mayEncrypt": true,
                 "vendorBit": true
-            }
+            },
+            "enums": [
+                {
+                    "code": 0,
+                    "name": "UNKNOWN"
+                },
+                {
+                    "code": 1,
+                    "name": "ATM"
+                },
+                {
+                    "code": 2,
+                    "name": "ETHERNET"
+                }
+            ]
         },
         {
             "code": 308,
@@ -14733,8 +14721,8 @@
             }
         },
         {
-            "code": 309,
-            "name": "Maximum-Allowed-Bandwidth-DL",
+            "code": 308,
+            "name": "Maximum-Allowed-Bandwidth-UL",
             "vendorId": 13019,
             "type": "Unsigned32",
             "flags": {
@@ -14769,8 +14757,8 @@
             }
         },
         {
-            "code": 310,
-            "name": "Maximum-Priority(deprecated)",
+            "code": 309,
+            "name": "Maximum-Allowed-Bandwidth-DL",
             "vendorId": 13019,
             "type": "Unsigned32",
             "flags": {
@@ -14815,8 +14803,8 @@
             ]
         },
         {
-            "code": 311,
-            "name": "Transport-Class",
+            "code": 310,
+            "name": "Maximum-Priority(deprecated)",
             "vendorId": 13019,
             "type": "Unsigned32",
             "flags": {
@@ -14861,10 +14849,10 @@
             ]
         },
         {
-            "code": 312,
-            "name": "Application-Class-ID",
+            "code": 311,
+            "name": "Transport-Class",
             "vendorId": 13019,
-            "type": "OctetString",
+            "type": "Unsigned32",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -14885,8 +14873,8 @@
             }
         },
         {
-            "code": 313,
-            "name": "Physical-Access-ID",
+            "code": 312,
+            "name": "Application-Class-ID",
             "vendorId": 13019,
             "type": "OctetString",
             "flags": {
@@ -14939,10 +14927,10 @@
             ]
         },
         {
-            "code": 314,
-            "name": "Initial-Gate-Setting-ID",
+            "code": 313,
+            "name": "Physical-Access-ID",
             "vendorId": 13019,
-            "type": "Unsigned32",
+            "type": "OctetString",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -14993,6 +14981,30 @@
             ]
         },
         {
+            "code": 314,
+            "name": "Initial-Gate-Setting-ID",
+            "vendorId": 13019,
+            "type": "Unsigned32",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 315,
+            "name": "Unallocated",
+            "vendorId": 0,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": false
+            }
+        },
+        {
             "code": 315,
             "name": "QoS-Profile-ID",
             "vendorId": 13019,
@@ -15005,7 +15017,7 @@
             }
         },
         {
-            "code": 315,
+            "code": 316,
             "name": "Unallocated",
             "vendorId": 0,
             "type": "OctetString",
@@ -15029,7 +15041,7 @@
             }
         },
         {
-            "code": 316,
+            "code": 317,
             "name": "Unallocated",
             "vendorId": 0,
             "type": "OctetString",
@@ -15050,18 +15062,6 @@
                 "protected": false,
                 "mayEncrypt": true,
                 "vendorBit": true
-            }
-        },
-        {
-            "code": 317,
-            "name": "Unallocated",
-            "vendorId": 0,
-            "type": "OctetString",
-            "flags": {
-                "mandatory": false,
-                "protected": false,
-                "mayEncrypt": false,
-                "vendorBit": false
             }
         },
         {
@@ -15078,18 +15078,6 @@
         },
         {
             "code": 318,
-            "name": "Not defined in .xml",
-            "vendorId": 13019,
-            "type": "OctetString",
-            "flags": {
-                "mandatory": true,
-                "protected": false,
-                "mayEncrypt": true,
-                "vendorBit": true
-            }
-        },
-        {
-            "code": 318,
             "name": "3GPP-AAA-Server-Name",
             "vendorId": 10415,
             "type": "OctetString",
@@ -15097,6 +15085,18 @@
                 "mandatory": false,
                 "protected": false,
                 "mayEncrypt": false,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 318,
+            "name": "Not defined in .xml",
+            "vendorId": 13019,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
                 "vendorBit": true
             }
         },
@@ -15114,12 +15114,12 @@
         },
         {
             "code": 319,
-            "name": "Not defined in .xml",
-            "vendorId": 13019,
+            "name": "SN-WLAN-AP-Identifier",
+            "vendorId": 8164,
             "type": "OctetString",
             "flags": {
                 "mandatory": true,
-                "protected": false,
+                "protected": true,
                 "mayEncrypt": true,
                 "vendorBit": true
             }
@@ -15138,12 +15138,12 @@
         },
         {
             "code": 319,
-            "name": "SN-WLAN-AP-Identifier",
-            "vendorId": 8164,
+            "name": "Not defined in .xml",
+            "vendorId": 13019,
             "type": "OctetString",
             "flags": {
                 "mandatory": true,
-                "protected": true,
+                "protected": false,
                 "mayEncrypt": true,
                 "vendorBit": true
             }
@@ -15162,24 +15162,24 @@
         },
         {
             "code": 320,
-            "name": "Not defined in .xml",
-            "vendorId": 13019,
-            "type": "OctetString",
-            "flags": {
-                "mandatory": true,
-                "protected": false,
-                "mayEncrypt": true,
-                "vendorBit": true
-            }
-        },
-        {
-            "code": 320,
             "name": "SN-WLAN-UE-Identifier",
             "vendorId": 8164,
             "type": "OctetString",
             "flags": {
                 "mandatory": true,
                 "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 320,
+            "name": "Not defined in .xml",
+            "vendorId": 13019,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
                 "mayEncrypt": true,
                 "vendorBit": true
             }
@@ -15970,6 +15970,18 @@
         },
         {
             "code": 349,
+            "name": "Unassigned",
+            "vendorId": 0,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": false
+            }
+        },
+        {
+            "code": 349,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -15981,7 +15993,7 @@
             }
         },
         {
-            "code": 349,
+            "code": 350,
             "name": "Unassigned",
             "vendorId": 0,
             "type": "OctetString",
@@ -16008,7 +16020,7 @@
             ]
         },
         {
-            "code": 350,
+            "code": 351,
             "name": "Unassigned",
             "vendorId": 0,
             "type": "OctetString",
@@ -16032,7 +16044,7 @@
             }
         },
         {
-            "code": 351,
+            "code": 352,
             "name": "Unassigned",
             "vendorId": 0,
             "type": "OctetString",
@@ -16056,7 +16068,7 @@
             }
         },
         {
-            "code": 352,
+            "code": 353,
             "name": "Unassigned",
             "vendorId": 0,
             "type": "OctetString",
@@ -16126,7 +16138,7 @@
             ]
         },
         {
-            "code": 353,
+            "code": 354,
             "name": "Unassigned",
             "vendorId": 0,
             "type": "OctetString",
@@ -16196,7 +16208,7 @@
             ]
         },
         {
-            "code": 354,
+            "code": 355,
             "name": "Unassigned",
             "vendorId": 0,
             "type": "OctetString",
@@ -16220,7 +16232,7 @@
             }
         },
         {
-            "code": 355,
+            "code": 356,
             "name": "Unassigned",
             "vendorId": 0,
             "type": "OctetString",
@@ -16244,7 +16256,7 @@
             }
         },
         {
-            "code": 356,
+            "code": 357,
             "name": "Unassigned",
             "vendorId": 0,
             "type": "OctetString",
@@ -16268,7 +16280,7 @@
             }
         },
         {
-            "code": 357,
+            "code": 358,
             "name": "Unassigned",
             "vendorId": 0,
             "type": "OctetString",
@@ -16292,7 +16304,7 @@
             }
         },
         {
-            "code": 358,
+            "code": 359,
             "name": "Unassigned",
             "vendorId": 0,
             "type": "OctetString",
@@ -16316,7 +16328,7 @@
             }
         },
         {
-            "code": 359,
+            "code": 360,
             "name": "Unassigned",
             "vendorId": 0,
             "type": "OctetString",
@@ -16340,7 +16352,7 @@
             }
         },
         {
-            "code": 360,
+            "code": 361,
             "name": "Unassigned",
             "vendorId": 0,
             "type": "OctetString",
@@ -16364,7 +16376,7 @@
             }
         },
         {
-            "code": 361,
+            "code": 362,
             "name": "Unassigned",
             "vendorId": 0,
             "type": "OctetString",
@@ -16385,18 +16397,6 @@
                 "protected": false,
                 "mayEncrypt": true,
                 "vendorBit": true
-            }
-        },
-        {
-            "code": 362,
-            "name": "Unassigned",
-            "vendorId": 0,
-            "type": "OctetString",
-            "flags": {
-                "mandatory": false,
-                "protected": false,
-                "mayEncrypt": false,
-                "vendorBit": false
             }
         },
         {
@@ -17300,30 +17300,18 @@
         },
         {
             "code": 394,
-            "name": "Not defined in .xml",
-            "vendorId": 13019,
+            "name": "Unassigned",
+            "vendorId": 0,
             "type": "OctetString",
             "flags": {
-                "mandatory": true,
+                "mandatory": false,
                 "protected": false,
-                "mayEncrypt": true,
-                "vendorBit": true
+                "mayEncrypt": false,
+                "vendorBit": false
             }
         },
         {
             "code": 394,
-            "name": "Unassigned",
-            "vendorId": 0,
-            "type": "OctetString",
-            "flags": {
-                "mandatory": false,
-                "protected": false,
-                "mayEncrypt": false,
-                "vendorBit": false
-            }
-        },
-        {
-            "code": 395,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -17347,7 +17335,7 @@
             }
         },
         {
-            "code": 396,
+            "code": 395,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -17371,7 +17359,7 @@
             }
         },
         {
-            "code": 397,
+            "code": 396,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -17395,7 +17383,7 @@
             }
         },
         {
-            "code": 398,
+            "code": 397,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -17419,7 +17407,7 @@
             }
         },
         {
-            "code": 399,
+            "code": 398,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -17440,6 +17428,18 @@
                 "protected": false,
                 "mayEncrypt": false,
                 "vendorBit": false
+            }
+        },
+        {
+            "code": 399,
+            "name": "Not defined in .xml",
+            "vendorId": 13019,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
             }
         },
         {
@@ -17456,18 +17456,6 @@
         },
         {
             "code": 400,
-            "name": "Session-Bundle-Id",
-            "vendorId": 13019,
-            "type": "Unsigned32",
-            "flags": {
-                "mandatory": true,
-                "protected": false,
-                "mayEncrypt": true,
-                "vendorBit": true
-            }
-        },
-        {
-            "code": 400,
             "name": "GBA-UserSecSettings",
             "vendorId": 10415,
             "type": "OctetString",
@@ -17475,6 +17463,18 @@
                 "mandatory": false,
                 "protected": false,
                 "mayEncrypt": false,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 400,
+            "name": "Session-Bundle-Id",
+            "vendorId": 13019,
+            "type": "Unsigned32",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
                 "vendorBit": true
             }
         },
@@ -17504,18 +17504,6 @@
         },
         {
             "code": 401,
-            "name": "Not defined in .xml",
-            "vendorId": 13019,
-            "type": "OctetString",
-            "flags": {
-                "mandatory": true,
-                "protected": false,
-                "mayEncrypt": true,
-                "vendorBit": true
-            }
-        },
-        {
-            "code": 401,
             "name": "Transaction-Identifier",
             "vendorId": 10415,
             "type": "OctetString",
@@ -17523,6 +17511,18 @@
                 "mandatory": false,
                 "protected": false,
                 "mayEncrypt": false,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 401,
+            "name": "Not defined in .xml",
+            "vendorId": 13019,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
                 "vendorBit": true
             }
         },
@@ -17545,18 +17545,6 @@
         },
         {
             "code": 402,
-            "name": "Not defined in .xml",
-            "vendorId": 13019,
-            "type": "OctetString",
-            "flags": {
-                "mandatory": true,
-                "protected": false,
-                "mayEncrypt": true,
-                "vendorBit": true
-            }
-        },
-        {
-            "code": 402,
             "name": "NAF-Hostname",
             "vendorId": 10415,
             "type": "OctetString",
@@ -17564,6 +17552,18 @@
                 "mandatory": false,
                 "protected": false,
                 "mayEncrypt": false,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 402,
+            "name": "Not defined in .xml",
+            "vendorId": 13019,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
                 "vendorBit": true
             }
         },
@@ -17587,18 +17587,6 @@
         },
         {
             "code": 403,
-            "name": "Not defined in .xml",
-            "vendorId": 13019,
-            "type": "OctetString",
-            "flags": {
-                "mandatory": true,
-                "protected": false,
-                "mayEncrypt": true,
-                "vendorBit": true
-            }
-        },
-        {
-            "code": 403,
             "name": "GAA-Service-Identifier",
             "vendorId": 10415,
             "type": "OctetString",
@@ -17606,6 +17594,18 @@
                 "mandatory": false,
                 "protected": false,
                 "mayEncrypt": false,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 403,
+            "name": "Not defined in .xml",
+            "vendorId": 13019,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
                 "vendorBit": true
             }
         },
@@ -17623,18 +17623,6 @@
         },
         {
             "code": 404,
-            "name": "Not defined in .xml",
-            "vendorId": 13019,
-            "type": "OctetString",
-            "flags": {
-                "mandatory": true,
-                "protected": false,
-                "mayEncrypt": true,
-                "vendorBit": true
-            }
-        },
-        {
-            "code": 404,
             "name": "Key-ExpiryTime",
             "vendorId": 10415,
             "type": "Time",
@@ -17642,6 +17630,18 @@
                 "mandatory": false,
                 "protected": false,
                 "mayEncrypt": false,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 404,
+            "name": "Not defined in .xml",
+            "vendorId": 13019,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
                 "vendorBit": true
             }
         },
@@ -17659,18 +17659,6 @@
         },
         {
             "code": 405,
-            "name": "Not defined in .xml",
-            "vendorId": 13019,
-            "type": "OctetString",
-            "flags": {
-                "mandatory": true,
-                "protected": false,
-                "mayEncrypt": true,
-                "vendorBit": true
-            }
-        },
-        {
-            "code": 405,
             "name": "ME-Key-Material",
             "vendorId": 10415,
             "type": "OctetString",
@@ -17678,6 +17666,18 @@
                 "mandatory": false,
                 "protected": false,
                 "mayEncrypt": false,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 405,
+            "name": "Not defined in .xml",
+            "vendorId": 13019,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
                 "vendorBit": true
             }
         },
@@ -17725,18 +17725,6 @@
         },
         {
             "code": 406,
-            "name": "Not defined in .xml",
-            "vendorId": 13019,
-            "type": "OctetString",
-            "flags": {
-                "mandatory": true,
-                "protected": false,
-                "mayEncrypt": true,
-                "vendorBit": true
-            }
-        },
-        {
-            "code": 406,
             "name": "UICC-Key-Material",
             "vendorId": 10415,
             "type": "OctetString",
@@ -17744,6 +17732,18 @@
                 "mandatory": false,
                 "protected": false,
                 "mayEncrypt": false,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 406,
+            "name": "Not defined in .xml",
+            "vendorId": 13019,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
                 "vendorBit": true
             }
         },
@@ -17757,18 +17757,6 @@
                 "protected": false,
                 "mayEncrypt": false,
                 "vendorBit": false
-            }
-        },
-        {
-            "code": 407,
-            "name": "Not defined in .xml",
-            "vendorId": 13019,
-            "type": "OctetString",
-            "flags": {
-                "mandatory": true,
-                "protected": false,
-                "mayEncrypt": true,
-                "vendorBit": true
             }
         },
         {
@@ -17794,6 +17782,18 @@
             ]
         },
         {
+            "code": 407,
+            "name": "Not defined in .xml",
+            "vendorId": 13019,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
             "code": 408,
             "name": "Origin-AAA-Protocol",
             "vendorId": 0,
@@ -17813,18 +17813,6 @@
         },
         {
             "code": 408,
-            "name": "Not defined in .xml",
-            "vendorId": 13019,
-            "type": "OctetString",
-            "flags": {
-                "mandatory": true,
-                "protected": false,
-                "mayEncrypt": true,
-                "vendorBit": true
-            }
-        },
-        {
-            "code": 408,
             "name": "BootstrapInfoCreationTime",
             "vendorId": 10415,
             "type": "Time",
@@ -17836,7 +17824,7 @@
             }
         },
         {
-            "code": 409,
+            "code": 408,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -17860,7 +17848,7 @@
             }
         },
         {
-            "code": 410,
+            "code": 409,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -17894,7 +17882,7 @@
             ]
         },
         {
-            "code": 411,
+            "code": 410,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -17902,18 +17890,6 @@
                 "mandatory": true,
                 "protected": false,
                 "mayEncrypt": true,
-                "vendorBit": true
-            }
-        },
-        {
-            "code": 411,
-            "name": "UE-Id",
-            "vendorId": 10415,
-            "type": "OctetString",
-            "flags": {
-                "mandatory": false,
-                "protected": false,
-                "mayEncrypt": false,
                 "vendorBit": true
             }
         },
@@ -17930,7 +17906,19 @@
             }
         },
         {
-            "code": 412,
+            "code": 411,
+            "name": "UE-Id",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 411,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -17939,6 +17927,18 @@
                 "protected": false,
                 "mayEncrypt": true,
                 "vendorBit": true
+            }
+        },
+        {
+            "code": 412,
+            "name": "CC-Input-Octets",
+            "vendorId": 0,
+            "type": "Unsigned64",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": false
             }
         },
         {
@@ -17965,18 +17965,6 @@
         },
         {
             "code": 412,
-            "name": "CC-Input-Octets",
-            "vendorId": 0,
-            "type": "Unsigned64",
-            "flags": {
-                "mandatory": true,
-                "protected": false,
-                "mayEncrypt": false,
-                "vendorBit": false
-            }
-        },
-        {
-            "code": 413,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -17984,18 +17972,6 @@
                 "mandatory": true,
                 "protected": false,
                 "mayEncrypt": true,
-                "vendorBit": true
-            }
-        },
-        {
-            "code": 413,
-            "name": "UICC-App-Label",
-            "vendorId": 10415,
-            "type": "OctetString",
-            "flags": {
-                "mandatory": false,
-                "protected": false,
-                "mayEncrypt": false,
                 "vendorBit": true
             }
         },
@@ -18016,7 +17992,19 @@
             ]
         },
         {
-            "code": 414,
+            "code": 413,
+            "name": "UICC-App-Label",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 413,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -18025,6 +18013,18 @@
                 "protected": false,
                 "mayEncrypt": true,
                 "vendorBit": true
+            }
+        },
+        {
+            "code": 414,
+            "name": "CC-Output-Octets",
+            "vendorId": 0,
+            "type": "Unsigned64",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": false
             }
         },
         {
@@ -18051,18 +18051,6 @@
         },
         {
             "code": 414,
-            "name": "CC-Output-Octets",
-            "vendorId": 0,
-            "type": "Unsigned64",
-            "flags": {
-                "mandatory": true,
-                "protected": true,
-                "mayEncrypt": true,
-                "vendorBit": false
-            }
-        },
-        {
-            "code": 415,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -18070,18 +18058,6 @@
                 "mandatory": true,
                 "protected": false,
                 "mayEncrypt": true,
-                "vendorBit": true
-            }
-        },
-        {
-            "code": 415,
-            "name": "Requested-Key-Lifetime",
-            "vendorId": 10415,
-            "type": "Time",
-            "flags": {
-                "mandatory": false,
-                "protected": false,
-                "mayEncrypt": false,
                 "vendorBit": true
             }
         },
@@ -18098,7 +18074,19 @@
             }
         },
         {
-            "code": 416,
+            "code": 415,
+            "name": "Requested-Key-Lifetime",
+            "vendorId": 10415,
+            "type": "Time",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 415,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -18108,28 +18096,6 @@
                 "mayEncrypt": true,
                 "vendorBit": true
             }
-        },
-        {
-            "code": 416,
-            "name": "Private-Identity-Request",
-            "vendorId": 10415,
-            "type": "Integer32",
-            "flags": {
-                "mandatory": false,
-                "protected": false,
-                "mayEncrypt": false,
-                "vendorBit": true
-            },
-            "enums": [
-                {
-                    "code": 0,
-                    "name": "Private identity requested"
-                },
-                {
-                    "code": 1,
-                    "name": "Private identity not requested"
-                }
-            ]
         },
         {
             "code": 416,
@@ -18162,7 +18128,29 @@
             ]
         },
         {
-            "code": 417,
+            "code": 416,
+            "name": "Private-Identity-Request",
+            "vendorId": 10415,
+            "type": "Integer32",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            },
+            "enums": [
+                {
+                    "code": 0,
+                    "name": "Private identity requested"
+                },
+                {
+                    "code": 1,
+                    "name": "Private identity not requested"
+                }
+            ]
+        },
+        {
+            "code": 416,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -18170,18 +18158,6 @@
                 "mandatory": true,
                 "protected": false,
                 "mayEncrypt": true,
-                "vendorBit": true
-            }
-        },
-        {
-            "code": 417,
-            "name": "GBA-Push-Info",
-            "vendorId": 10415,
-            "type": "OctetString",
-            "flags": {
-                "mandatory": false,
-                "protected": false,
-                "mayEncrypt": false,
                 "vendorBit": true
             }
         },
@@ -18198,7 +18174,19 @@
             }
         },
         {
-            "code": 418,
+            "code": 417,
+            "name": "GBA-Push-Info",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 417,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -18206,18 +18194,6 @@
                 "mandatory": true,
                 "protected": false,
                 "mayEncrypt": true,
-                "vendorBit": true
-            }
-        },
-        {
-            "code": 418,
-            "name": "NAF-SA-Identifier",
-            "vendorId": 10415,
-            "type": "OctetString",
-            "flags": {
-                "mandatory": false,
-                "protected": false,
-                "mayEncrypt": false,
                 "vendorBit": true
             }
         },
@@ -18244,7 +18220,19 @@
             ]
         },
         {
-            "code": 419,
+            "code": 418,
+            "name": "NAF-SA-Identifier",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 418,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -18253,6 +18241,18 @@
                 "protected": false,
                 "mayEncrypt": true,
                 "vendorBit": true
+            }
+        },
+        {
+            "code": 419,
+            "name": "CC-Sub-Session-Id",
+            "vendorId": 0,
+            "type": "Unsigned64",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": false
             }
         },
         {
@@ -18269,14 +18269,38 @@
         },
         {
             "code": 419,
-            "name": "CC-Sub-Session-Id",
+            "name": "Not defined in .xml",
+            "vendorId": 13019,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 420,
+            "name": "CC-Time",
             "vendorId": 0,
-            "type": "Unsigned64",
+            "type": "Unsigned32",
             "flags": {
                 "mandatory": true,
                 "protected": false,
                 "mayEncrypt": false,
                 "vendorBit": false
+            }
+        },
+        {
+            "code": 420,
+            "name": "Security-Feature-Response",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
             }
         },
         {
@@ -18302,42 +18326,6 @@
             ]
         },
         {
-            "code": 420,
-            "name": "Security-Feature-Response",
-            "vendorId": 10415,
-            "type": "OctetString",
-            "flags": {
-                "mandatory": false,
-                "protected": false,
-                "mayEncrypt": false,
-                "vendorBit": true
-            }
-        },
-        {
-            "code": 420,
-            "name": "CC-Time",
-            "vendorId": 0,
-            "type": "Unsigned32",
-            "flags": {
-                "mandatory": true,
-                "protected": false,
-                "mayEncrypt": false,
-                "vendorBit": false
-            }
-        },
-        {
-            "code": 421,
-            "name": "Not defined in .xml",
-            "vendorId": 13019,
-            "type": "OctetString",
-            "flags": {
-                "mandatory": true,
-                "protected": false,
-                "mayEncrypt": true,
-                "vendorBit": true
-            }
-        },
-        {
             "code": 421,
             "name": "CC-Total-Octets",
             "vendorId": 0,
@@ -18350,7 +18338,7 @@
             }
         },
         {
-            "code": 422,
+            "code": 421,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -18384,7 +18372,7 @@
             ]
         },
         {
-            "code": 423,
+            "code": 422,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -18413,7 +18401,7 @@
             ]
         },
         {
-            "code": 424,
+            "code": 423,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -18437,7 +18425,7 @@
             }
         },
         {
-            "code": 425,
+            "code": 424,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -18461,7 +18449,7 @@
             }
         },
         {
-            "code": 426,
+            "code": 425,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -18495,7 +18483,7 @@
             ]
         },
         {
-            "code": 427,
+            "code": 426,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -18533,7 +18521,7 @@
             ]
         },
         {
-            "code": 428,
+            "code": 427,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -18567,7 +18555,7 @@
             ]
         },
         {
-            "code": 429,
+            "code": 428,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -18591,7 +18579,7 @@
             }
         },
         {
-            "code": 430,
+            "code": 429,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -18621,7 +18609,7 @@
             ]
         },
         {
-            "code": 431,
+            "code": 430,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -18654,7 +18642,7 @@
             ]
         },
         {
-            "code": 432,
+            "code": 431,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -18678,7 +18666,7 @@
             }
         },
         {
-            "code": 433,
+            "code": 432,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -18720,7 +18708,7 @@
             ]
         },
         {
-            "code": 434,
+            "code": 433,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -18748,7 +18736,7 @@
             ]
         },
         {
-            "code": 435,
+            "code": 434,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -18772,7 +18760,7 @@
             }
         },
         {
-            "code": 436,
+            "code": 435,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -18782,6 +18770,36 @@
                 "mayEncrypt": true,
                 "vendorBit": true
             }
+        },
+        {
+            "code": 436,
+            "name": "Requested-Action",
+            "vendorId": 0,
+            "type": "Unsigned32",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": false
+            },
+            "enums": [
+                {
+                    "code": 0,
+                    "name": "DIRECT_DEBITING"
+                },
+                {
+                    "code": 1,
+                    "name": "REFUND_ACCOUNT"
+                },
+                {
+                    "code": 2,
+                    "name": "CHECK_BALANCE"
+                },
+                {
+                    "code": 3,
+                    "name": "PRICE_ENQUIRY"
+                }
+            ]
         },
         {
             "code": 436,
@@ -18815,36 +18833,6 @@
         },
         {
             "code": 436,
-            "name": "Requested-Action",
-            "vendorId": 0,
-            "type": "Unsigned32",
-            "flags": {
-                "mandatory": true,
-                "protected": true,
-                "mayEncrypt": true,
-                "vendorBit": false
-            },
-            "enums": [
-                {
-                    "code": 0,
-                    "name": "DIRECT_DEBITING"
-                },
-                {
-                    "code": 1,
-                    "name": "REFUND_ACCOUNT"
-                },
-                {
-                    "code": 2,
-                    "name": "CHECK_BALANCE"
-                },
-                {
-                    "code": 3,
-                    "name": "PRICE_ENQUIRY"
-                }
-            ]
-        },
-        {
-            "code": 437,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -18876,7 +18864,7 @@
             ]
         },
         {
-            "code": 438,
+            "code": 437,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -18900,7 +18888,7 @@
             }
         },
         {
-            "code": 439,
+            "code": 438,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -18924,7 +18912,7 @@
             }
         },
         {
-            "code": 440,
+            "code": 439,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -18952,7 +18940,7 @@
             ]
         },
         {
-            "code": 441,
+            "code": 440,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -18976,7 +18964,7 @@
             }
         },
         {
-            "code": 442,
+            "code": 441,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -19000,7 +18988,7 @@
             }
         },
         {
-            "code": 443,
+            "code": 442,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -19028,7 +19016,7 @@
             ]
         },
         {
-            "code": 444,
+            "code": 443,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -19052,7 +19040,7 @@
             }
         },
         {
-            "code": 445,
+            "code": 444,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -19080,7 +19068,7 @@
             ]
         },
         {
-            "code": 446,
+            "code": 445,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -19113,7 +19101,7 @@
             ]
         },
         {
-            "code": 447,
+            "code": 446,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -19137,7 +19125,7 @@
             }
         },
         {
-            "code": 448,
+            "code": 447,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -19161,7 +19149,7 @@
             }
         },
         {
-            "code": 449,
+            "code": 448,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -19199,20 +19187,16 @@
             ]
         },
         {
-            "code": 450,
-            "name": "Binding-information",
+            "code": 449,
+            "name": "Not defined in .xml",
             "vendorId": 13019,
-            "type": "Grouped",
+            "type": "OctetString",
             "flags": {
-                "mandatory": false,
+                "mandatory": true,
                 "protected": false,
                 "mayEncrypt": true,
                 "vendorBit": true
-            },
-            "groupedAvps": [
-                "Binding-Input-List",
-                "Binding-Output-List"
-            ]
+            }
         },
         {
             "code": 450,
@@ -19249,8 +19233,8 @@
             ]
         },
         {
-            "code": 451,
-            "name": "Binding-Input-List",
+            "code": 450,
+            "name": "Binding-information",
             "vendorId": 13019,
             "type": "Grouped",
             "flags": {
@@ -19260,8 +19244,8 @@
                 "vendorBit": true
             },
             "groupedAvps": [
-                "V6-Transport-Address",
-                "V4-Transport-Address"
+                "Binding-Input-List",
+                "Binding-Output-List"
             ]
         },
         {
@@ -19277,8 +19261,8 @@
             }
         },
         {
-            "code": 452,
-            "name": "Binding-Output-List",
+            "code": 451,
+            "name": "Binding-Input-List",
             "vendorId": 13019,
             "type": "Grouped",
             "flags": {
@@ -19319,8 +19303,8 @@
             ]
         },
         {
-            "code": 453,
-            "name": "V6-Transport-address",
+            "code": 452,
+            "name": "Binding-Output-List",
             "vendorId": 13019,
             "type": "Grouped",
             "flags": {
@@ -19330,8 +19314,8 @@
                 "vendorBit": true
             },
             "groupedAvps": [
-                "Framed-IPv6-Prefix",
-                "Port-Number"
+                "V6-Transport-Address",
+                "V4-Transport-Address"
             ]
         },
         {
@@ -19347,8 +19331,8 @@
             }
         },
         {
-            "code": 454,
-            "name": "V4-Transport-Address",
+            "code": 453,
+            "name": "V6-Transport-address",
             "vendorId": 13019,
             "type": "Grouped",
             "flags": {
@@ -19358,7 +19342,7 @@
                 "vendorBit": true
             },
             "groupedAvps": [
-                "Framed-IP-Address",
+                "Framed-IPv6-Prefix",
                 "Port-Number"
             ]
         },
@@ -19401,16 +19385,20 @@
             ]
         },
         {
-            "code": 455,
-            "name": "Port-Number",
+            "code": 454,
+            "name": "V4-Transport-Address",
             "vendorId": 13019,
-            "type": "Unsigned32",
+            "type": "Grouped",
             "flags": {
                 "mandatory": false,
                 "protected": false,
-                "mayEncrypt": false,
+                "mayEncrypt": true,
                 "vendorBit": true
-            }
+            },
+            "groupedAvps": [
+                "Framed-IP-Address",
+                "Port-Number"
+            ]
         },
         {
             "code": 455,
@@ -19435,8 +19423,8 @@
             ]
         },
         {
-            "code": 456,
-            "name": "Reservation-Class",
+            "code": 455,
+            "name": "Port-Number",
             "vendorId": 13019,
             "type": "Unsigned32",
             "flags": {
@@ -19471,6 +19459,35 @@
             ]
         },
         {
+            "code": 456,
+            "name": "Reservation-Class",
+            "vendorId": 13019,
+            "type": "Unsigned32",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 457,
+            "name": "G-S-U-Pool-Reference",
+            "vendorId": 0,
+            "type": "Grouped",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": false
+            },
+            "groupedAvps": [
+                "G-S-U-Pool-Identifier",
+                "CC-Unit-Type",
+                "Unit-Value"
+            ]
+        },
+        {
             "code": 457,
             "name": "Requested-Information",
             "vendorId": 13019,
@@ -19493,20 +19510,19 @@
             ]
         },
         {
-            "code": 457,
-            "name": "G-S-U-Pool-Reference",
+            "code": 458,
+            "name": "User-Equipment-Info",
             "vendorId": 0,
             "type": "Grouped",
             "flags": {
-                "mandatory": true,
+                "mandatory": false,
                 "protected": false,
                 "mayEncrypt": false,
                 "vendorBit": false
             },
             "groupedAvps": [
-                "G-S-U-Pool-Identifier",
-                "CC-Unit-Type",
-                "Unit-Value"
+                "User-Equipment-Info-Type",
+                "User-Equipment-Info-Value"
             ]
         },
         {
@@ -19556,34 +19572,6 @@
             ]
         },
         {
-            "code": 458,
-            "name": "User-Equipment-Info",
-            "vendorId": 0,
-            "type": "Grouped",
-            "flags": {
-                "mandatory": false,
-                "protected": false,
-                "mayEncrypt": false,
-                "vendorBit": false
-            },
-            "groupedAvps": [
-                "User-Equipment-Info-Type",
-                "User-Equipment-Info-Value"
-            ]
-        },
-        {
-            "code": 459,
-            "name": "Service-Class",
-            "vendorId": 13019,
-            "type": "OctetString",
-            "flags": {
-                "mandatory": false,
-                "protected": false,
-                "mayEncrypt": true,
-                "vendorBit": true
-            }
-        },
-        {
             "code": 459,
             "name": "User-Equipment-Info-Type",
             "vendorId": 0,
@@ -19614,12 +19602,12 @@
             ]
         },
         {
-            "code": 460,
-            "name": "Not defined in .xml",
+            "code": 459,
+            "name": "Service-Class",
             "vendorId": 13019,
             "type": "OctetString",
             "flags": {
-                "mandatory": true,
+                "mandatory": false,
                 "protected": false,
                 "mayEncrypt": true,
                 "vendorBit": true
@@ -19638,7 +19626,7 @@
             }
         },
         {
-            "code": 461,
+            "code": 460,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -19662,7 +19650,7 @@
             }
         },
         {
-            "code": 462,
+            "code": 461,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -19686,7 +19674,7 @@
             }
         },
         {
-            "code": 463,
+            "code": 462,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -19710,7 +19698,7 @@
             }
         },
         {
-            "code": 464,
+            "code": 463,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -19734,7 +19722,7 @@
             }
         },
         {
-            "code": 465,
+            "code": 464,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -19758,7 +19746,7 @@
             }
         },
         {
-            "code": 466,
+            "code": 465,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -19782,7 +19770,7 @@
             }
         },
         {
-            "code": 467,
+            "code": 466,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -19806,7 +19794,7 @@
             }
         },
         {
-            "code": 468,
+            "code": 467,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -19830,7 +19818,7 @@
             }
         },
         {
-            "code": 469,
+            "code": 468,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -19854,7 +19842,7 @@
             }
         },
         {
-            "code": 470,
+            "code": 469,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -19878,7 +19866,7 @@
             }
         },
         {
-            "code": 471,
+            "code": 470,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -19902,7 +19890,7 @@
             }
         },
         {
-            "code": 472,
+            "code": 471,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -19926,7 +19914,7 @@
             }
         },
         {
-            "code": 473,
+            "code": 472,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -19950,7 +19938,7 @@
             }
         },
         {
-            "code": 474,
+            "code": 473,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -19974,7 +19962,7 @@
             }
         },
         {
-            "code": 475,
+            "code": 474,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -19998,7 +19986,7 @@
             }
         },
         {
-            "code": 476,
+            "code": 475,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -20022,7 +20010,7 @@
             }
         },
         {
-            "code": 477,
+            "code": 476,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -20046,7 +20034,7 @@
             }
         },
         {
-            "code": 478,
+            "code": 477,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -20070,7 +20058,7 @@
             }
         },
         {
-            "code": 479,
+            "code": 478,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -20094,7 +20082,7 @@
             }
         },
         {
-            "code": 480,
+            "code": 479,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -20136,7 +20124,7 @@
             ]
         },
         {
-            "code": 481,
+            "code": 480,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -20160,7 +20148,7 @@
             }
         },
         {
-            "code": 482,
+            "code": 481,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -20184,7 +20172,7 @@
             }
         },
         {
-            "code": 483,
+            "code": 482,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -20226,7 +20214,7 @@
             ]
         },
         {
-            "code": 484,
+            "code": 483,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -20250,7 +20238,7 @@
             }
         },
         {
-            "code": 485,
+            "code": 484,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -20271,6 +20259,18 @@
                 "protected": false,
                 "mayEncrypt": true,
                 "vendorBit": false
+            }
+        },
+        {
+            "code": 485,
+            "name": "Not defined in .xml",
+            "vendorId": 13019,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": true,
+                "vendorBit": true
             }
         },
         {
@@ -20383,18 +20383,6 @@
         },
         {
             "code": 495,
-            "name": "Not defined in .xml",
-            "vendorId": 13019,
-            "type": "OctetString",
-            "flags": {
-                "mandatory": true,
-                "protected": false,
-                "mayEncrypt": true,
-                "vendorBit": true
-            }
-        },
-        {
-            "code": 495,
             "name": "TMOD-1",
             "vendorId": 0,
             "type": "Grouped",
@@ -20413,7 +20401,7 @@
             ]
         },
         {
-            "code": 496,
+            "code": 495,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -20437,7 +20425,7 @@
             }
         },
         {
-            "code": 497,
+            "code": 496,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -20461,7 +20449,7 @@
             }
         },
         {
-            "code": 498,
+            "code": 497,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -20485,7 +20473,7 @@
             }
         },
         {
-            "code": 499,
+            "code": 498,
             "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
@@ -20509,14 +20497,14 @@
             }
         },
         {
-            "code": 500,
-            "name": "Line-Identifier",
+            "code": 499,
+            "name": "Not defined in .xml",
             "vendorId": 13019,
             "type": "OctetString",
             "flags": {
-                "mandatory": false,
+                "mandatory": true,
                 "protected": false,
-                "mayEncrypt": false,
+                "mayEncrypt": true,
                 "vendorBit": true
             }
         },
@@ -20530,6 +20518,49 @@
                 "protected": false,
                 "mayEncrypt": false,
                 "vendorBit": false
+            }
+        },
+        {
+            "code": 500,
+            "name": "Line-Identifier",
+            "vendorId": 13019,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 501,
+            "name": "TMOD-2",
+            "vendorId": 0,
+            "type": "Grouped",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": false
+            },
+            "groupedAvps": [
+                "Token-Rate",
+                "Bucket-Depth",
+                "Peak-Traffic-Rate",
+                "Minimum-Policed-Unit",
+                "Maximum-Packet-Size"
+            ]
+        },
+        {
+            "code": 501,
+            "name": "SN-Volume-Quota-Threshold",
+            "vendorId": 8164,
+            "type": "Unsigned32",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
             }
         },
         {
@@ -20556,27 +20587,20 @@
             ]
         },
         {
-            "code": 501,
-            "name": "TMOD-2",
+            "code": 502,
+            "name": "Bandwidth",
             "vendorId": 0,
-            "type": "Grouped",
+            "type": "Unsigned32",
             "flags": {
-                "mandatory": true,
+                "mandatory": false,
                 "protected": false,
                 "mayEncrypt": false,
                 "vendorBit": false
-            },
-            "groupedAvps": [
-                "Token-Rate",
-                "Bucket-Depth",
-                "Peak-Traffic-Rate",
-                "Minimum-Policed-Unit",
-                "Maximum-Packet-Size"
-            ]
+            }
         },
         {
-            "code": 501,
-            "name": "SN-Volume-Quota-Threshold",
+            "code": 502,
+            "name": "SN-Unit-Quota-Threshold",
             "vendorId": 8164,
             "type": "Unsigned32",
             "flags": {
@@ -20614,8 +20638,8 @@
             ]
         },
         {
-            "code": 502,
-            "name": "Bandwidth",
+            "code": 503,
+            "name": "PHB-Class",
             "vendorId": 0,
             "type": "Unsigned32",
             "flags": {
@@ -20626,8 +20650,8 @@
             }
         },
         {
-            "code": 502,
-            "name": "SN-Unit-Quota-Threshold",
+            "code": 503,
+            "name": "SN-Time-Quota-Threshold",
             "vendorId": 8164,
             "type": "Unsigned32",
             "flags": {
@@ -20657,42 +20681,6 @@
             ]
         },
         {
-            "code": 503,
-            "name": "PHB-Class",
-            "vendorId": 0,
-            "type": "Unsigned32",
-            "flags": {
-                "mandatory": false,
-                "protected": false,
-                "mayEncrypt": false,
-                "vendorBit": false
-            }
-        },
-        {
-            "code": 503,
-            "name": "SN-Time-Quota-Threshold",
-            "vendorId": 8164,
-            "type": "Unsigned32",
-            "flags": {
-                "mandatory": true,
-                "protected": true,
-                "mayEncrypt": true,
-                "vendorBit": true
-            }
-        },
-        {
-            "code": 504,
-            "name": "ETSI-Digest-Realm",
-            "vendorId": 13019,
-            "type": "OctetString",
-            "flags": {
-                "mandatory": false,
-                "protected": false,
-                "mayEncrypt": false,
-                "vendorBit": true
-            }
-        },
-        {
             "code": 504,
             "name": "SN-Total-Used-Service-Unit",
             "vendorId": 8164,
@@ -20714,8 +20702,8 @@
             ]
         },
         {
-            "code": 505,
-            "name": "ETSI-Digest-Nonce",
+            "code": 504,
+            "name": "ETSI-Digest-Realm",
             "vendorId": 13019,
             "type": "OctetString",
             "flags": {
@@ -20738,8 +20726,8 @@
             }
         },
         {
-            "code": 506,
-            "name": "ETSI-Digest-Domain",
+            "code": 505,
+            "name": "ETSI-Digest-Nonce",
             "vendorId": 13019,
             "type": "OctetString",
             "flags": {
@@ -20750,8 +20738,8 @@
             }
         },
         {
-            "code": 507,
-            "name": "ETSI-Digest-Opaque",
+            "code": 506,
+            "name": "ETSI-Digest-Domain",
             "vendorId": 13019,
             "type": "OctetString",
             "flags": {
@@ -20770,6 +20758,18 @@
                 "mandatory": true,
                 "protected": true,
                 "mayEncrypt": true,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 507,
+            "name": "ETSI-Digest-Opaque",
+            "vendorId": 13019,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
                 "vendorBit": true
             }
         },
@@ -20823,18 +20823,6 @@
         },
         {
             "code": 512,
-            "name": "ETSI-Digest-Auth-Param",
-            "vendorId": 13019,
-            "type": "OctetString",
-            "flags": {
-                "mandatory": false,
-                "protected": false,
-                "mayEncrypt": false,
-                "vendorBit": true
-            }
-        },
-        {
-            "code": 512,
             "name": "SN-Bandwidth-Control",
             "vendorId": 8164,
             "type": "Unsigned32",
@@ -20856,8 +20844,8 @@
             ]
         },
         {
-            "code": 513,
-            "name": "ETSI-Digest-Username",
+            "code": 512,
+            "name": "ETSI-Digest-Auth-Param",
             "vendorId": 13019,
             "type": "OctetString",
             "flags": {
@@ -20880,8 +20868,8 @@
             }
         },
         {
-            "code": 514,
-            "name": "ETSI-Digest-URI",
+            "code": 513,
+            "name": "ETSI-Digest-Username",
             "vendorId": 13019,
             "type": "OctetString",
             "flags": {
@@ -20904,8 +20892,8 @@
             }
         },
         {
-            "code": 515,
-            "name": "ETSI-Digest-Response",
+            "code": 514,
+            "name": "ETSI-Digest-URI",
             "vendorId": 13019,
             "type": "OctetString",
             "flags": {
@@ -20928,8 +20916,8 @@
             }
         },
         {
-            "code": 516,
-            "name": "ETSI-Digest-CNonce",
+            "code": 515,
+            "name": "ETSI-Digest-Response",
             "vendorId": 13019,
             "type": "OctetString",
             "flags": {
@@ -20940,8 +20928,8 @@
             }
         },
         {
-            "code": 517,
-            "name": "ETSI-Digest-Nonce-Count",
+            "code": 516,
+            "name": "ETSI-Digest-CNonce",
             "vendorId": 13019,
             "type": "OctetString",
             "flags": {
@@ -20969,8 +20957,8 @@
             ]
         },
         {
-            "code": 518,
-            "name": "ETSI-Digest-Method",
+            "code": 517,
+            "name": "ETSI-Digest-Nonce-Count",
             "vendorId": 13019,
             "type": "OctetString",
             "flags": {
@@ -20993,8 +20981,8 @@
             }
         },
         {
-            "code": 519,
-            "name": "ETSI-Digest-Entity-Body-Hash",
+            "code": 518,
+            "name": "ETSI-Digest-Method",
             "vendorId": 13019,
             "type": "OctetString",
             "flags": {
@@ -21017,8 +21005,8 @@
             }
         },
         {
-            "code": 520,
-            "name": "ETSI-Digest-Nextnonce",
+            "code": 519,
+            "name": "ETSI-Digest-Entity-Body-Hash",
             "vendorId": 13019,
             "type": "OctetString",
             "flags": {
@@ -21047,8 +21035,8 @@
             ]
         },
         {
-            "code": 521,
-            "name": "ETSI-Digest-Response-Auth",
+            "code": 520,
+            "name": "ETSI-Digest-Nextnonce",
             "vendorId": 13019,
             "type": "OctetString",
             "flags": {
@@ -21079,6 +21067,18 @@
                     "name": "USAGE_MONITORING_ENABLED"
                 }
             ]
+        },
+        {
+            "code": 521,
+            "name": "ETSI-Digest-Response-Auth",
+            "vendorId": 13019,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            }
         },
         {
             "code": 522,
@@ -23861,6 +23861,18 @@
         },
         {
             "code": 898,
+            "name": "Access-Network-Physical-Access-ID-Realm",
+            "vendorId": 5535,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 898,
             "name": "Address-Domain",
             "vendorId": 10415,
             "type": "Grouped",
@@ -23876,8 +23888,8 @@
             ]
         },
         {
-            "code": 898,
-            "name": "Access-Network-Physical-Access-ID-Realm",
+            "code": 899,
+            "name": "Access-Network-Physical-Access-ID-Value",
             "vendorId": 5535,
             "type": "OctetString",
             "flags": {
@@ -23928,18 +23940,6 @@
                     "name": "Other"
                 }
             ]
-        },
-        {
-            "code": 899,
-            "name": "Access-Network-Physical-Access-ID-Value",
-            "vendorId": 5535,
-            "type": "OctetString",
-            "flags": {
-                "mandatory": false,
-                "protected": false,
-                "mayEncrypt": false,
-                "vendorBit": true
-            }
         },
         {
             "code": 900,
@@ -25268,23 +25268,6 @@
         },
         {
             "code": 1055,
-            "name": "QoS-Rule-Report",
-            "vendorId": 10415,
-            "type": "Grouped",
-            "flags": {
-                "mandatory": true,
-                "protected": true,
-                "mayEncrypt": true,
-                "vendorBit": true
-            },
-            "groupedAvps": [
-                "QoS-Rule-Name",
-                "PCC-Rule-Status",
-                "Rule-Failure-Code"
-            ]
-        },
-        {
-            "code": 1055,
             "name": "Charging-Rule-Authorization",
             "vendorId": 193,
             "type": "Grouped",
@@ -25301,16 +25284,21 @@
             ]
         },
         {
-            "code": 1056,
-            "name": "Security-Parameter-Index",
+            "code": 1055,
+            "name": "QoS-Rule-Report",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "Grouped",
             "flags": {
-                "mandatory": false,
+                "mandatory": true,
                 "protected": true,
                 "mayEncrypt": true,
                 "vendorBit": true
-            }
+            },
+            "groupedAvps": [
+                "QoS-Rule-Name",
+                "PCC-Rule-Status",
+                "Rule-Failure-Code"
+            ]
         },
         {
             "code": 1056,
@@ -25379,8 +25367,8 @@
             ]
         },
         {
-            "code": 1057,
-            "name": "Flow-Label",
+            "code": 1056,
+            "name": "Security-Parameter-Index",
             "vendorId": 10415,
             "type": "OctetString",
             "flags": {
@@ -25399,6 +25387,18 @@
                 "mandatory": true,
                 "protected": false,
                 "mayEncrypt": false,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 1057,
+            "name": "Flow-Label",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": false,
+                "protected": true,
+                "mayEncrypt": true,
                 "vendorBit": true
             }
         },
@@ -25423,18 +25423,6 @@
         },
         {
             "code": 1059,
-            "name": "Packet-Filter-Content",
-            "vendorId": 10415,
-            "type": "OctetString",
-            "flags": {
-                "mandatory": false,
-                "protected": true,
-                "mayEncrypt": true,
-                "vendorBit": true
-            }
-        },
-        {
-            "code": 1059,
             "name": "Next-Authorization-State",
             "vendorId": 193,
             "type": "Integer32",
@@ -25456,8 +25444,8 @@
             ]
         },
         {
-            "code": 1060,
-            "name": "Packet-Filter-Identifier",
+            "code": 1059,
+            "name": "Packet-Filter-Content",
             "vendorId": 10415,
             "type": "OctetString",
             "flags": {
@@ -25476,6 +25464,18 @@
                 "mandatory": true,
                 "protected": false,
                 "mayEncrypt": false,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 1060,
+            "name": "Packet-Filter-Identifier",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": false,
+                "protected": true,
+                "mayEncrypt": true,
                 "vendorBit": true
             }
         },
@@ -26300,24 +26300,24 @@
         {
             "code": 1146,
             "name": "Customer-Id",
-            "vendorId": 8164,
-            "type": "OctetString",
-            "flags": {
-                "mandatory": true,
-                "protected": true,
-                "mayEncrypt": true,
-                "vendorBit": true
-            }
-        },
-        {
-            "code": 1146,
-            "name": "Customer-Id",
             "vendorId": 193,
             "type": "OctetString",
             "flags": {
                 "mandatory": true,
                 "protected": false,
                 "mayEncrypt": false,
+                "vendorBit": true
+            }
+        },
+        {
+            "code": 1146,
+            "name": "Customer-Id",
+            "vendorId": 8164,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
                 "vendorBit": true
             }
         },
@@ -29359,6 +29359,22 @@
         },
         {
             "code": 1472,
+            "name": "Access-Network-Charging-Physical-Access-Id",
+            "vendorId": 8164,
+            "type": "Grouped",
+            "flags": {
+                "mandatory": true,
+                "protected": true,
+                "mayEncrypt": true,
+                "vendorBit": true
+            },
+            "groupedAvps": [
+                "Access-Network-Charging-Physical-Access-Id-Value",
+                "Access-Network-Charging-Physical-Access-Id-Realm"
+            ]
+        },
+        {
+            "code": 1472,
             "name": "Specific-APN-Info",
             "vendorId": 10415,
             "type": "Grouped",
@@ -29374,20 +29390,16 @@
             ]
         },
         {
-            "code": 1472,
-            "name": "Access-Network-Charging-Physical-Access-Id",
+            "code": 1473,
+            "name": "Access-Network-Charging-Physical-Access-Id-Value",
             "vendorId": 8164,
-            "type": "Grouped",
+            "type": "OctetString",
             "flags": {
                 "mandatory": true,
                 "protected": true,
                 "mayEncrypt": true,
                 "vendorBit": true
-            },
-            "groupedAvps": [
-                "Access-Network-Charging-Physical-Access-Id-Value",
-                "Access-Network-Charging-Physical-Access-Id-Realm"
-            ]
+            }
         },
         {
             "code": 1473,
@@ -29407,8 +29419,8 @@
             ]
         },
         {
-            "code": 1473,
-            "name": "Access-Network-Charging-Physical-Access-Id-Value",
+            "code": 1474,
+            "name": "Access-Network-Charging-Physical-Access-Id-Realm",
             "vendorId": 8164,
             "type": "OctetString",
             "flags": {
@@ -29427,18 +29439,6 @@
                 "mandatory": true,
                 "protected": false,
                 "mayEncrypt": false,
-                "vendorBit": true
-            }
-        },
-        {
-            "code": 1474,
-            "name": "Access-Network-Charging-Physical-Access-Id-Realm",
-            "vendorId": 8164,
-            "type": "OctetString",
-            "flags": {
-                "mandatory": true,
-                "protected": true,
-                "mayEncrypt": true,
                 "vendorBit": true
             }
         },
