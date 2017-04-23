@@ -7,14 +7,14 @@ describe('diameter-dictionary', function () {
         var avp = dictionary.getAvpByCode(1);
         expect(avp).toEqual({
             code: 1,
-            name: 'Ping-Timestamp-Secs',
-            vendorId: 42,
-            type: 'Unsigned32',
+            name: 'User-Name',
+            vendorId: 0,
+            type: 'OctetString',
             flags: {
-                mandatory: false,
+                mandatory: true,
                 protected: false,
                 mayEncrypt: false,
-                vendorBit: true
+                vendorBit: false
             }
         });
     });
@@ -37,22 +37,36 @@ describe('diameter-dictionary', function () {
 
     it('getApplicationById', function () {
         var avp = dictionary.getApplicationById(0);
-        expect(avp).toEqual({ code : 0, name : 'Diameter Common Messages' });
+        expect(avp).toEqual({
+            code: 0,
+            name: 'Diameter Common Messages'
+        });
     });
 
     it('getApplicationByName', function () {
         var avp = dictionary.getApplicationByName('Diameter Common Messages');
-        expect(avp).toEqual({ code : 0, name : 'Diameter Common Messages' });
+        expect(avp).toEqual({
+            code: 0,
+            name: 'Diameter Common Messages'
+        });
     });
 
     it('getCommandByCode', function () {
         var avp = dictionary.getCommandByCode(100);
-        expect(avp).toEqual({ code : 100, name : 'Peer Information', vendorId : 11 });
+        expect(avp).toEqual({
+            code: 100,
+            name: 'Peer Information',
+            vendorId: 11
+        });
     });
 
     it('getCommandByName', function () {
         var avp = dictionary.getCommandByName('Peer Information');
-        expect(avp).toEqual({ code : 100, name : 'Peer Information', vendorId : 11 });
+        expect(avp).toEqual({
+            code: 100,
+            name: 'Peer Information',
+            vendorId: 11
+        });
     });
 
     it('getAvpByCodeAndVendorId', function () {
