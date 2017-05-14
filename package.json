@@ -1,6 +1,6 @@
 {
   "name": "diameter",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "description": "Diameter base protocol implementation",
   "author": "Robert Kovacevic <robert.kovacevic1@gmail.com>",
   "license": "GPL-3.0",
