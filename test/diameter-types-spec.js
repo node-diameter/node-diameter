@@ -24,11 +24,11 @@ describe('diameter-types', function() {
     });
 
     it('encodes OctetString', function() {
-        expect(types.encode('OctetString', Buffer.from([ 0xde, 0xad, 0xbe, 0xef ])).toString('hex')).toBe('deadbeef');
+        expect(types.encode('OctetString', new Buffer([ 0xde, 0xad, 0xbe, 0xef ])).toString('hex')).toBe('deadbeef');
     });
 
     it('decodes OctetString', function() {
-        expect(types.decode('OctetString', Buffer.from([ 0xde, 0xad, 0xbe, 0xef ])).toString('hex')).toBe('deadbeef');
+        expect(types.decode('OctetString', new Buffer([ 0xde, 0xad, 0xbe, 0xef ])).toString('hex')).toBe('deadbeef');
     });
 
     it('encodes UTF8String', function() {
