@@ -10260,7 +10260,7 @@
             "code": 201,
             "name": "Peer-Name",
             "vendorId": 11,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -10284,7 +10284,7 @@
             "code": 202,
             "name": "Peer-Identity",
             "vendorId": 11,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -12498,7 +12498,7 @@
             "code": 264,
             "name": "Origin-Host",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -13279,7 +13279,7 @@
             "code": 275,
             "name": "Alternate-Peer",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -13408,7 +13408,7 @@
             "code": 280,
             "name": "Proxy-Host",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -13456,7 +13456,7 @@
             "code": 282,
             "name": "Route-Record",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -13490,7 +13490,7 @@
             "code": 283,
             "name": "Destination-Realm",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -13806,7 +13806,7 @@
             "code": 293,
             "name": "Destination-Host",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -13840,7 +13840,7 @@
             "code": 294,
             "name": "Error-Reporting-Host",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": true,
@@ -13932,7 +13932,7 @@
             "code": 296,
             "name": "Origin-Realm",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -15679,7 +15679,7 @@
             "code": 336,
             "name": "MIP-Candidate-Home-Agent-Host",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -15861,7 +15861,7 @@
             "code": 342,
             "name": "MIP-Filter-Rule",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -16122,7 +16122,7 @@
             "code": 351,
             "name": "RACS-Contact-Point",
             "vendorId": 13019,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -17545,7 +17545,7 @@
             "code": 400,
             "name": "NAS-Filter-Rule",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -17860,7 +17860,7 @@
             "code": 407,
             "name": "QoS-Filter-Rule",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -18966,7 +18966,7 @@
             "code": 438,
             "name": "Restricted-Filter-Rule",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -21110,7 +21110,7 @@
             "code": 507,
             "name": "Flow-Description",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -21151,7 +21151,7 @@
             "code": 507,
             "name": "Flow-Description",
             "vendorId": 5771,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -27164,7 +27164,7 @@
             "code": 1012,
             "name": "TFT-Filter",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -27737,7 +27737,7 @@
             "code": 1036,
             "name": "Tunnel-Header-Filter",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": true,
@@ -28181,7 +28181,7 @@
             "code": 1059,
             "name": "Packet-Filter-Content",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": true,
@@ -36123,7 +36123,7 @@
             "code": 2402,
             "name": "MME-Name",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -36206,7 +36206,7 @@
             "code": 2408,
             "name": "MME-Realm",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -36218,7 +36218,7 @@
             "code": 2409,
             "name": "SGSN-Name",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -36230,7 +36230,7 @@
             "code": 2410,
             "name": "SGSN-Realm",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -37161,7 +37161,7 @@
             "code": 3101,
             "name": "IP-SM-GW-Name",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
