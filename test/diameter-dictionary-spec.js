@@ -9,7 +9,7 @@ describe('diameter-dictionary', function () {
             code: 1,
             name: 'User-Name',
             vendorId: 0,
-            type: 'OctetString',
+            type: 'UTF8String',
             flags: {
                 mandatory: true,
                 protected: false,

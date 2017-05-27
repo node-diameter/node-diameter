@@ -7,6 +7,7 @@ describe('diameter-types', function() {
     it('handles common types', function() {
         var parsableTypes = types.getParsableTypes();
         _.each(['OctetString',
+            'UTF8String',
             'Unsigned32',
             'Integer32',
             'Unsigned64',
@@ -23,11 +24,19 @@ describe('diameter-types', function() {
     });
 
     it('encodes OctetString', function() {
-        expect(types.encode('OctetString', 'test').toString('utf8')).toBe('test');
+        expect(types.encode('OctetString', Buffer.from([ 0xde, 0xad, 0xbe, 0xef ])).toString('hex')).toBe('deadbeef');
     });
 
     it('decodes OctetString', function() {
-        expect(types.decode('OctetString', new Buffer('test', 'utf8'))).toBe('test');
+        expect(types.decode('OctetString', Buffer.from([ 0xde, 0xad, 0xbe, 0xef ])).toString('hex')).toBe('deadbeef');
+    });
+
+    it('encodes UTF8String', function() {
+        expect(types.encode('UTF8String', 'test').toString('utf8')).toBe('test');
+    });
+
+    it('decodes UTF8String', function() {
+        expect(types.decode('UTF8String', new Buffer('test', 'utf8'))).toBe('test');
     });
 
     it('encodes Unsigned32', function() {
