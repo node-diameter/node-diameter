@@ -582,7 +582,7 @@
             "code": 1,
             "name": "User-Name",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -606,7 +606,7 @@
             "code": 1,
             "name": "3GPP-IMSI",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -666,7 +666,7 @@
             "code": 2,
             "name": "SN-VPN-Name",
             "vendorId": 8164,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -3092,7 +3092,7 @@
             "code": 5,
             "name": "3GPP-GPRS-Negotiated-QoS-profile",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -3336,7 +3336,7 @@
             "code": 8,
             "name": "3GPP-IMSI-MCC-MNC",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -3372,7 +3372,7 @@
             "code": 9,
             "name": "3GPP-GGSN-MCC-MNC",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -3444,7 +3444,7 @@
             "code": 10,
             "name": "3GPP-NSAPI",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -3468,7 +3468,7 @@
             "code": 11,
             "name": "Filter-Id",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -3480,7 +3480,7 @@
             "code": 11,
             "name": "3GPP-Session-Stop-Indicator",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -3516,7 +3516,7 @@
             "code": 12,
             "name": "3GPP-Selection-Mode",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -3558,7 +3558,7 @@
             "code": 13,
             "name": "3GPP-Charging-Characteristics",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -3690,7 +3690,7 @@
             "code": 15,
             "name": "SN-PPP-Outbound-Password",
             "vendorId": 8164,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -3754,7 +3754,7 @@
             "code": 16,
             "name": "Detailed-Result-Cause",
             "vendorId": 637,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": true,
@@ -3790,7 +3790,7 @@
             "code": 17,
             "name": "SN-IP-In-ACL",
             "vendorId": 8164,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -3814,7 +3814,7 @@
             "code": 18,
             "name": "Reply-Message",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -3826,7 +3826,7 @@
             "code": 18,
             "name": "3GPP-SGSN-MCC-MNC",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -3838,7 +3838,7 @@
             "code": 18,
             "name": "SN-IP-Out-ACL",
             "vendorId": 8164,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -3850,7 +3850,7 @@
             "code": 19,
             "name": "Callback-Number",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -3896,7 +3896,7 @@
             "code": 20,
             "name": "Callback-Id",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -4124,7 +4124,7 @@
             "code": 22,
             "name": "Framed-Route",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -4170,7 +4170,7 @@
             "code": 23,
             "name": "Framed-IPX-Network",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -4494,7 +4494,7 @@
             "code": 30,
             "name": "Called-Station-Id",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -4518,7 +4518,7 @@
             "code": 31,
             "name": "Calling-Station-Id",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -5482,7 +5482,7 @@
             "code": 58,
             "name": "Egress-VLAN-Name",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -5726,7 +5726,7 @@
             "code": 61,
             "name": "SN-PPP-Outbound-Username",
             "vendorId": 8164,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -5992,7 +5992,7 @@
             "code": 66,
             "name": "Acct-Tunnel-Client-Endpoint",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -6004,7 +6004,7 @@
             "code": 67,
             "name": "Tunnel-Server-Endpoint",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -6320,7 +6320,7 @@
             "code": 77,
             "name": "Connect-Info",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -6680,7 +6680,7 @@
             "code": 87,
             "name": "NAS-Port-Id",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -6728,7 +6728,7 @@
             "code": 89,
             "name": "CUI",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -6752,7 +6752,7 @@
             "code": 90,
             "name": "Tunnel-Client-Auth-Id",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -6776,7 +6776,7 @@
             "code": 91,
             "name": "Tunnel-Server-Auth-Id",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -6800,7 +6800,7 @@
             "code": 92,
             "name": "NAS-Filter-Rule",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -6888,7 +6888,7 @@
             "code": 94,
             "name": "SN-Virtual-APN-Name",
             "vendorId": 8164,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -7028,7 +7028,7 @@
             "code": 99,
             "name": "Framed-IPv6-Route",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -7202,7 +7202,7 @@
             "code": 102,
             "name": "EAP-Key-Name",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -7226,7 +7226,7 @@
             "code": 103,
             "name": "Digest-Response",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -7260,7 +7260,7 @@
             "code": 104,
             "name": "Digest-Realm",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -7284,7 +7284,7 @@
             "code": 105,
             "name": "Digest-Nonce",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -7322,7 +7322,7 @@
             "code": 106,
             "name": "Digest-Response-Auth",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -7356,7 +7356,7 @@
             "code": 107,
             "name": "Digest-Nextnonce",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -7390,7 +7390,7 @@
             "code": 108,
             "name": "Digest-Method",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -7424,7 +7424,7 @@
             "code": 109,
             "name": "Digest-URI",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -7448,7 +7448,7 @@
             "code": 110,
             "name": "Digest-Qop",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -7472,7 +7472,7 @@
             "code": 111,
             "name": "Digest-Algorithm",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -7558,7 +7558,7 @@
             "code": 112,
             "name": "Digest-Entity-Body-Hash",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -7644,7 +7644,7 @@
             "code": 113,
             "name": "Digest-Digest-CNonce",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -7730,7 +7730,7 @@
             "code": 114,
             "name": "Digest-Nonce-Count",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -7816,7 +7816,7 @@
             "code": 115,
             "name": "Digest-Username",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -7902,7 +7902,7 @@
             "code": 116,
             "name": "Digest-Opaque",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -7988,7 +7988,7 @@
             "code": 117,
             "name": "Digest-Auth-Param",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -8012,7 +8012,7 @@
             "code": 118,
             "name": "Digest-AKA-Auts",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -8036,7 +8036,7 @@
             "code": 119,
             "name": "Digest-Domain",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -8060,7 +8060,7 @@
             "code": 120,
             "name": "Digest-Stale",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -8084,7 +8084,7 @@
             "code": 121,
             "name": "Digest-HA1",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -8108,7 +8108,7 @@
             "code": 122,
             "name": "SIP-AOR",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -8394,7 +8394,7 @@
             "code": 131,
             "name": "SN-Voice-Push-List-Name",
             "vendorId": 8164,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -8418,7 +8418,7 @@
             "code": 132,
             "name": "SN-Unclassify-List-Name",
             "vendorId": 8164,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -8546,7 +8546,7 @@
             "code": 135,
             "name": "Management-Policy-Id",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -8624,7 +8624,7 @@
             "code": 137,
             "name": "SN-Charging-VPN-Name",
             "vendorId": 8164,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -8904,7 +8904,7 @@
             "code": 147,
             "name": "SN-QoS-Negotiated",
             "vendorId": 8164,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -9130,7 +9130,7 @@
             "code": 154,
             "name": "SN-MIP-HA-Assignment-Table",
             "vendorId": 8164,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -10517,7 +10517,7 @@
             "code": 214,
             "name": "SN-DNS-Proxy-Intercept-List",
             "vendorId": 8164,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -10733,7 +10733,7 @@
             "code": 223,
             "name": "SN-Primary-DCCA-Peer",
             "vendorId": 8164,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -10757,7 +10757,7 @@
             "code": 224,
             "name": "SN-Secondary-DCCA-Peer",
             "vendorId": 8164,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -11123,7 +11123,7 @@
             "code": 238,
             "name": "SN-ROHC-Profile-Name",
             "vendorId": 8164,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -11433,7 +11433,7 @@
             "code": 254,
             "name": "SN-SIP-Method",
             "vendorId": 8164,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -11457,7 +11457,7 @@
             "code": 255,
             "name": "SN-Event",
             "vendorId": 8164,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -11537,7 +11537,7 @@
             "code": 257,
             "name": "SN-Session-Id",
             "vendorId": 8164,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -11915,7 +11915,7 @@
             "code": 258,
             "name": "SN-SIP-Request-Time-Stamp",
             "vendorId": 8164,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -12237,7 +12237,7 @@
             "code": 259,
             "name": "SN-SIP-Response-Time-Stamp",
             "vendorId": 8164,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -12278,7 +12278,7 @@
             "code": 260,
             "name": "SN-IMS-Charging-Identifier",
             "vendorId": 8164,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -12380,7 +12380,7 @@
             "code": 261,
             "name": "SN-Originating-IOI",
             "vendorId": 8164,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -12450,7 +12450,7 @@
             "code": 262,
             "name": "Rulebase-Id",
             "vendorId": 12645,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -12462,7 +12462,7 @@
             "code": 263,
             "name": "Session-Id",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -12474,7 +12474,7 @@
             "code": 263,
             "name": "SN-SDP-Session-Description",
             "vendorId": 8164,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -12585,7 +12585,7 @@
             "code": 266,
             "name": "SN-Authorised-Qos",
             "vendorId": 8164,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -13061,7 +13061,7 @@
             "code": 269,
             "name": "Product-Name",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -13073,7 +13073,7 @@
             "code": 269,
             "name": "SN-Is-Unregistered-Subscriber",
             "vendorId": 8164,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -13115,7 +13115,7 @@
             "code": 270,
             "name": "SN-Content-Type",
             "vendorId": 8164,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -13157,7 +13157,7 @@
             "code": 271,
             "name": "SN-Content-Length",
             "vendorId": 8164,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -13181,7 +13181,7 @@
             "code": 272,
             "name": "SN-Content-Disposition",
             "vendorId": 8164,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -13315,7 +13315,7 @@
             "code": 276,
             "name": "SN-ISC-Template-Name",
             "vendorId": 8164,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -13349,7 +13349,7 @@
             "code": 277,
             "name": "SN-CF-Forward-Unconditional",
             "vendorId": 8164,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -13373,7 +13373,7 @@
             "code": 278,
             "name": "SN-CF-Forward-No-Answer",
             "vendorId": 8164,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -13396,7 +13396,7 @@
             "code": 279,
             "name": "SN-CF-Forward-Busy-Line",
             "vendorId": 8164,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -13420,7 +13420,7 @@
             "code": 280,
             "name": "SN-CF-Forward-Not-Regd",
             "vendorId": 8164,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -13432,7 +13432,7 @@
             "code": 281,
             "name": "Error-Message",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": true,
@@ -13444,7 +13444,7 @@
             "code": 281,
             "name": "SN-CF-Follow-Me",
             "vendorId": 8164,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -13654,7 +13654,7 @@
             "code": 288,
             "name": "SN-Software-Version",
             "vendorId": 8164,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -13690,7 +13690,7 @@
             "code": 290,
             "name": "Rule-Space-Suggestion",
             "vendorId": 193,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -13726,7 +13726,7 @@
             "code": 291,
             "name": "Rule-Space-Decision",
             "vendorId": 193,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -13760,7 +13760,7 @@
             "code": 292,
             "name": "Redirect-Host",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -14963,7 +14963,7 @@
             "code": 312,
             "name": "Application-Class-ID",
             "vendorId": 13019,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -14987,7 +14987,7 @@
             "code": 313,
             "name": "Physical-Access-ID",
             "vendorId": 13019,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -16638,7 +16638,7 @@
             "code": 369,
             "name": "SIP-Accounting-Server-URI",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": true,
@@ -16662,7 +16662,7 @@
             "code": 370,
             "name": "SIP-Credit-Control-Server-URI",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": true,
@@ -16686,7 +16686,7 @@
             "code": 371,
             "name": "SIP-Server-URI",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": true,
@@ -17145,7 +17145,7 @@
             "code": 385,
             "name": "SIP-Reason-Info",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": true,
@@ -17169,7 +17169,7 @@
             "code": 386,
             "name": "SIP-Visited-Network-Id",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": true,
@@ -17231,7 +17231,7 @@
             "code": 388,
             "name": "SIP-Supported-User-Data-Type",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": true,
@@ -17283,7 +17283,7 @@
             "code": 390,
             "name": "SIP-User-Data-Type",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": true,
@@ -17365,7 +17365,7 @@
             "code": 393,
             "name": "SIP-Method",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": true,
@@ -18503,7 +18503,7 @@
             "code": 424,
             "name": "Cost-Unit",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -18838,7 +18838,7 @@
             "code": 435,
             "name": "Redirect-Server-Address",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -19118,7 +19118,7 @@
             "code": 444,
             "name": "Subscription-Id-Data",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -19491,7 +19491,7 @@
             "code": 455,
             "name": "Multiple-Services-Indicator",
             "vendorId": 0,
-            "type": "Unsigned32",
+            "type": "Integer32",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -19692,7 +19692,7 @@
             "code": 459,
             "name": "Service-Class",
             "vendorId": 13019,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -19728,7 +19728,7 @@
             "code": 461,
             "name": "Service-Context-Id",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -20558,7 +20558,7 @@
             "code": 493,
             "name": "Service-Selection",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -20981,7 +20981,7 @@
             "code": 504,
             "name": "ETSI-Digest-Realm",
             "vendorId": 13019,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -21038,7 +21038,7 @@
             "code": 505,
             "name": "ETSI-Digest-Nonce",
             "vendorId": 13019,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -21086,7 +21086,7 @@
             "code": 506,
             "name": "ETSI-Digest-Domain",
             "vendorId": 13019,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -21098,7 +21098,7 @@
             "code": 506,
             "name": "Mobile-Node-Identifier",
             "vendorId": 0,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -21122,7 +21122,7 @@
             "code": 507,
             "name": "ETSI-Digest-Opaque",
             "vendorId": 13019,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -21178,7 +21178,7 @@
             "code": 508,
             "name": "ETSI-Digest-Stale",
             "vendorId": 13019,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -21202,7 +21202,7 @@
             "code": 509,
             "name": "ETSI-Digest-Algorithm",
             "vendorId": 13019,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -21231,7 +21231,7 @@
             "code": 510,
             "name": "ETSI-Digest-QoP",
             "vendorId": 13019,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -21277,7 +21277,7 @@
             "code": 511,
             "name": "ETSI-Digest-HA1",
             "vendorId": 13019,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -21315,7 +21315,7 @@
             "code": 512,
             "name": "ETSI-Digest-Auth-Param",
             "vendorId": 13019,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -21415,7 +21415,7 @@
             "code": 513,
             "name": "ETSI-Digest-Username",
             "vendorId": 13019,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -21439,7 +21439,7 @@
             "code": 514,
             "name": "ETSI-Digest-URI",
             "vendorId": 13019,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -21451,7 +21451,7 @@
             "code": 514,
             "name": "SN-Traffic-Policy",
             "vendorId": 8164,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -21475,7 +21475,7 @@
             "code": 515,
             "name": "ETSI-Digest-Response",
             "vendorId": 13019,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -21487,7 +21487,7 @@
             "code": 515,
             "name": "SN-Firewall-Policy",
             "vendorId": 8164,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -21511,7 +21511,7 @@
             "code": 516,
             "name": "ETSI-Digest-CNonce",
             "vendorId": 13019,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -21551,7 +21551,7 @@
             "code": 517,
             "name": "ETSI-Digest-Nonce-Count",
             "vendorId": 13019,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -21592,7 +21592,7 @@
             "code": 518,
             "name": "ETSI-Digest-Method",
             "vendorId": 13019,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -21636,7 +21636,7 @@
             "code": 519,
             "name": "ETSI-Digest-Entity-Body-Hash",
             "vendorId": 13019,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -21706,7 +21706,7 @@
             "code": 520,
             "name": "ETSI-Digest-Nextnonce",
             "vendorId": 13019,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -21748,7 +21748,7 @@
             "code": 521,
             "name": "ETSI-Digest-Response-Auth",
             "vendorId": 13019,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -21828,7 +21828,7 @@
             "code": 523,
             "name": "SN-Phase0-PSAPName",
             "vendorId": 8164,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -21840,7 +21840,7 @@
             "code": 524,
             "name": "Codec-Data AVP",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -21960,7 +21960,7 @@
             "code": 528,
             "name": "SN-Rulebase-Id",
             "vendorId": 8164,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -22018,7 +22018,7 @@
             "code": 530,
             "name": "SN-Charging-Collection-Function-Name",
             "vendorId": 8164,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -22202,7 +22202,7 @@
             "code": 554,
             "name": "Subscription-Id-Data",
             "vendorId": 193,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -22298,7 +22298,7 @@
             "code": 601,
             "name": "Public-Identity",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -22322,7 +22322,7 @@
             "code": 602,
             "name": "Server-Name",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -22420,7 +22420,7 @@
             "code": 605,
             "name": "Accounting-Correlation-Id",
             "vendorId": 193,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -22489,7 +22489,7 @@
             "code": 608,
             "name": "SIP-Authentication-Scheme",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -22939,7 +22939,7 @@
             "code": 617,
             "name": "Reason-Info",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -22981,7 +22981,7 @@
             "code": 619,
             "name": "Primary-Event-Charging-Function-Name",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -22993,7 +22993,7 @@
             "code": 620,
             "name": "Secondary-Event-Charging-Function-Name",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -23005,7 +23005,7 @@
             "code": 621,
             "name": "Primary-Charging-Collection-Function-Name",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -23017,7 +23017,7 @@
             "code": 622,
             "name": "Secondary-Charging-Collection-Function-Name",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -23218,7 +23218,7 @@
             "code": 634,
             "name": "Wildcarded-PSI",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -23248,7 +23248,7 @@
             "code": 636,
             "name": "Wildcarded-IMPU",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -24233,7 +24233,7 @@
             "code": 810,
             "name": "Flow-Identifier",
             "vendorId": 5535,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -24333,7 +24333,7 @@
             "code": 815,
             "name": "AGW-MCC-MNC",
             "vendorId": 5535,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -24364,7 +24364,7 @@
             "code": 824,
             "name": "SIP-Method",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -24376,7 +24376,7 @@
             "code": 825,
             "name": "Event",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -24388,7 +24388,7 @@
             "code": 826,
             "name": "Content-Type",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -24412,7 +24412,7 @@
             "code": 828,
             "name": "Content-Disposition",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -24454,7 +24454,7 @@
             "code": 830,
             "name": "User-Session-Id",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -24466,7 +24466,7 @@
             "code": 831,
             "name": "Calling-Party-Address",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -24478,7 +24478,7 @@
             "code": 832,
             "name": "Called-Party-Address",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -24530,7 +24530,7 @@
             "code": 836,
             "name": "Application-Server",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -24542,7 +24542,7 @@
             "code": 837,
             "name": "Application-provided-Called-Party-Address",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -24570,7 +24570,7 @@
             "code": 839,
             "name": "Originating-IOI",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -24582,7 +24582,7 @@
             "code": 840,
             "name": "Terminating-IOI",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -24594,7 +24594,7 @@
             "code": 841,
             "name": "IMS-Charging-Identifier",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -24606,7 +24606,7 @@
             "code": 842,
             "name": "SDP-Session-Description",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -24634,7 +24634,7 @@
             "code": 844,
             "name": "SDP-Media-Name",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -24646,7 +24646,7 @@
             "code": 845,
             "name": "SDP-Media-Description",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -24694,7 +24694,7 @@
             "code": 849,
             "name": "Authorised-QoS",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -24738,7 +24738,7 @@
             "code": 852,
             "name": "Incoming-Trunk-Group-ID",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -24750,7 +24750,7 @@
             "code": 853,
             "name": "Outgoing-Trunk-Group-ID",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -24774,7 +24774,7 @@
             "code": 855,
             "name": "Service-ID",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -24786,7 +24786,7 @@
             "code": 858,
             "name": "PoC-Controlling-Address",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -24798,7 +24798,7 @@
             "code": 859,
             "name": "PoC-Group-Name",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -25174,7 +25174,7 @@
             "code": 863,
             "name": "Service-Specific-Data",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -26005,7 +26005,7 @@
             "code": 887,
             "name": "Participants-Involved",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -26137,7 +26137,7 @@
             "code": 897,
             "name": "Address-Data",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -26259,7 +26259,7 @@
             "code": 901,
             "name": "Required-MBMS-Bearer-Capabilities",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -26321,7 +26321,7 @@
             "code": 905,
             "name": "Alternative-APN",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -26393,7 +26393,7 @@
             "code": 909,
             "name": "RAI",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -26441,7 +26441,7 @@
             "code": 913,
             "name": "MBMS-Required-QoS",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": true,
@@ -26810,7 +26810,7 @@
             "code": 1004,
             "name": "Charging-Rule-Base-Name",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -28489,7 +28489,7 @@
             "code": 1074,
             "name": "QoS-Rule-Base-Name",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -28680,7 +28680,7 @@
             "code": 1101,
             "name": "VASP-ID",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -28692,7 +28692,7 @@
             "code": 1102,
             "name": "VAS-ID",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -28738,7 +28738,7 @@
             "code": 1104,
             "name": "Sender-Address",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -28796,7 +28796,7 @@
             "code": 1108,
             "name": "Recipient-Address",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -28808,7 +28808,7 @@
             "code": 1109,
             "name": "Routeing-Address",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -28916,7 +28916,7 @@
             "code": 1114,
             "name": "Service-Key",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -28928,7 +28928,7 @@
             "code": 1115,
             "name": "Billing-Information",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -28956,7 +28956,7 @@
             "code": 1117,
             "name": "Status-Code",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -28968,7 +28968,7 @@
             "code": 1118,
             "name": "Status-Text",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -29057,7 +29057,7 @@
             "code": 1146,
             "name": "Customer-Id",
             "vendorId": 193,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -29069,7 +29069,7 @@
             "code": 1146,
             "name": "Customer-Id",
             "vendorId": 8164,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -29081,7 +29081,7 @@
             "code": 1200,
             "name": "Domain-Name",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -29495,7 +29495,7 @@
             "code": 1205,
             "name": "Additional-Type-Information",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -29588,7 +29588,7 @@
             "code": 1210,
             "name": "Message-ID",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -29732,7 +29732,7 @@
             "code": 1215,
             "name": "Token-Text",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -29788,7 +29788,7 @@
             "code": 1218,
             "name": "Applic-ID",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -29800,7 +29800,7 @@
             "code": 1219,
             "name": "Aux-Applic-Info",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -29902,7 +29902,7 @@
             "code": 1223,
             "name": "Reply-Applic-ID",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -29994,7 +29994,7 @@
             "code": 1229,
             "name": "PoC-Session-Id",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -30006,7 +30006,7 @@
             "code": 1230,
             "name": "Deferred-Location-Event-Type",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -30018,7 +30018,7 @@
             "code": 1231,
             "name": "LCS-APN",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -30050,7 +30050,7 @@
             "code": 1233,
             "name": "LCS-Client-Dialed-By-MS",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -30062,7 +30062,7 @@
             "code": 1234,
             "name": "LCS-Client-External-ID",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -30091,7 +30091,7 @@
             "code": 1236,
             "name": "LCS-Data-Coding-Scheme",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -30137,7 +30137,7 @@
             "code": 1238,
             "name": "LCS-Name-String",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -30165,7 +30165,7 @@
             "code": 1240,
             "name": "LCS-Requestor-ID-String",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -30207,7 +30207,7 @@
             "code": 1242,
             "name": "Location-Estimate",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -30269,7 +30269,7 @@
             "code": 1245,
             "name": "Positioning-Data",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -30281,7 +30281,7 @@
             "code": 1246,
             "name": "WLAN-Session-Id",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -30353,7 +30353,7 @@
             "code": 1250,
             "name": "Called-Asserted-Identity",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -30365,7 +30365,7 @@
             "code": 1251,
             "name": "Requested-Party-Address",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -30393,7 +30393,7 @@
             "code": 1253,
             "name": "PoC-User-Role-IDs",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -30590,7 +30590,7 @@
             "code": 1263,
             "name": "Access-Network-Information",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -30884,7 +30884,7 @@
             "code": 1280,
             "name": "Alternate-Charged-Party-Address",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -30896,7 +30896,7 @@
             "code": 1281,
             "name": "IMS-Communication-Service-Identifier",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -30980,7 +30980,7 @@
             "code": 1288,
             "name": "Media-Initiator-Party",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -31052,7 +31052,7 @@
             "code": 1402,
             "name": "IMEI",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -31064,7 +31064,7 @@
             "code": 1403,
             "name": "Software-Version",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -31434,7 +31434,7 @@
             "code": 1427,
             "name": "APN-OI-Replacement",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -31710,7 +31710,7 @@
             "code": 1444,
             "name": "User-Id",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -32741,7 +32741,7 @@
             "code": 1504,
             "name": "ANID",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -33676,7 +33676,7 @@
             "code": 1642,
             "name": "Time-Zone",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -33944,7 +33944,7 @@
             "code": 2003,
             "name": "Interface-Id",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -33956,7 +33956,7 @@
             "code": 2004,
             "name": "Interface-Port",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -33968,7 +33968,7 @@
             "code": 2005,
             "name": "Interface-Text",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -34290,7 +34290,7 @@
             "code": 2023,
             "name": "Carrier-Select-Routing-Information",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -34302,7 +34302,7 @@
             "code": 2024,
             "name": "Number-Portability-Routing-Information",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -34614,7 +34614,7 @@
             "code": 2035,
             "name": "Associated-Party-Address",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -35209,7 +35209,7 @@
             "code": 2064,
             "name": "Node-Id",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -35389,7 +35389,7 @@
             "code": 2104,
             "name": "Delivery-Status",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -35543,7 +35543,7 @@
             "code": 2116,
             "name": "Content-ID",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -35555,7 +35555,7 @@
             "code": 2117,
             "name": "Content-provider-ID",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -35820,7 +35820,7 @@
             "code": 2306,
             "name": "Tariff-XML",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -36062,7 +36062,7 @@
             "code": 2320,
             "name": "Outgoing-Session-Id",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -36074,7 +36074,7 @@
             "code": 2321,
             "name": "Initial-IMS-Charging-Identifier",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -36434,7 +36434,7 @@
             "code": 2511,
             "name": "LCS-Codeword",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -36656,7 +36656,7 @@
             "code": 2601,
             "name": "IMS-Application-Reference-Identifier",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -36831,7 +36831,7 @@
             "code": 2901,
             "name": "Policy-Counter-Identifier",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -36843,7 +36843,7 @@
             "code": 2902,
             "name": "Policy-Counter-Status",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -37308,7 +37308,7 @@
             "code": 3111,
             "name": "External-Identifier",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -37384,7 +37384,7 @@
             "code": 3401,
             "name": "Reason-Header",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -37396,7 +37396,7 @@
             "code": 3402,
             "name": "Instance-Id",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -37408,7 +37408,7 @@
             "code": 3403,
             "name": "Route-Header-Received",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -37420,7 +37420,7 @@
             "code": 3404,
             "name": "Route-Header-Transmitted",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -37524,7 +37524,7 @@
             "code": 5106,
             "name": "Rulebase-Id",
             "vendorId": 94,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -37579,7 +37579,7 @@
             "code": 5112,
             "name": "Nokia-URI",
             "vendorId": 94,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -37603,7 +37603,7 @@
             "code": 9010,
             "name": "3GPP2-BSID",
             "vendorId": 5535,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": true,
                 "protected": true,
@@ -37639,7 +37639,7 @@
             "code": 60528,
             "name": "Account-State",
             "vendorId": 28458,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": true,
@@ -37668,7 +37668,7 @@
             "code": 60551,
             "name": "Offer-Name",
             "vendorId": 28458,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": true,
@@ -37680,7 +37680,7 @@
             "code": 60552,
             "name": "Version",
             "vendorId": 28458,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": true,
@@ -37750,7 +37750,7 @@
             "code": 60559,
             "name": "Account-Type",
             "vendorId": 28458,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": true,
@@ -37762,7 +37762,7 @@
             "code": 60560,
             "name": "Account-Subtype",
             "vendorId": 28458,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": true,
@@ -38194,7 +38194,7 @@
             "code": 131091,
             "name": "Match-String",
             "vendorId": 5771,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -38206,7 +38206,7 @@
             "code": 131092,
             "name": "Attribute-String",
             "vendorId": 5771,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -40262,7 +40262,7 @@
             "code": 131214,
             "name": "Class-Map-Name",
             "vendorId": 5771,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -40274,7 +40274,7 @@
             "code": 131215,
             "name": "Header-Group-Name",
             "vendorId": 5771,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -40332,7 +40332,7 @@
             "code": 131219,
             "name": "Header-Insert-Name",
             "vendorId": 5771,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -40344,7 +40344,7 @@
             "code": 131220,
             "name": "Header-Field-Name",
             "vendorId": 5771,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -40356,7 +40356,7 @@
             "code": 131221,
             "name": "Header-Class-Name",
             "vendorId": 5771,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -40481,7 +40481,7 @@
             "code": 131229,
             "name": "Header-Item-String",
             "vendorId": 5771,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
@@ -40605,7 +40605,7 @@
             "code": 131236,
             "name": "Cisco-QoS-Profile-Name",
             "vendorId": 5771,
-            "type": "OctetString",
+            "type": "UTF8String",
             "flags": {
                 "mandatory": false,
                 "protected": false,
