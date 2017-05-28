@@ -654,7 +654,7 @@
             "code": 2,
             "name": "3GPP-Charging-Id",
             "vendorId": 10415,
-            "type": "OctetString",
+            "type": "Unsigned32",
             "flags": {
                 "mandatory": true,
                 "protected": true,
