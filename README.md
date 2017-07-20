@@ -33,4 +33,4 @@ $ npm run-script example-client
 
 Makes it easier to work with diameter messages, by converting the arrays to objects:
 
-[https://github.com/atesgoral/diameter-avp-object](https://github.com/atesgoral/diameter-avp-object)
+[https://github.com/node-diameter/node-diameter-avp-object](https://github.com/node-diameter/node-diameter-avp-object)
