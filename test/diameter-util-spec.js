@@ -64,10 +64,14 @@ describe('diameter-util', function() {
             ]]
         ];
 
-        expect(util.getAvpValue(exampleMessage, '....')).toBe(undefined)
-        expect(util.getAvpValue(exampleMessage, 'Origin-Realm')).toBe('com')
-        expect(util.getAvpValue(exampleMessage, 'Not-Present')).toBe(undefined)
-        expect(util.getAvpValue(exampleMessage, 'Result-Code')).toBe(2001)
+        expect(util.getAvpValue(exampleMessage, '....')).toBe(undefined);
+        expect(util.getAvpValue(exampleMessage, 'Origin-Realm')).toBe('com');
+        expect(function() {
+            util.getAvpValue(exampleMessage, 'Origin-Realm[1]');
+        })
+        .toThrow(new Error('Can\'t resolve path, index for \'Origin-Realm\' is out of bounds'));
+        expect(util.getAvpValue(exampleMessage, 'Not-Present')).toBe(undefined);
+        expect(util.getAvpValue(exampleMessage, 'Result-Code')).toBe(2001);
         expect(util.getAvpValue(exampleMessage, 
             'Multiple-Services-Credit-Control.Granted-Service-Unit.CC-Time'))
             .toBe(123);
