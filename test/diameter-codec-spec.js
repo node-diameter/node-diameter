@@ -2,7 +2,7 @@ var codec = require('../lib/diameter-codec');
 
 describe('diameter-codec', function() {
 
-    describe('enodeAvp', function() {
+    describe('encodeAvp', function() {
 
         it('encodes string key and string value', function() {
             var avp = ['Result-Code', 'DIAMETER_SUCCESS'];
