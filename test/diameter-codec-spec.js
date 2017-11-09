@@ -32,7 +32,7 @@ describe('diameter-codec', function() {
     describe('decodeAvp', function() {
 
         it('decodes application ID code as a string', function() {
-            var buffer = Buffer.from('000001024000000c00000004', 'hex');
+            var buffer = new Buffer('000001024000000c00000004', 'hex');
             var decoded = codec.decodeAvp(buffer, 0);
             expect(decoded.code).toBe('Auth-Application-Id');
             expect(decoded.data).toBe('Diameter Credit Control Application');
