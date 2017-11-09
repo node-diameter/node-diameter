@@ -4286,7 +4286,7 @@
             "code": 258,
             "name": "Auth-Application-Id",
             "vendorId": 0,
-            "type": "Unsigned32",
+            "type": "AppId",
             "flags": {
                 "mandatory": true,
                 "protected": false,
@@ -4298,7 +4298,7 @@
             "code": 259,
             "name": "Acct-Application-Id",
             "vendorId": 0,
-            "type": "Unsigned32",
+            "type": "AppId",
             "flags": {
                 "mandatory": true,
                 "protected": false,
