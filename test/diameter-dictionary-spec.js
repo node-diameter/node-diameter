@@ -1,5 +1,6 @@
 var dictionary = require('../lib/diameter-dictionary');
 var _ = require('lodash');
+var proxyquire = require('proxyquire');
 
 describe('diameter-dictionary', function () {
 
@@ -81,6 +82,24 @@ describe('diameter-dictionary', function () {
                 protected: true,
                 mayEncrypt: true,
                 vendorBit: true
+            }
+        });
+    });
+
+    it('uses custom dictionary', function() {
+        process.env.DIAMETER_DICTIONARY = '../test/custom-dictionary.json';
+        var customDictionary = proxyquire('../lib/diameter-dictionary', {});
+        var avp = customDictionary.getAvpByCode(1);
+        expect(avp).toEqual({
+            code: 1,
+            name: 'Custom-Dictionary-AVP',
+            vendorId: 0,
+            type: 'UTF8String',
+            flags: {
+                mandatory: true,
+                protected: false,
+                mayEncrypt: false,
+                vendorBit: false
             }
         });
     });

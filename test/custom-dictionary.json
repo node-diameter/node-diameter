@@ -1,0 +1,22 @@
+{
+    "applications": [
+        {
+            "code": 0,
+            "name": "Custom dictionary app"
+        }
+    ],
+    "avps": [
+        {
+            "code": 1,
+            "name": "Custom-Dictionary-AVP",
+            "vendorId": 0,
+            "type": "UTF8String",
+            "flags": {
+                "mandatory": true,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": false
+            }
+        }
+    ]
+}
