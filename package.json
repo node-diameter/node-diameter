@@ -23,7 +23,8 @@
   "devDependencies": {
     "codeclimate-test-reporter": "^0.1.0",
     "istanbul": "^0.3.19",
-    "jasmine-node": "^1.14.5"
+    "jasmine-node": "^1.14.5",
+    "proxyquire": "^1.8.0"
   },
   "scripts": {
     "unit": "./node_modules/.bin/jasmine-node test",
