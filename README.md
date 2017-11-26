@@ -32,6 +32,7 @@ $ npm run-script example-client
 ## Using custom diameter dictionaries
 
 To use your own diameter dictionary, set the 'DIAMETER_DICTIONARY' environment variable to path of the json file containing your dictionary, or name of node module that provides it. See 'node-diameter-dictionary' module for json file format, and how to create a node module that provides a dictionary. 
+
 Note: this module has a dependency on 'node-diameter-dictionary' module, so if you are using your own dictionary, you can optionaly remove the 'node-diameter-dictionary' dependency when doing the npm shrinkwrap of your application. 
 
 ## Complementary library
