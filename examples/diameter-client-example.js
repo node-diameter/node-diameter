@@ -22,7 +22,7 @@ var socket = diameter.createConnection(options, function() {
         [ 'Vendor-Id', 10415 ],
         [ 'Origin-State-Id', 219081 ],
         [ 'Supported-Vendor-Id', 10415 ],
-        [ 'Auth-Application-Id', 'Diameter Credit Control' ]
+        [ 'Auth-Application-Id', 'Diameter Credit Control Application' ]
     ]);
     connection.sendRequest(request).then(function(response) {
         // handle response
@@ -33,6 +33,7 @@ var socket = diameter.createConnection(options, function() {
 
 // Handling server initiated messages:
 socket.on('diameterMessage', function(event) {
+    console.log('Received server initiated message');
     if (event.message.command === 'Capabilities-Exchange') {
         event.response.body = event.response.body.concat([
             ['Result-Code', 'DIAMETER_SUCCESS'],
@@ -44,7 +45,7 @@ socket.on('diameterMessage', function(event) {
             ['Product-Name', 'node-diameter']
         ]);
         event.callback(event.response);
-        socket.diameterConnection.end();
+        // socket.diameterConnection.end();
     }
 });
 socket.on('error', function(err) {

@@ -29,7 +29,7 @@ var server = diameter.createServer(options, function(socket) {
                 ['Result-Code', 2001], // You can also define enum values by their integer codes
                 [264, 'test.com'], // or AVP names, this is 'Origin-Host'
                 ['Origin-Realm', 'com'],
-                ['Auth-Application-Id', 'Diameter Credit Control'],
+                ['Auth-Application-Id', 'Diameter Credit Control Application'],
                 ['CC-Request-Type', 'INITIAL_REQUEST'],
                 ['CC-Request-Number', 0],
                 ['Multiple-Services-Credit-Control', [
@@ -75,7 +75,7 @@ var server = diameter.createServer(options, function(socket) {
     			[ 'Vendor-Id', 10415 ],
     			[ 'Origin-State-Id', 219081 ],
     			[ 'Supported-Vendor-Id', 10415 ],
-    			[ 'Auth-Application-Id', 'Diameter Credit Control' ]
+    			[ 'Auth-Application-Id', 'Diameter Credit Control Application' ]
     		]);
     		connection.sendRequest(request).then(function(response) {
     			console.log('Got response for server initiated message');
