@@ -17,7 +17,7 @@
     "chalk": "^1.0.0",
     "diameter-dictionary": "^1.0.2",
     "ipaddr.js": "^1.0.1",
-    "lodash": "^3.0.0",
+    "lodash": "^4.17.10",
     "long": "^2.2.0"
   },
   "devDependencies": {
