@@ -37,5 +37,17 @@ describe('diameter-codec', function() {
             expect(decoded.code).toBe('Auth-Application-Id');
             expect(decoded.data).toBe('Diameter Credit Control Application');
         });
+
+        it('decodes non mandartory avp ', function() {
+            var buffer = new Buffer('000009a4800000100000014300000080', 'hex');
+            var decoded = codec.decodeAvp(buffer, 0);
+            expect(decoded.code).toBe('DSR-ApplicationInvoked');
+            expect(decoded.data).toBe(128);
+        });
+
+        it('decodes non mandartory avp ', function() {
+            var buffer = new Buffer('000001154000000c000000ff', 'hex');
+            expect(() => { codec.decodeAvp(buffer, 0) }).toThrow(new Error('No enum value found for Auth-Session-State code 255'));
+        });
     });
 });
