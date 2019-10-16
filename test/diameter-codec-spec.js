@@ -45,7 +45,7 @@ describe('diameter-codec', function() {
             expect(decoded.data).toBe(128);
         });
 
-        it('decodes mandartory AVP with unknown enum value ', function() {
+        it('decodes mandatory AVP with unknown enum value ', function() {
             var buffer = new Buffer('000001154000000c000000ff', 'hex');
             expect(() => { codec.decodeAvp(buffer, 0) }).toThrow(new Error('No enum value found for Auth-Session-State code 255'));
         });
