@@ -1,10 +1,9 @@
 language: node_js
 node_js:
+  - "10.18.0"
   - "6"
   - "6.1"
   - "5.11"
-  - "0.10"
-  - "iojs"
 addons:
   code_climate:
     repo_token: $CODECLIMATE_REPO_TOKEN
