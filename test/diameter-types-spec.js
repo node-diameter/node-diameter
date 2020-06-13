@@ -1,6 +1,7 @@
 var Buffer = require('buffer').Buffer;
 var types = require('../lib/diameter-types');
 var _ = require('lodash');
+var Long = require('long');
 
 describe('diameter-types', function() {
 
@@ -53,6 +54,26 @@ describe('diameter-types', function() {
 
     it('decodes Integer32', function() {
         expect(types.decode('Integer32', new Buffer('0000007b', 'hex'))).toBe(123);
+    });
+
+    it('encodes Unsigned64', function() {
+        expect(types.encode('Unsigned64', Long.fromString('8000000180000002', true, 16)).toString('hex'))
+            .toBe('8000000180000002');
+    });
+
+    it('decodes Unsigned64', function() {
+        expect(types.decode('Unsigned64', new Buffer('8000000180000002', 'hex')))
+            .toEqual(Long.fromString('8000000180000002', true, 16));
+    });
+
+    it('encodes Integer64', function() {
+        expect(types.encode('Integer64', Long.fromString('8000000180000002', false, 16)).toString('hex'))
+            .toBe('8000000180000002');
+    });
+
+    it('decodes Integer64', function() {
+        expect(types.decode('Integer64', new Buffer('8000000180000002', 'hex')))
+            .toEqual(Long.fromString('8000000180000002', false, 16));
     });
 
     it('encodes IPAddress', function() {
